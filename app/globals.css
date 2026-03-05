@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/DMSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: 'IBMPlexMono-Regular';
+  src: url('/fonts/Ibm_plex_mono/IBMPlexMono-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
+@font-face {
+  font-family: 'IBMPlexMono-Medium';
+  src: url('/fonts/Ibm_plex_mono/IBMPlexMono-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBMPlexMono-SemiBold';
+  src: url('/fonts/Ibm_plex_mono/IBMPlexMono-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBMPlexMono-Bold';
+  src: url('/fonts/Ibm_plex_mono/IBMPlexMono-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #020617;
+  }
+
+  * {
+    @apply border-slate-200;
+    font-family: inherit;
+  }
+
+  body {
+    @apply bg-white text-slate-950 antialiased selection:bg-blue-100 selection:text-blue-900;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme {
+  --font-dmsans: "DM Sans";
+  --font-ibmplexmonoregular: "IBMPlexMono-Regular";
+  --font-ibmplexmonomedium: "IBMPlexMono-Medium";
+  --font-ibmplexmonosemi: "IBMPlexMono-SemiBold";
+  --font-ibmplexmonibold: "IBMPlexMono-Bold";
 }
