@@ -17,7 +17,7 @@ export default function LogoCloud() {
     ];
 
     return (
-        <div className="bg-slate-50 py-12 md:py-24">
+        <div className="bg-slate-50 py-12 md:py-24 ">
             <div className="container mx-auto px-6">
                 {/* Header Section */}
                 <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-20 border-b border-slate-100 pb-12 font-ibmplexmonomedium">

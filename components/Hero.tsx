@@ -29,12 +29,12 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-wrap items-center gap-4 mb-10">
-                        <Link href="#startups">
+                        <Link href="/for-startups">
                             <button className="bg-white text-black text-[13px] font-bold px-10 py-4 rounded-lg uppercase hover:bg-slate-50 transition-all hover:scale-105 active:scale-95 shadow-2xl cursor-pointer">
                                 Hire a Developer
                             </button>
                         </Link>
-                        <Link href="#developers">
+                        <Link href="/for-developers">
                             <button className="bg-transparent text-white border border-white/30 text-[13px] font-bold px-10 py-4 rounded-lg uppercase backdrop-blur-md hover:bg-white/10 transition-all hover:scale-105 active:scale-95 shadow-2xl cursor-pointer">
                                 Apply as Developer
                             </button>

@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-slate-50 selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
-      <main className="flex-grow">
+      <main className="grow">
         <Hero />
         <LogoCloud />
         <Features />

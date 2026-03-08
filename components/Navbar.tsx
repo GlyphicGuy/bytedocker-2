@@ -43,8 +43,8 @@ export default function Navbar() {
 
         <div className="hidden lg:flex items-center gap-10">
           {[
-            { name: "For Startups", href: "#startups" },
-            { name: "For Developers", href: "#developers" },
+            { name: "For Startups", href: "/for-startups" },
+            { name: "For Developers", href: "/for-developers" },
             { name: "Our Process", href: "#process" },
             { name: "About Us", href: "#about" }
           ].map((item) => (
