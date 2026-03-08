@@ -2,6 +2,12 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,8 +48,46 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden lg:flex items-center gap-10">
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-[13px] font-bold text-slate-800 hover:text-blue-600 transition-colors uppercase tracking-wider flex items-center gap-1 focus:outline-none cursor-pointer">
+              For Startups
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56 mt-2 font-ibmplexmonomedium p-2 bg-white/95 backdrop-blur-sm border-slate-100 shadow-xl rounded-xl">
+              <Link href="/rate-calculator" className="w-full block">
+                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                  <span className="font-bold text-slate-900">Rate Calculator</span>
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/how-we-vet-developers" className="w-full block">
+                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                  <span className="font-bold text-slate-900">How we vet developers</span>
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/faq-for-companies" className="w-full block">
+                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                  <span className="font-bold text-slate-900">FAQ for companies</span>
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/case-studies" className="w-full block">
+                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                  <span className="font-bold text-slate-900">Case studies</span>
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/testimonials" className="w-full block">
+                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                  <span className="font-bold text-slate-900">Testimonials</span>
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/about-us" className="w-full block">
+                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                  <span className="font-bold text-slate-900">About us</span>
+                </DropdownMenuItem>
+              </Link>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           {[
-            { name: "For Startups", href: "/for-startups" },
             { name: "For Developers", href: "/for-developers" },
             { name: "Our Process", href: "#process" },
             { name: "About Us", href: "#about" }
