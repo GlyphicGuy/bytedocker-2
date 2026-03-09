@@ -1,5 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
+import FastProcessSteps from "@/app/how-we-vet-developers/components/FastProcessSteps";
+import TopVettedDevelopers from "@/app/how-we-vet-developers/components/TopVettedDevelopers";
+import TechInterviewsTimeline from "@/app/how-we-vet-developers/components/TechInterviewsTimeline";
+import TooStrict from "@/app/how-we-vet-developers/components/TooStrict";
+import MeetTheTeam from "@/app/how-we-vet-developers/components/MeetTheTeam";
+import WhyChooseUs from "@/app/how-we-vet-developers/components/WhyChooseUs";
+import Testimonials from "@/app/how-we-vet-developers/components/Testimonials";
+import VettingCTA from "@/app/how-we-vet-developers/components/VettingCTA";
+import SectionDivider from "@/components/SectionDivider";
 
 export const metadata = {
     title: "How We Vet Developers | Bytedocker Talent",
@@ -51,22 +61,41 @@ export default function VettingProcessPage() {
                             </p>
                         </div>
 
-                        <div className="w-full md:w-[500px] aspect-square md:aspect-[4/3] bg-white border border-slate-100 rounded-3xl flex flex-col items-center justify-center border-dashed relative overflow-hidden shadow-xl p-8 group">
-                            {/* Illustration Space */}
-                            <div className="absolute inset-0 bg-slate-50/50 backdrop-blur-xl opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
-                                <p className="font-ibmplexmonomedium text-xs uppercase tracking-widest bg-white px-4 py-2 rounded-lg shadow-sm">Drop SVG here</p>
-                            </div>
-                            <svg className="w-32 h-32 text-slate-200 mb-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                <polyline points="2 17 12 22 22 17"></polyline>
-                                <polyline points="2 12 12 17 22 12"></polyline>
-                            </svg>
-                            <div className="text-slate-400 font-ibmplexmonomedium text-sm flex flex-col items-center text-center">
-                                [ Vetting / Analysis SVG Illustration ]
-                            </div>
+                        <div className="w-full md:w-[500px] aspect-square md:aspect-[4/3] flex items-center justify-center border-dashed relative overflow-hidden group">
+                            <Image
+                                src="/undraw_remote-meeting_kqj0.svg"
+                                alt="Vetting Process"
+                                width={500}
+                                height={500}
+                                className="w-full h-full"
+                            />
                         </div>
                     </div>
                 </section>
+
+                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
+                <FastProcessSteps />
+
+                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-50" />
+                <TopVettedDevelopers />
+
+                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-slate-900" />
+                <TechInterviewsTimeline />
+
+                <SectionDivider bgTop="bg-slate-900" fillBottom="fill-slate-50" />
+                <TooStrict />
+
+                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
+                <MeetTheTeam />
+
+                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-50" />
+                <WhyChooseUs />
+
+                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
+                <Testimonials />
+
+                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-900" />
+                <VettingCTA />
             </main>
             <Footer />
         </div>

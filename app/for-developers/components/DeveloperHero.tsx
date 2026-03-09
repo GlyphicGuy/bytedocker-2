@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function DeveloperHero() {
     const stats = [
@@ -33,34 +34,47 @@ export default function DeveloperHero() {
             </div>
 
             <div className="container mx-auto max-w-[1400px] relative z-10">
-                <div className="max-w-4xl">
-                    <div className="inline-flex items-center gap-3 mb-8 bg-white/50 backdrop-blur-sm p-2 pr-6 rounded-full border border-slate-200">
-                        <span className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-[10px] font-bold">BY</span>
-                        <span className="text-xs font-ibmplexmonomedium uppercase text-slate-500">
-                            Join the Elite Engineering Network
-                        </span>
+                <div className="flex flex-col md:flex-row gap-16 items-center mb-0">
+                    <div className="flex-1 max-w-2xl">
+                        <div className="inline-flex items-center gap-3 mb-8 bg-white/50 backdrop-blur-sm p-2 pr-6 rounded-full border border-slate-200">
+                            <span className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-[10px] font-bold">BY</span>
+                            <span className="text-xs font-ibmplexmonomedium uppercase text-slate-500">
+                                Join the Elite Engineering Network
+                            </span>
+                        </div>
+
+                        <h1 className="text-6xl md:text-8xl font-light tracking-tight text-slate-900 leading-[0.92] mb-10 font-dmsans">
+                            The Remote Career <br />
+                            <span className="font-medium">You&apos;ve Earned.</span>
+                        </h1>
+
+                        <p className="text-slate-500 text-lg md:text-2xl mb-12 max-w-2xl leading-relaxed font-dmsans">
+                            Skip the job boards. We match you with high-growth US startups that respect your craft and pay what you&apos;re worth.
+                        </p>
+
+                        <div className="flex flex-wrap items-center gap-4">
+                            <Link href="#apply">
+                                <button className="bg-black text-white text-xs font-ibmplexmonomedium px-10 py-5 rounded-xl uppercase hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 shadow-xl cursor-pointer">
+                                    Apply to Join
+                                </button>
+                            </Link>
+                            <Link href="#process">
+                                <button className="bg-white text-black border border-slate-200 text-xs font-ibmplexmonomedium px-10 py-5 rounded-xl uppercase hover:bg-slate-50 transition-all hover:scale-105 active:scale-95 shadow-sm cursor-pointer">
+                                    Our Vetting Process
+                                </button>
+                            </Link>
+                        </div>
                     </div>
 
-                    <h1 className="text-6xl md:text-8xl font-light tracking-tight text-slate-900 leading-[0.92] mb-10 font-dmsans">
-                        The Remote Career <br />
-                        <span className="font-medium">You&apos;ve Earned.</span>
-                    </h1>
-
-                    <p className="text-slate-500 text-lg md:text-2xl mb-12 max-w-2xl leading-relaxed font-dmsans">
-                        Skip the job boards. We match you with high-growth US startups that respect your craft and pay what you&apos;re worth.
-                    </p>
-
-                    <div className="flex flex-wrap items-center gap-4 mb-20">
-                        <Link href="#apply">
-                            <button className="bg-black text-white text-xs font-ibmplexmonomedium px-10 py-5 rounded-xl uppercase hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 shadow-xl cursor-pointer">
-                                Apply to Join
-                            </button>
-                        </Link>
-                        <Link href="#process">
-                            <button className="bg-white text-black border border-slate-200 text-xs font-ibmplexmonomedium px-10 py-5 rounded-xl uppercase hover:bg-slate-50 transition-all hover:scale-105 active:scale-95 shadow-sm cursor-pointer">
-                                Our Vetting Process
-                            </button>
-                        </Link>
+                    <div className="hidden md:flex w-full md:w-[480px] shrink-0 items-center justify-center">
+                        <Image
+                            src="/undraw_career-progress_vfq5.svg"
+                            alt="Developer Career Illustration"
+                            width={480}
+                            height={400}
+                            className="w-full h-auto"
+                            priority
+                        />
                     </div>
                 </div>
 

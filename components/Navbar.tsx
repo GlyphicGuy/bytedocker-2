@@ -42,7 +42,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 max-w-[1400px] flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <span className="text-xl font-black uppercase tracking-widest text-black">
+          <span className="text-xl font-montserrat font-bold tracking-tighter uppercase text-black">
             bytedocker
           </span>
         </Link>
@@ -50,7 +50,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-10">
           <DropdownMenu>
             <DropdownMenuTrigger className="text-[13px] font-bold text-slate-800 hover:text-blue-600 transition-colors uppercase tracking-wider flex items-center gap-1 focus:outline-none cursor-pointer">
-              For Startups
+              For Companies
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56 mt-2 font-ibmplexmonomedium p-2 bg-white/95 backdrop-blur-sm border-slate-100 shadow-xl rounded-xl">
@@ -87,10 +87,43 @@ export default function Navbar() {
             </DropdownMenuContent>
           </DropdownMenu>
 
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-[13px] font-bold text-slate-800 hover:text-blue-600 transition-colors uppercase tracking-wider flex items-center gap-1 focus:outline-none cursor-pointer">
+              Services
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-64 mt-2 font-ibmplexmonomedium p-2 bg-white/95 backdrop-blur-sm border-slate-100 shadow-xl rounded-xl">
+              <Link href="/services/staff-augmentation" className="w-full block">
+                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                  <span className="font-bold text-slate-900">Staff Augmentation</span>
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/services/dedicated-teams" className="w-full block">
+                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                  <span className="font-bold text-slate-900">Dedicated Teams</span>
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/services/tech-consulting" className="w-full block">
+                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                  <span className="font-bold text-slate-900">Tech Consulting</span>
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/services/mvp-development" className="w-full block">
+                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                  <span className="font-bold text-slate-900">MVP Development</span>
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/services/engineering-hiring" className="w-full block">
+                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                  <span className="font-bold text-slate-900">Engineering Hiring</span>
+                </DropdownMenuItem>
+              </Link>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           {[
             { name: "For Developers", href: "/for-developers" },
-            { name: "Our Process", href: "#process" },
-            { name: "About Us", href: "#about" }
+            { name: "About Us", href: "/about-us" }
           ].map((item) => (
             <Link
               key={item.name}
@@ -102,10 +135,17 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
-          <button className="bg-black text-white text-[11px] font-black px-7 py-3 rounded-lg uppercase tracking-widest hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 shadow-md">
-            Hire Now
-          </button>
+        <div className="flex items-center gap-3">
+          <Link href="/find-jobs">
+            <button className="border border-slate-300 text-slate-700 text-[11px] font-black px-6 py-3 rounded-lg uppercase tracking-widest hover:border-slate-500 hover:text-slate-900 transition-all active:scale-95">
+              Find Jobs
+            </button>
+          </Link>
+          <Link href="/hire">
+            <button className="bg-black text-white text-[11px] font-black px-7 py-3 rounded-lg uppercase tracking-widest hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 shadow-md">
+              Hire Now
+            </button>
+          </Link>
         </div>
       </div>
     </nav>
