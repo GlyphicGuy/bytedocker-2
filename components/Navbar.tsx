@@ -93,29 +93,29 @@ export default function Navbar() {
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-64 mt-2 font-ibmplexmonomedium p-2 bg-white/95 backdrop-blur-sm border-slate-100 shadow-xl rounded-xl">
-              <Link href="/services/staff-augmentation" className="w-full block">
+              <Link href="/services/frontend-development" className="w-full block">
                 <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">Staff Augmentation</span>
+                  <span className="font-bold text-slate-900">Frontend Development</span>
                 </DropdownMenuItem>
               </Link>
-              <Link href="/services/dedicated-teams" className="w-full block">
+              <Link href="/services/fullstack-development" className="w-full block">
                 <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">Dedicated Teams</span>
+                  <span className="font-bold text-slate-900">Fullstack Development</span>
                 </DropdownMenuItem>
               </Link>
-              <Link href="/services/tech-consulting" className="w-full block">
+              <Link href="/services/backend-engineering" className="w-full block">
                 <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">Tech Consulting</span>
+                  <span className="font-bold text-slate-900">Backend Engineering</span>
                 </DropdownMenuItem>
               </Link>
-              <Link href="/services/mvp-development" className="w-full block">
+              <Link href="/services/devops-and-cloud" className="w-full block">
                 <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">MVP Development</span>
+                  <span className="font-bold text-slate-900">DevOps &amp; Cloud</span>
                 </DropdownMenuItem>
               </Link>
-              <Link href="/services/engineering-hiring" className="w-full block">
+              <Link href="/services/mobile-engineering" className="w-full block">
                 <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">Engineering Hiring</span>
+                  <span className="font-bold text-slate-900">Mobile Engineering</span>
                 </DropdownMenuItem>
               </Link>
             </DropdownMenuContent>
