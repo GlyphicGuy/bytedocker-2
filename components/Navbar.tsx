@@ -12,6 +12,8 @@ import {
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+  const [isCompaniesOpen, setIsCompaniesOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -48,78 +50,150 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden lg:flex items-center gap-10">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="text-[13px] font-bold text-slate-800 hover:text-blue-600 transition-colors uppercase tracking-wider flex items-center gap-1 focus:outline-none cursor-pointer">
-              For Companies
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56 mt-2 font-ibmplexmonomedium p-2 bg-white/95 backdrop-blur-sm border-slate-100 shadow-xl rounded-xl">
-              <Link href="/rate-calculator" className="w-full block">
-                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">Rate Calculator</span>
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/how-we-vet-developers" className="w-full block">
-                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">How we vet developers</span>
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/faq-for-companies" className="w-full block">
-                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">FAQ for companies</span>
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/case-studies" className="w-full block">
-                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">Case studies</span>
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/testimonials" className="w-full block">
-                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">Testimonials</span>
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/about-us" className="w-full block">
-                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">About us</span>
-                </DropdownMenuItem>
-              </Link>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <div
+            onMouseEnter={() => setIsCompaniesOpen(true)}
+            onMouseLeave={() => setIsCompaniesOpen(false)}
+            className="h-full py-2"
+          >
+            <DropdownMenu open={isCompaniesOpen} onOpenChange={setIsCompaniesOpen}>
+              <DropdownMenuTrigger className="text-[13px] font-bold text-slate-800 hover:text-blue-600 transition-colors uppercase tracking-wider flex items-center gap-1 focus:outline-none cursor-pointer">
+                For Companies
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 mt-2 font-ibmplexmonomedium p-2 bg-white/95 backdrop-blur-sm border-slate-100 shadow-xl rounded-xl">
+                <Link href="/rate-calculator" className="w-full block">
+                  <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                    <span className="font-bold text-slate-900">Rate Calculator</span>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href="/how-we-vet-developers" className="w-full block">
+                  <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                    <span className="font-bold text-slate-900">How we vet developers</span>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href="/faq-for-companies" className="w-full block">
+                  <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                    <span className="font-bold text-slate-900">FAQ for companies</span>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href="/case-studies" className="w-full block">
+                  <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                    <span className="font-bold text-slate-900">Case studies</span>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href="/testimonials" className="w-full block">
+                  <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                    <span className="font-bold text-slate-900">Testimonials</span>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href="/about-us" className="w-full block">
+                  <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
+                    <span className="font-bold text-slate-900">About us</span>
+                  </DropdownMenuItem>
+                </Link>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger className="text-[13px] font-bold text-slate-800 hover:text-blue-600 transition-colors uppercase tracking-wider flex items-center gap-1 focus:outline-none cursor-pointer">
-              Services
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-64 mt-2 font-ibmplexmonomedium p-2 bg-white/95 backdrop-blur-sm border-slate-100 shadow-xl rounded-xl">
-              <Link href="/services/frontend-development" className="w-full block">
-                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">Frontend Development</span>
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/services/fullstack-development" className="w-full block">
-                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">Fullstack Development</span>
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/services/backend-engineering" className="w-full block">
-                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">Backend Engineering</span>
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/services/devops-and-cloud" className="w-full block">
-                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">DevOps &amp; Cloud</span>
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/services/mobile-engineering" className="w-full block">
-                <DropdownMenuItem className="cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-lg p-3">
-                  <span className="font-bold text-slate-900">Mobile Engineering</span>
-                </DropdownMenuItem>
-              </Link>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <div
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+            className="h-full py-2"
+          >
+            <DropdownMenu open={isServicesOpen} onOpenChange={setIsServicesOpen}>
+              <DropdownMenuTrigger className="text-[13px] font-bold text-slate-800 hover:text-blue-600 transition-colors uppercase tracking-wider flex items-center gap-1 focus:outline-none cursor-pointer">
+                Services
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-[calc(100vw-80px)] max-w-[1250px] mt-4 p-0 bg-white/98 backdrop-blur-xl border-slate-100 shadow-2xl rounded-[32px] overflow-hidden" align="center" sideOffset={15}>
+                <div className="p-16">
+                  <div className="grid grid-cols-[250px_1fr] gap-16">
+                    <div className="space-y-4">
+                      <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Hire by role</h3>
+                      <p className="text-xs text-slate-400 uppercase tracking-widest font-ibmplexmonomedium">Tailored recruitment for specific positions</p>
+                    </div>
+                    <div className="grid grid-cols-3 gap-x-12 gap-y-5">
+                      {/* Column 1 */}
+                      <div className="flex flex-col gap-4">
+                        {["Full-stack developers", "Front-end developers", "Back-end developers", "Mobile developers", "Game developers", "DevOps"].map((item) => (
+                          <Link key={item} href={`/services/${item.toLowerCase().replace(/ /g, "-")}`} className="flex items-center gap-2 group whitespace-nowrap">
+                            <span className="text-slate-400 text-[13px] font-medium transition-colors group-hover:text-slate-900">Hire</span>
+                            <span className="text-slate-800 text-[14px] font-bold transition-transform group-hover:translate-x-1">{item}</span>
+                          </Link>
+                        ))}
+                      </div>
+                      {/* Column 2 */}
+                      <div className="flex flex-col gap-4">
+                        {["Cloud engineers", "AI engineers", "Machine Learning engineers", "Data analysts", "Data engineers", "Data scientists"].map((item) => (
+                          <Link key={item} href={`/services/${item.toLowerCase().replace(/ /g, "-")}`} className="flex items-center gap-2 group whitespace-nowrap">
+                            <span className="text-slate-400 text-[13px] font-medium transition-colors group-hover:text-slate-900">Hire</span>
+                            <span className="text-slate-800 text-[14px] font-bold transition-transform group-hover:translate-x-1">{item}</span>
+                          </Link>
+                        ))}
+                      </div>
+                      {/* Column 3 */}
+                      <div className="flex flex-col gap-4">
+                        {["Blockchain developers", "Automation QA engineers"].map((item) => (
+                          <Link key={item} href={`/services/${item.toLowerCase().replace(/ /g, "-")}`} className="flex items-center gap-2 group whitespace-nowrap">
+                            <span className="text-slate-400 text-[13px] font-medium transition-colors group-hover:text-slate-900">Hire</span>
+                            <span className="text-slate-800 text-[14px] font-bold transition-transform group-hover:translate-x-1">{item}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-[250px_1fr] gap-16 mt-20">
+                    <div className="space-y-4">
+                      <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Hire by skill</h3>
+                      <p className="text-xs text-slate-400 uppercase tracking-widest font-ibmplexmonomedium">Find experts in your stack</p>
+                    </div>
+                    <div className="grid grid-cols-3 gap-x-12 gap-y-5">
+                      {/* Column 1 */}
+                      <div className="flex flex-col gap-4">
+                        {["React developers", "Angular developers", "Node.js developers", "JavaScript developers", "Next.js developers", "Vue.js developers", "Three.js developers"].map((item) => (
+                          <Link key={item} href={`/services/${item.toLowerCase().replace(/ /g, "-")}`} className="flex items-center gap-2 group whitespace-nowrap">
+                            <span className="text-slate-400 text-[13px] font-medium transition-colors group-hover:text-slate-900">Hire</span>
+                            <span className="text-slate-800 text-[14px] font-bold transition-transform group-hover:translate-x-1">{item}</span>
+                          </Link>
+                        ))}
+                      </div>
+                      {/* Column 2 */}
+                      <div className="flex flex-col gap-4">
+                        {["Python developers", "Unity developers", "Django developers", "Java developers", "Ruby on Rails developers", "PHP developers", "Laravel developers"].map((item) => (
+                          <Link key={item} href={`/services/${item.toLowerCase().replace(/ /g, "-")}`} className="flex items-center gap-2 group whitespace-nowrap">
+                            <span className="text-slate-400 text-[13px] font-medium transition-colors group-hover:text-slate-900">Hire</span>
+                            <span className="text-slate-800 text-[14px] font-bold transition-transform group-hover:translate-x-1">{item}</span>
+                          </Link>
+                        ))}
+                      </div>
+                      {/* Column 3 */}
+                      <div className="flex flex-col gap-4">
+                        {[".NET developers", "ASP.NET developers", "iOS developers", "Flutter developers", "React Native developers", "Android developers"].map((item) => (
+                          <Link key={item} href={`/services/${item.toLowerCase().replace(/ /g, "-")}`} className="flex items-center gap-2 group whitespace-nowrap">
+                            <span className="text-slate-400 text-[13px] font-medium transition-colors group-hover:text-slate-900">Hire</span>
+                            <span className="text-slate-800 text-[14px] font-bold transition-transform group-hover:translate-x-1">{item}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-20 border-t border-slate-100 pt-10 flex justify-between items-center">
+                    <div className="flex gap-4">
+                      <p className="text-[11px] text-slate-400 font-ibmplexmonomedium uppercase tracking-widest">( 04 ) Specialized Engineering Services</p>
+                    </div>
+                    <Link href="/services">
+                      <button className="flex items-center gap-3 px-8 py-3.5 bg-black text-white rounded-xl text-[11px] font-black uppercase tracking-widest hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 shadow-lg group">
+                        View all services
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
 
           {[
             { name: "For Developers", href: "/for-developers" },

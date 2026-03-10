@@ -1,7 +1,7 @@
 "use client";
 
 export default function LogoCloud() {
-    const filters = ["ALL", "FINTECH", "SAAS", "AI", "INFRA", "WEB3"];
+    const filters = ["FINTECH", "SAAS", "AI", "INFRA", "WEB3"];
 
     const logos = [
         { name: "Google", color: "text-black" },
@@ -30,7 +30,7 @@ export default function LogoCloud() {
                             {filters.map((filter, idx) => (
                                 <button
                                     key={filter}
-                                    className={`text-[10px] uppercase tracking-widest transition-colors ${idx === 0 ? "text-slate-900 underline underline-offset-8 decoration-1" : "text-slate-400 hover:text-slate-900"}`}
+                                    className={`text-[10px] uppercase tracking-widest transition-colors text-slate-400 hover:text-slate-900`}
                                 >
                                     {filter}
                                 </button>
@@ -40,8 +40,7 @@ export default function LogoCloud() {
 
                     <div className="max-w-md">
                         <p className="text-[11px] md:text-xs leading-relaxed text-slate-900 uppercase tracking-widest">
-                            Bytedocker Talent is proud to partner with high-growth startups which have ambitious goals and are passionate about building elite engineering cultures.
-                        </p>
+                            The vetted developers in our network have previously worked at high-growth startups and leading technology companies, bringing proven experience in building scalable products and strong engineering cultures.                        </p>
                     </div>
                 </div>
 

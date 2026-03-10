@@ -165,7 +165,7 @@ export default function Features() {
                                 Deploy Speed. <br /> SCALE FASTER.
                             </h3>
                             <p className="text-lg text-slate-500 leading-relaxed font-dmsans max-w-lg">
-                                Once vetted, we match you with 1-3 hand-picked engineers who are ready to integrate. Risk-free 2-week trial included.
+                                Once vetted, we match you with 1-3 hand-picked engineers who are ready to integrate.
                             </p>
                             <div className="space-y-4">
                                 <div className="flex items-center gap-6 p-4 border border-slate-100 rounded-2xl hover:bg-slate-50 transition-colors cursor-default group">

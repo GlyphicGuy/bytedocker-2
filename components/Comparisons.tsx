@@ -21,13 +21,13 @@ export default function Comparisons() {
             id: "02",
             title: "Deploy 10x faster with our pre-vetted network.",
             subtitle: "Technical Vetting",
-            description: "Only the top 5% of engineers pass our rigorous multi-stage coding and communication assessment.",
+            description: "Only the top 1% of engineers pass our rigorous multi-stage coding and communication assessment.",
         },
         {
             id: "03",
             title: "Scale your engineering team with zero risk.",
             subtitle: "Team Integration",
-            description: "Start with a 2-week risk-free trial to ensure the perfect fit for your remote workflows.",
+            description: "Start with a trial to ensure the perfect fit for your remote workflows.",
         },
         {
             id: "04",
