@@ -15,6 +15,7 @@ export default function Navbar() {
   const [isCompaniesOpen, setIsCompaniesOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -255,9 +256,82 @@ export default function Navbar() {
           </div>
 
           <div className="space-y-4">
-            <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Hire</p>
-            <div className="flex flex-col gap-6">
-              <Link onClick={() => setIsMobileMenuOpen(false)} href="/services" className="text-2xl font-bold text-slate-900">Services</Link>
+            <button
+              onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+              className="w-full flex items-center justify-between text-left"
+            >
+              <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Services</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={`transition-transform duration-300 ${isMobileServicesOpen ? "rotate-180" : ""}`}
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+
+            <div className={`space-y-6 overflow-hidden transition-all duration-500 ease-in-out ${isMobileServicesOpen ? "max-h-[3000px] opacity-100 mt-6" : "max-h-0 opacity-0"}`}>
+              <div className="space-y-6 pl-4 border-l border-slate-100">
+                <div className="space-y-4">
+                  <p className="text-[10px] uppercase tracking-widest text-slate-400 font-ibmplexmonomedium">Hire by role</p>
+                  <div className="flex flex-col gap-4">
+                    {["Full-stack developers", "Front-end developers", "Back-end developers", "Mobile developers", "Game developers", "DevOps", "Cloud engineers", "AI engineers", "Machine Learning engineers", "Data analysts", "Data engineers", "Data scientists", "Blockchain developers", "Automation QA engineers"].map((item) => (
+                      <Link
+                        key={item}
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsMobileServicesOpen(false);
+                        }}
+                        href={`/services/${item.toLowerCase().replace(/ /g, "-")}`}
+                        className="text-lg font-bold text-slate-900"
+                      >
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-4 mt-8">
+                  <p className="text-[10px] uppercase tracking-widest text-slate-400 font-ibmplexmonomedium">Hire by skill</p>
+                  <div className="flex flex-col gap-4">
+                    {["React developers", "Angular developers", "Node.js developers", "JavaScript developers", "Next.js developers", "Vue.js developers", "Three.js developers", "Python developers", "Unity developers", "Django developers", "Java developers", "Ruby on Rails developers", "PHP developers", "Laravel developers", ".NET developers", "ASP.NET developers", "iOS developers", "Flutter developers", "React Native developers", "Android developers"].map((item) => (
+                      <Link
+                        key={item}
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsMobileServicesOpen(false);
+                        }}
+                        href={`/services/${item.toLowerCase().replace(/ /g, "-")}`}
+                        className="text-lg font-bold text-slate-900"
+                      >
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                <Link
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setIsMobileServicesOpen(false);
+                  }}
+                  href="/services"
+                  className="flex items-center gap-2 text-sm font-black uppercase tracking-widest text-black pt-4"
+                >
+                  View all services
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-6 pt-6">
               <Link onClick={() => setIsMobileMenuOpen(false)} href="/how-we-vet-developers" className="text-2xl font-bold text-slate-900">How we vet</Link>
               <Link onClick={() => setIsMobileMenuOpen(false)} href="/rate-calculator" className="text-2xl font-bold text-slate-900">Rate Calculator</Link>
             </div>
