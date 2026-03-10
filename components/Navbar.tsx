@@ -41,8 +41,9 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 w-full z-50 font-ibmplexmonomedium transition-all duration-500 ease-in-out bg-slate-50/90 backdrop-blur-md py-4 ${isScrolled ? "shadow-sm border-b border-slate-100" : ""
-          } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+        className={`fixed top-0 left-0 right-0 w-full z-50 font-ibmplexmonomedium transition-all duration-500 ease-in-out py-4 ${isMobileMenuOpen ? "bg-white" : "bg-slate-50/90 backdrop-blur-md"
+          } ${isScrolled ? "shadow-sm border-b border-slate-100" : ""} ${isVisible ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         <div className="container mx-auto px-6 max-w-[1400px] flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group shrink-0">
@@ -240,34 +241,34 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu Overlay */}
-        <div className={`lg:hidden fixed inset-0 top-[72px] bg-white z-40 transition-transform duration-500 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
-          <div className="flex flex-col p-8 gap-8 overflow-y-auto max-h-[calc(100vh-72px)]">
-            <div className="space-y-4">
-              <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Main</p>
-              <div className="flex flex-col gap-6">
-                <Link onClick={() => setIsMobileMenuOpen(false)} href="/for-developers" className="text-2xl font-bold text-slate-900">For Developers</Link>
-                <Link onClick={() => setIsMobileMenuOpen(false)} href="/about-us" className="text-2xl font-bold text-slate-900">About Us</Link>
-                <Link onClick={() => setIsMobileMenuOpen(false)} href="/case-studies" className="text-2xl font-bold text-slate-900">Case Studies</Link>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Hire</p>
-              <div className="flex flex-col gap-6">
-                <Link onClick={() => setIsMobileMenuOpen(false)} href="/services" className="text-2xl font-bold text-slate-900">Services</Link>
-                <Link onClick={() => setIsMobileMenuOpen(false)} href="/how-we-vet-developers" className="text-2xl font-bold text-slate-900">How we vet</Link>
-                <Link onClick={() => setIsMobileMenuOpen(false)} href="/rate-calculator" className="text-2xl font-bold text-slate-900">Rate Calculator</Link>
-              </div>
-            </div>
-
-            <div className="mt-auto space-y-4 pt-8">
-              <Link onClick={() => setIsMobileMenuOpen(false)} href="/hire" className="block w-full text-center bg-black text-white p-4 rounded-xl font-black uppercase tracking-widest text-sm transition-transform active:scale-95">Hire Now</Link>
-              <Link onClick={() => setIsMobileMenuOpen(false)} href="/find-jobs" className="block w-full text-center border border-slate-200 text-slate-900 p-4 rounded-xl font-black uppercase tracking-widest text-sm transition-transform active:scale-95">Find Jobs</Link>
+      </nav>
+      {/* Mobile Menu Overlay */}
+      <div className={`lg:hidden fixed inset-0 top-[72px] bg-white z-50 transition-transform duration-500 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
+        <div className="flex flex-col p-8 gap-8 overflow-y-auto max-h-[calc(100vh-72px)]">
+          <div className="space-y-4">
+            <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Main</p>
+            <div className="flex flex-col gap-6">
+              <Link onClick={() => setIsMobileMenuOpen(false)} href="/for-developers" className="text-2xl font-bold text-slate-900">For Developers</Link>
+              <Link onClick={() => setIsMobileMenuOpen(false)} href="/about-us" className="text-2xl font-bold text-slate-900">About Us</Link>
+              <Link onClick={() => setIsMobileMenuOpen(false)} href="/case-studies" className="text-2xl font-bold text-slate-900">Case Studies</Link>
             </div>
           </div>
+
+          <div className="space-y-4">
+            <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Hire</p>
+            <div className="flex flex-col gap-6">
+              <Link onClick={() => setIsMobileMenuOpen(false)} href="/services" className="text-2xl font-bold text-slate-900">Services</Link>
+              <Link onClick={() => setIsMobileMenuOpen(false)} href="/how-we-vet-developers" className="text-2xl font-bold text-slate-900">How we vet</Link>
+              <Link onClick={() => setIsMobileMenuOpen(false)} href="/rate-calculator" className="text-2xl font-bold text-slate-900">Rate Calculator</Link>
+            </div>
+          </div>
+
+          <div className="mt-auto space-y-4 pt-8">
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/hire" className="block w-full text-center bg-black text-white p-4 rounded-xl font-black uppercase tracking-widest text-sm transition-transform active:scale-95">Hire Now</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/find-jobs" className="block w-full text-center border border-slate-200 text-slate-900 p-4 rounded-xl font-black uppercase tracking-widest text-sm transition-transform active:scale-95">Find Jobs</Link>
+          </div>
         </div>
-      </nav>
+      </div>
     </>
   );
 }
