@@ -266,7 +266,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <main className="grow pt-20">
 
                 {/* Hero */}
-                <section className="relative px-6 pt-32 pb-24 bg-slate-50 overflow-hidden border-b border-slate-100 min-h-[60vh] flex items-center">
+                <section className="relative px-4 md:px-6 pt-24 md:pt-32 pb-16 md:pb-24 bg-slate-50 overflow-hidden border-b border-slate-100 min-h-[50vh] md:min-h-[60vh] flex items-center">
                     <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
                         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                             <defs>
@@ -284,33 +284,33 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                         <div className="absolute right-1/4 top-0 h-full border-l border-dashed border-black/5"></div>
                     </div>
 
-                    <div className="container mx-auto max-w-[1400px] relative z-10 flex flex-col md:flex-row gap-16 items-center">
-                        <div className="flex-1 max-w-2xl">
+                    <div className="container mx-auto max-w-[1400px] relative z-10 flex flex-col md:flex-row gap-12 md:gap-16 items-center">
+                        <div className="flex-1 max-w-2xl text-center md:text-left">
                             <div className="inline-flex items-center gap-3 mb-8 bg-white/50 backdrop-blur-sm p-2 pr-6 rounded-full border border-slate-200">
                                 <span className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-[10px] font-bold">BY</span>
                                 <span className="text-xs font-ibmplexmonomedium uppercase text-slate-500">{service.badge}</span>
                             </div>
-                            <h1 className="text-6xl md:text-8xl font-light tracking-tight text-slate-900 leading-[0.92] mb-8 font-dmsans">
+                            <h1 className="text-4xl sm:text-5xl md:text-8xl font-light tracking-tight text-slate-900 leading-[1.1] md:leading-[0.92] mb-6 md:mb-8 font-dmsans">
                                 {service.headline[0]} <br />
                                 <span className="font-medium">{service.headline[1]}</span>
                             </h1>
-                            <p className="text-slate-500 text-lg md:text-xl max-w-xl leading-relaxed font-dmsans mb-10">
+                            <p className="text-slate-500 text-base md:text-xl max-w-xl mx-auto md:mx-0 leading-relaxed font-dmsans mb-10">
                                 {service.description}
                             </p>
                             <a href="#contact">
-                                <button className="bg-black hover:bg-slate-800 text-white font-medium text-base px-8 py-4 rounded-xl transition-colors font-dmsans">
-                                    Get started
+                                <button className="bg-black text-white text-[12px] md:text-[13px] font-black px-10 py-4 rounded-xl uppercase tracking-widest hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 shadow-lg font-ibmplexmonomedium">
+                                    Hire Now
                                 </button>
                             </a>
                         </div>
 
-                        <div className="hidden md:flex w-full md:w-[480px] shrink-0 items-center justify-center">
+                        <div className="flex w-full md:w-[480px] shrink-0 items-center justify-center -mb-20 md:mb-0">
                             <Image
                                 src={service.image}
                                 alt={`${service.label} Illustration`}
                                 width={480}
                                 height={400}
-                                className="w-full h-auto"
+                                className="w-[80%] md:w-full h-auto"
                                 priority
                             />
                         </div>
@@ -318,10 +318,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </section>
 
                 {/* Snapshot band */}
-                <section className="bg-slate-50 border-b border-slate-100 px-6 py-10 font-dmsans">
-                    <div className="container mx-auto max-w-[1200px] flex flex-col lg:flex-row items-start justify-between gap-10">
+                <section className="bg-slate-50 border-b border-slate-100 px-6 py-12 md:py-16 font-dmsans">
+                    <div className="container mx-auto max-w-[1200px] flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12 text-center lg:text-left">
                         <div className="max-w-md space-y-3">
-                            <p className="text-xs font-ibmplexmonomedium uppercase tracking-[0.2em] text-slate-400">
+                            <p className="text-[10px] md:text-xs font-ibmplexmonomedium uppercase tracking-[0.2em] text-slate-400">
                                 At a glance
                             </p>
                             <p className="text-lg text-slate-600 leading-relaxed">
@@ -329,16 +329,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                                 instead of chaotic.
                             </p>
                         </div>
-                        <div className="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
                             {service.stats.map(([val, lbl], i) => (
                                 <div
                                     key={`${val}-${i}`}
-                                    className="border border-slate-200 rounded-2xl bg-white/60 backdrop-blur-sm px-5 py-4 flex flex-col justify-between"
+                                    className="border border-slate-200 rounded-2xl bg-white/60 backdrop-blur-sm px-6 py-5 flex flex-col justify-between"
                                 >
-                                    <span className="text-xs font-ibmplexmonomedium uppercase tracking-[0.18em] text-slate-400 mb-2">
+                                    <span className="text-[10px] font-ibmplexmonomedium uppercase tracking-[0.18em] text-slate-400 mb-3">
                                         {lbl}
                                     </span>
-                                    <span className="text-2xl font-dmsans font-medium text-slate-900">{val}</span>
+                                    <span className="text-2xl md:text-3xl font-dmsans font-medium text-slate-900">{val}</span>
                                 </div>
                             ))}
                         </div>

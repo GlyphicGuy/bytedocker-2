@@ -46,13 +46,13 @@ export default function Features() {
             </div>
 
             {/* Sticky Sub-header */}
-            <div className="sticky top-0 z-40 bg-slate-50 border-b border-slate-100 font-ibmplexmonomedium">
-                <div className="container mx-auto px-6">
-                    <div className="flex items-stretch">
+            <div className="sticky top-0 z-40 bg-slate-50/90 backdrop-blur-md border-b border-slate-100 font-ibmplexmonomedium">
+                <div className="container mx-auto px-6 overflow-x-auto no-scrollbar">
+                    <div className="flex items-stretch min-w-[400px] md:min-w-0">
                         {steps.map((step) => (
                             <div
                                 key={step.id}
-                                className={`flex-1 py-8 border-t-4 transition-all duration-500 cursor-pointer ${activeSection === step.id
+                                className={`flex-1 py-6 md:py-8 border-t-4 transition-all duration-500 cursor-pointer ${activeSection === step.id
                                     ? "border-slate-950 opacity-100"
                                     : "border-slate-50 opacity-30 hover:opacity-100"
                                     }`}
@@ -60,8 +60,8 @@ export default function Features() {
                                     document.getElementById(step.id)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                                 }}
                             >
-                                <h4 className="text-xs md:text-sm font-black uppercase tracking-widest text-slate-900 mb-1">{step.title}</h4>
-                                <p className="text-[9px] md:text-[10px] uppercase font-bold text-slate-500 tracking-wider">
+                                <h4 className="text-[10px] md:text-sm font-black uppercase tracking-widest text-slate-900 mb-1">{step.title}</h4>
+                                <p className="text-[8px] md:text-[10px] uppercase font-bold text-slate-500 tracking-wider">
                                     {step.subtitle}
                                 </p>
                             </div>
@@ -152,9 +152,11 @@ export default function Features() {
                                     </div>
                                 ))}
                             </div>
-                            <button className="bg-slate-950 text-white font-black uppercase tracking-widest text-[10px] py-4 px-10 rounded-xl hover:scale-105 active:scale-95 transition-all">
-                                View Vetting Process
-                            </button>
+                            <Link href="/hire">
+                                <button className="bg-slate-950 text-white font-ibmplexmonomedium uppercase tracking-widest text-[10px] py-4 px-10 rounded-xl hover:scale-105 active:scale-95 transition-all">
+                                    Hire Now
+                                </button>
+                            </Link>
                         </div>
                     </div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 
 const services = [
@@ -42,137 +42,132 @@ const services = [
 ];
 
 export default function Services() {
-    const containerRef = useRef<HTMLDivElement>(null);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
     const boxRefs = useRef<(HTMLDivElement | null)[]>([]);
 
     useEffect(() => {
         const boxes = boxRefs.current;
+        const isMobile = window.innerWidth < 1024;
 
         boxes.forEach((box, index) => {
             if (!box) return;
 
             const content = box.querySelector(".service-content");
             const brief = box.querySelector(".service-brief");
+            const isActive = activeIndex === index;
 
-            // Set initial state
-            gsap.set(content, { opacity: 0, scale: 0.95 });
-
-            const onEnter = () => {
-                // Animate flex-grow for all boxes
-                boxes.forEach((b, i) => {
-                    gsap.to(b, {
-                        flex: i === index ? 6 : 1,
-                        duration: 0.7,
-                        ease: "power4.inOut"
-                    });
+            // Desktop Animation (Flex Width)
+            if (!isMobile) {
+                gsap.to(box, {
+                    flex: isActive ? 6 : 1,
+                    duration: 0.7,
+                    ease: "power4.inOut"
                 });
 
-                // Animate content for target box
                 gsap.to(content, {
-                    opacity: 1,
-                    scale: 1,
+                    opacity: isActive ? 1 : 0,
+                    x: isActive ? 0 : 20,
                     duration: 0.5,
-                    delay: 0.2,
-                    ease: "power3.out"
+                    ease: "power3.out",
+                    display: isActive ? "flex" : "none"
                 });
 
-                // Hide the vertical brief title
                 gsap.to(brief, {
-                    opacity: 0,
+                    opacity: isActive ? 0 : 1,
                     duration: 0.3
                 });
-            };
-
-            const onLeave = () => {
-                // Reset everything
-                boxes.forEach((b) => {
-                    gsap.to(b, {
-                        flex: 1,
-                        duration: 0.7,
-                        ease: "power4.inOut"
-                    });
+            }
+            // Mobile Animation (Vertical Height)
+            else {
+                gsap.to(box, {
+                    height: isActive ? "auto" : "100px",
+                    duration: 0.6,
+                    ease: "power3.inOut"
                 });
 
                 gsap.to(content, {
-                    opacity: 0,
-                    scale: 0.95,
-                    duration: 0.3,
-                    ease: "power3.in"
+                    opacity: isActive ? 1 : 0,
+                    y: isActive ? 0 : 10,
+                    height: isActive ? "auto" : 0,
+                    duration: 0.5,
+                    ease: "power3.out",
+                    display: isActive ? "flex" : "none",
+                    marginTop: isActive ? "20px" : "0"
                 });
 
-                gsap.to(brief, {
-                    opacity: 1,
-                    duration: 0.4,
-                    delay: 0.2
-                });
-            };
-
-            box.addEventListener("mouseenter", onEnter);
-            box.addEventListener("mouseleave", onLeave);
-
-            return () => {
-                box.removeEventListener("mouseenter", onEnter);
-                box.removeEventListener("mouseleave", onLeave);
-            };
+                const arrow = brief?.querySelector(".mobile-arrow");
+                if (arrow) {
+                    gsap.to(arrow, {
+                        rotate: isActive ? 180 : 0,
+                        duration: 0.4
+                    });
+                }
+            }
         });
-    }, []);
+    }, [activeIndex]);
 
     return (
         <section className="bg-slate-50 border-t border-slate-200">
             {/* Header Area */}
-            <div className="container mx-auto pt-24 pb-12">
-                <div className="text-center mb-24 space-y-6">
-                    <span className="text-xs font-ibmplexmonomedium uppercase block">
-                        Bytedocker / 24-5
+            <div className="container mx-auto pt-20 pb-10">
+                <div className="text-center mb-16 space-y-4">
+                    <span className="text-[10px] md:text-xs font-ibmplexmonomedium uppercase tracking-widest text-slate-400 block">
+                        Our Capabilities / 05
                     </span>
                     <h2 className="text-4xl md:text-6xl font-medium text-slate-900 font-dmsans tracking-tight uppercase leading-none">
-                        Services
+                        Our Services
                     </h2>
                 </div>
             </div>
 
             {/* Interaction Area */}
-            <div ref={containerRef} className="flex h-[420px] border-y border-black overflow-hidden bg-white">
+            <div className="flex flex-col lg:flex-row lg:h-[480px] border-y border-black overflow-hidden bg-white">
                 {services.map((service, idx) => (
                     <div
                         key={service.id}
                         ref={(el) => { boxRefs.current[idx] = el; }}
-                        className={`relative flex-1 border-r border-black last:border-r-0 cursor-pointer overflow-hidden transition-colors hover:bg-slate-50 group flex flex-col`}
+                        onMouseEnter={() => window.innerWidth >= 1024 && setActiveIndex(idx)}
+                        onMouseLeave={() => window.innerWidth >= 1024 && setActiveIndex(null)}
+                        onClick={() => window.innerWidth < 1024 && setActiveIndex(activeIndex === idx ? null : idx)}
+                        className={`relative flex-1 border-b lg:border-b-0 lg:border-r border-black last:border-r-0 cursor-pointer overflow-hidden transition-colors hover:bg-slate-50 flex flex-col`}
                     >
-                        {/* Brief State - Vertical Title */}
-                        <div className="service-brief absolute top-12 left-1/2 -translate-x-1/2 h-full flex flex-col items-center">
-                            <span className="text-[10px] font-ibmplexmonomedium text-slate-400 mb-8 whitespace-nowrap">
+                        {/* Brief State */}
+                        <div className="service-brief relative lg:absolute top-0 lg:top-12 left-0 lg:left-1/2 lg:-translate-x-1/2 h-full flex flex-row lg:flex-col items-center p-8 lg:p-0 justify-between lg:justify-start">
+                            <span className="text-[10px] font-ibmplexmonomedium text-slate-400 lg:mb-8 whitespace-nowrap">
                                 {service.id}
                             </span>
-                            <div className="rotate-90 origin-center translate-y-24">
-                                <h3 className="text-xl font-bold text-slate-900 whitespace-nowrap uppercase tracking-tighter font-dmsans">
+                            <div className="lg:rotate-90 lg:origin-center lg:translate-y-28">
+                                <h3 className="text-lg md:text-xl font-black text-slate-900 whitespace-nowrap uppercase tracking-tighter font-dmsans">
                                     {service.title}
                                 </h3>
+                            </div>
+                            <div className="lg:hidden mobile-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                             </div>
                         </div>
 
                         {/* Expanded Content State */}
-                        <div className="service-content absolute inset-0 p-12 flex flex-col pointer-events-none opacity-0">
-                            <div className="flex justify-between items-start mb-8">
-                                <span className="text-5xl font-bold text-slate-900 font-dmsans tracking-tighter">
-                                    {service.id}
+                        <div className="service-content relative lg:absolute inset-0 p-8 md:p-12 flex flex-col opacity-0">
+                            <div className="flex justify-between items-start mb-6 md:mb-10">
+                                <span className="text-4xl md:text-6xl font-black text-slate-900 font-dmsans tracking-tighter">
+                                    {service.id.split('-')[1]}
                                 </span>
                                 <div className="text-right">
-                                    <h3 className="text-4xl font-bold text-slate-900 uppercase tracking-tighter mb-2 font-dmsans">
+                                    <h3 className="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter mb-2 font-dmsans">
                                         // {service.title}
                                     </h3>
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-2 gap-12 grow">
-                                <div className="space-y-4">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:grow">
+                                <div className="space-y-3 md:space-y-4">
                                     {service.capabilities.map((cap) => (
-                                        <div key={cap} className="text-lg text-slate-900 font-medium font-dmsans uppercase">
+                                        <div key={cap} className="text-base md:text-lg text-slate-900 font-bold font-dmsans uppercase tracking-tight">
                                             / {cap}
                                         </div>
                                     ))}
                                 </div>
-                                <div className="relative rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 h-64">
+                                <div className="hidden lg:block relative rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 h-64 border border-black/5">
                                     <img
                                         src={service.image}
                                         alt={service.title}
@@ -181,8 +176,8 @@ export default function Services() {
                                 </div>
                             </div>
 
-                            <div className="mt-auto border-t border-slate-200 pt-8">
-                                <p className="text-xs font-ibmplexmonomedium text-slate-500 uppercase tracking-widest max-w-sm leading-relaxed">
+                            <div className="mt-8 md:mt-12 lg:mt-auto border-t border-slate-100 pt-6 md:pt-8">
+                                <p className="text-[10px] md:text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest max-w-sm leading-relaxed">
                                     {service.description}
                                 </p>
                             </div>
