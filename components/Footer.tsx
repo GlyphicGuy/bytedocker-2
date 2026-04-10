@@ -116,9 +116,9 @@ export default function Footer() {
                         <div className="space-y-1 pt-2">
                             <p className="opacity-40 text-[10px] uppercase tracking-widest font-ibmplexmonomedium mb-3">HQ</p>
                             <address className="not-italic opacity-60 leading-relaxed text-xs md:text-sm">
-                                bytedocker HQ,<br />
-                                12th Floor, Technopark,<br />
-                                Bangalore, KA, 560103
+                                Level 15, UB City<br/>
+                                Concorde Towers, Vittal Mallya Rd<br/>
+                                Bengaluru, Karnataka 560001<br/>
                             </address>
                         </div>
                     </div>
