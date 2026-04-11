@@ -9,20 +9,20 @@ export default function CompanyTimeline() {
     ];
 
     return (
-        <section className="bg-slate-50 py-24 px-6 font-dmsans">
+        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
-                <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-4 tracking-tight">
+                <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-4 tracking-tight font-family:var(--font-grotesk) uppercase">
                     A decade of doing it right
                 </h2>
-                <p className="text-slate-500 text-lg mb-16 max-w-lg">
+                <p className="text-[#4a4a4a] text-lg mb-16 max-w-lg">
                     Ten years of refining our process, one placement at a time.
                 </p>
 
-                <div className="max-w-3xl divide-y divide-slate-200 border-t border-slate-200">
+                <div className="max-w-3xl divide-y-[3px] divide-[#0a0a0a] border-t-[3px] border-[#0a0a0a]">
                     {milestones.map((m, i) => (
-                        <div key={i} className="py-8 flex gap-10 items-start">
-                            <span className="text-sm font-ibmplexmonomedium text-slate-400 shrink-0 w-12">{m.year}</span>
-                            <p className="text-slate-700 font-dmsans font-medium text-lg leading-snug">{m.event}</p>
+                        <div key={i} className="py-8 px-8 flex gap-10 items-start bg-[#ffffff] border-[3px] border-[#0a0a0a] border-t-0 mb-3 shadow-neo hover:shadow-neo-lg transition-all">
+                            <span className="text-sm font-ibmplexmonomedium text-[#ff8c00] shrink-0 w-12 font-black uppercase">{m.year}</span>
+                            <p className="text-[#0a0a0a] font-dmsans font-black text-lg leading-snug">{m.event}</p>
                         </div>
                     ))}
                 </div>

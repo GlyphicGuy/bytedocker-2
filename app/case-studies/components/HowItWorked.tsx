@@ -23,22 +23,22 @@ export default function HowItWorked() {
     ];
 
     return (
-        <section className="bg-white py-24 px-6 font-dmsans border-t border-slate-100">
+        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans border-t-[3px] border-[#0a0a0a]">
             <div className="container mx-auto max-w-[1200px]">
-                <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-4 tracking-tight">
+                <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-4 tracking-tight font-family:var(--font-grotesk) uppercase">
                     How it worked
                 </h2>
-                <p className="text-slate-500 text-lg mb-16 max-w-lg">
+                <p className="text-[#4a4a4a] text-lg mb-16 max-w-lg">
                     The same repeatable process behind every successful placement in our case studies.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-slate-200 rounded-2xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-slate-200">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-[3px] border-[#0a0a0a] rounded-none overflow-hidden divide-y-[3px] md:divide-y-0 md:divide-x-[3px] divide-[#0a0a0a] shadow-neo bg-[#ffffff]">
                     {steps.map((step) => (
                         <div key={step.num} className="p-8 flex flex-col gap-5">
-                            <span className="text-sm font-ibmplexmonomedium text-slate-400">{step.num}</span>
+                            <span className="text-sm font-ibmplexmonomedium text-[#ff8c00] font-black">{step.num}</span>
                             <div>
-                                <h3 className="text-lg font-dmsans font-medium text-slate-900 mb-2">{step.title}</h3>
-                                <p className="text-slate-500 text-sm leading-relaxed">{step.description}</p>
+                                <h3 className="text-lg font-black text-[#0a0a0a] mb-2 uppercase">{step.title}</h3>
+                                <p className="text-[#4a4a4a] text-sm leading-relaxed">{step.description}</p>
                             </div>
                         </div>
                     ))}

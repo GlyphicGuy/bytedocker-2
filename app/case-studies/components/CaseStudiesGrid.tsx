@@ -57,40 +57,40 @@ export default function CaseStudiesGrid() {
     ];
 
     return (
-        <section className="bg-white py-24 px-6 font-dmsans">
+        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans border-y-[3px] border-[#0a0a0a]">
             <div className="container mx-auto max-w-[1200px]">
-                <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-4 tracking-tight">
+                <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-4 tracking-tight font-family:var(--font-grotesk) uppercase">
                     Client case studies
                 </h2>
-                <p className="text-slate-500 text-lg mb-16 max-w-xl">
+                <p className="text-[#4a4a4a] text-lg mb-16 max-w-xl">
                     Real placements, real results. Here&apos;s what our clients achieved after hiring through Bytedocker.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-slate-200 rounded-2xl overflow-hidden divide-y md:divide-y-0 [&>*:nth-child(n+4)]:md:border-t [&>*:nth-child(n+4)]:border-slate-200">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-[3px] border-[#0a0a0a] rounded-none overflow-hidden divide-y-[3px] md:divide-y-0 [&>*:nth-child(n+4)]:md:border-t-[3px] [&>*:nth-child(n+4)]:border-[#0a0a0a] shadow-neo bg-[#ffffff] [&>*:nth-child(n+4)]:md:border-[#0a0a0a]">
                     {cases.map((c, i) => (
                         <div
                             key={c.num}
-                            className={`p-8 flex flex-col gap-6 ${i % 3 !== 2 ? "lg:border-r border-slate-200" : ""} ${i % 2 !== 1 ? "md:border-r lg:border-r-0 border-slate-200" : ""}`}
+                            className={`p-8 flex flex-col gap-6 ${i % 3 !== 2 ? "lg:border-r-[3px] lg:border-[#0a0a0a]" : ""} ${i % 2 !== 1 ? "md:border-r-[3px] lg:border-r-0 border-[#0a0a0a]" : ""}`}
                         >
                             <div className="flex items-start justify-between">
-                                <span className="text-sm font-ibmplexmonomedium text-slate-400">{c.num}</span>
-                                <span className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest border border-slate-200 px-2.5 py-1 rounded-full">{c.industry}</span>
+                                <span className="text-sm font-ibmplexmonomedium text-[#ff8c00] font-black">{c.num}</span>
+                                <span className="text-xs font-ibmplexmonomedium text-[#0a0a0a] uppercase tracking-widest border-[2px] border-[#0a0a0a] px-2.5 py-1 rounded-none font-black">{c.industry}</span>
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-dmsans font-medium text-slate-900 mb-1">{c.company}</h3>
-                                <p className="text-sm text-slate-500 font-ibmplexmonomedium">{c.role}</p>
+                                <h3 className="text-xl font-black text-[#0a0a0a] mb-1 uppercase">{c.company}</h3>
+                                <p className="text-sm text-[#4a4a4a] font-ibmplexmonomedium">{c.role}</p>
                             </div>
 
-                            <p className="text-slate-600 text-sm leading-relaxed flex-1">{c.result}</p>
+                            <p className="text-[#4a4a4a] text-sm leading-relaxed flex-1">{c.result}</p>
 
-                            <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div className="flex items-center justify-between pt-4 border-t-[2px] border-[#0a0a0a]">
                                 <div className="flex flex-wrap gap-1.5">
                                     {c.tags.map(tag => (
-                                        <span key={tag} className="text-xs font-ibmplexmonomedium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded">{tag}</span>
+                                        <span key={tag} className="text-xs font-ibmplexmonomedium text-[#0a0a0a] bg-[#f5f0e8] border-[2px] border-[#0a0a0a] px-2 py-0.5 rounded-none font-black">{tag}</span>
                                     ))}
                                 </div>
-                                <span className="text-xs font-ibmplexmonomedium text-slate-400 shrink-0 ml-4">{c.timeToHire}</span>
+                                <span className="text-xs font-ibmplexmonomedium text-[#4a4a4a] shrink-0 ml-4 font-black">{c.timeToHire}</span>
                             </div>
                         </div>
                     ))}

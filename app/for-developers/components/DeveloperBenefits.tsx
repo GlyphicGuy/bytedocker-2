@@ -47,19 +47,19 @@ export default function DeveloperBenefits() {
     ];
 
     return (
-        <section className="py-24 bg-white relative">
+        <section className="py-24 bg-[#f5f0e8] relative border-y-[3px] border-[#0a0a0a]">
             <div className="container mx-auto px-6 max-w-[1400px]">
                 <div className="mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 font-dmsans">
+                    <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] font-family:var(--font-grotesk) uppercase">
                         How to get into Bytedocker?
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-16 border-t md:border-t-0 border-slate-100">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-16 border-t-[3px] md:border-t-0 border-[#0a0a0a]">
                     {steps.map((step, idx) => (
                         <div
                             key={idx}
-                            className={`flex flex-col relative py-12 lg:py-0 border-b lg:border-b-0 border-slate-100 ${idx !== 3 ? 'lg:border-r lg:border-slate-100' : ''
+                            className={`flex flex-col relative py-12 lg:py-0 border-b-[3px] lg:border-b-0 border-[#0a0a0a] ${idx !== 3 ? 'lg:border-r-[3px] lg:border-[#0a0a0a]' : ''
                                 } ${idx === 0 ? 'lg:pr-10' : ''
                                 } ${idx > 0 && idx < 3 ? 'lg:px-10' : ''
                                 } ${idx === 3 ? 'lg:pl-10' : ''
@@ -67,22 +67,22 @@ export default function DeveloperBenefits() {
                         >
                             <div className="relative mb-10 inline-block w-fit">
                                 {/* Background container for the icon */}
-                                <div className="w-[84px] h-[84px] bg-slate-100 rounded-full flex items-center justify-center ml-8 text-slate-900 shadow-sm relative z-0">
+                                <div className="w-[84px] h-[84px] bg-[#ffffff] rounded-none flex items-center justify-center ml-8 text-[#0a0a0a] shadow-neo relative z-0 border-[3px] border-[#0a0a0a]">
                                     {step.icon}
                                 </div>
                                 {/* Huge overlapping number */}
-                                <div className="absolute -left-2 -top-4 text-[96px] font-black text-slate-900 leading-none font-dmsans z-10 select-none drop-shadow-sm">
+                                <div className="absolute -left-2 -top-4 text-[96px] font-black text-[#ff8c00] leading-none font-family:var(--font-grotesk) z-10 select-none drop-shadow-sm">
                                     {step.number}
                                 </div>
                             </div>
 
-                            <h3 className="text-2xl font-bold text-slate-900 font-dmsans tracking-tight mb-4 pr-4 leading-[1.2]">
+                            <h3 className="text-2xl font-black text-[#0a0a0a] font-dmsans tracking-tight mb-4 pr-4 leading-[1.2] uppercase">
                                 {step.title}
                             </h3>
-                            <p className="text-slate-600 text-[15px] leading-relaxed font-dmsans">
+                            <p className="text-[#4a4a4a] text-[15px] leading-relaxed font-dmsans">
                                 {step.title === "Technical interview" ? (
                                     <>
-                                        The final reckoning—a tech interview by one of Bytedocker best devs. More on what to expect <Link href="#process" className="text-blue-600 underline underline-offset-2 hover:text-blue-800 transition-colors">here</Link>.
+                                        The final reckoning—a tech interview by one of Bytedocker best devs. More on what to expect <Link href="#process" className="text-[#0a0a0a] underline underline-offset-2 hover:text-[#ff8c00] transition-colors font-black">here</Link>.
                                     </>
                                 ) : (
                                     step.description

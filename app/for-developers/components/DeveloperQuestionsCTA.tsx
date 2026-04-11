@@ -5,7 +5,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export default function DeveloperQuestionsCTA() {
     return (
-        <section className="bg-slate-100 relative overflow-hidden py-24 border-y border-slate-200">
+        <section className="bg-[#f5f0e8] relative overflow-hidden py-24 border-y-[3px] border-[#0a0a0a]">
             {/* Technical grid background */}
             <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -21,13 +21,13 @@ export default function DeveloperQuestionsCTA() {
             <div className="container mx-auto px-6 max-w-[1400px] relative z-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
                     {/* Content Column */}
-                    <div className="lg:w-3/5 space-y-8 text-slate-900">
-                        <h2 className="text-4xl md:text-5xl font-bold font-dmsans leading-tight">
+                    <div className="lg:w-3/5 space-y-8 text-[#0a0a0a]">
+                        <h2 className="text-4xl md:text-5xl font-black font-family:var(--font-grotesk) leading-tight uppercase">
                             Got any questions still? <br />
                             Get precise answers.
                         </h2>
 
-                        <div className="space-y-4 max-w-2xl font-dmsans text-[17px] leading-relaxed text-slate-700">
+                        <div className="space-y-4 max-w-2xl font-dmsans text-[17px] leading-relaxed text-[#4a4a4a]">
                             <p>
                                 If you still have doubts about top-tier remote engineering and joining our network, we can answer all your questions—just contact us.
                             </p>
@@ -38,7 +38,7 @@ export default function DeveloperQuestionsCTA() {
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4">
                             <Link href="/for-developers#faq">
-                                <button className="w-full sm:w-auto bg-transparent border-2 border-slate-900 text-slate-900 uppercase font-ibmplexmonomedium text-xs px-8 py-4 rounded-xl hover:bg-slate-200 transition-all flex items-center justify-center gap-3">
+                                <button className="w-full sm:w-auto bg-[#ffffff] border-[3px] border-[#0a0a0a] text-[#0a0a0a] uppercase font-ibmplexmonomedium text-xs px-8 py-4 rounded-none hover:shadow-neo-lg transition-all flex items-center justify-center gap-3 shadow-neo active:translate-y-0.5">
                                     View all FAQs
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -47,7 +47,7 @@ export default function DeveloperQuestionsCTA() {
                             </Link>
 
                             <Link href="#apply">
-                                <button className="w-full sm:w-auto bg-slate-900 border-2 border-slate-900 text-white uppercase font-ibmplexmonomedium text-xs px-8 py-4 rounded-xl hover:bg-slate-800 transition-all flex items-center justify-center gap-3 group">
+                                <button className="w-full sm:w-auto bg-[#0a0a0a] border-[3px] border-[#0a0a0a] text-[#f5f0e8] uppercase font-ibmplexmonomedium text-xs px-8 py-4 rounded-none hover:shadow-neo-lg transition-all flex items-center justify-center gap-3 group shadow-neo active:translate-y-0.5">
                                     Apply and ask in person
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 group-hover:translate-x-1 transition-transform">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />

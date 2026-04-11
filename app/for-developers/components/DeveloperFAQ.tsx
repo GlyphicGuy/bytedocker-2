@@ -25,12 +25,12 @@ export default function DeveloperFAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-24 bg-slate-50 border-t border-slate-100">
+        <section className="py-24 bg-[#f5f0e8] border-t-[3px] border-[#0a0a0a]">
             <div className="container mx-auto px-6 max-w-[1400px]">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
                     <div className="md:col-span-4">
-                        <span className="text-[10px] font-ibmplexmonomedium uppercase tracking-[0.3em] text-slate-400 mb-4 block">Knowledge Base</span>
-                        <h2 className="text-4xl font-medium text-slate-900 font-dmsans">
+                        <span className="text-[10px] font-ibmplexmonomedium uppercase tracking-[0.3em] text-[#4a4a4a] mb-4 block">Knowledge Base</span>
+                        <h2 className="text-4xl font-black text-[#0a0a0a] font-family:var(--font-grotesk) uppercase">
                             Frequently <br /> Asked Questions
                         </h2>
                     </div>
@@ -39,23 +39,26 @@ export default function DeveloperFAQ() {
                         {faqs.map((faq, idx) => (
                             <div
                                 key={idx}
-                                className="bg-white rounded-xl border border-slate-100 overflow-hidden transition-all hover:border-slate-300"
+                                className={`bg-[#ffffff] rounded-none overflow-hidden transition-all shadow-neo ${openIndex === idx
+                                        ? "shadow-neo-lg border-[3px] border-[#0a0a0a] border-l-[6px] border-l-[#ff8c00]"
+                                        : "border-[3px] border-[#0a0a0a]"
+                                    }`}
                             >
                                 <button
                                     onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                                     className="w-full px-8 py-6 text-left flex justify-between items-center group"
                                 >
-                                    <span className="text-lg font-bold text-slate-900 uppercase tracking-tight font-dmsans group-hover:text-blue-600 transition-colors">
+                                    <span className="text-lg font-black text-[#0a0a0a] uppercase tracking-tight font-dmsans group-hover:text-[#ff8c00] transition-colors">
                                         {faq.question}
                                     </span>
-                                    <span className={`text-2xl transition-transform duration-300 ${openIndex === idx ? "rotate-45" : ""}`}>
+                                    <span className={`text-2xl transition-transform duration-300 text-[#0a0a0a] font-black ${openIndex === idx ? "rotate-45" : ""}`}>
                                         +
                                     </span>
                                 </button>
                                 <div
                                     className={`px-8 transition-all duration-300 ease-in-out ${openIndex === idx ? "max-h-48 pb-6 opacity-100" : "max-h-0 opacity-0"}`}
                                 >
-                                    <p className="text-slate-500 font-dmsans leading-relaxed">
+                                    <p className="text-[#4a4a4a] font-dmsans leading-relaxed border-t-[2px] border-[#0a0a0a] pt-4">
                                         {faq.answer}
                                     </p>
                                 </div>

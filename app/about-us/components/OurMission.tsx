@@ -23,25 +23,25 @@ export default function OurMission() {
     ];
 
     return (
-        <section className="bg-white py-24 px-6 font-dmsans">
+        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans border-t-[3px] border-[#0a0a0a]">
             <div className="container mx-auto max-w-[1200px]">
                 <div className="flex flex-col lg:flex-row gap-16 items-start mb-20">
                     <div className="lg:w-[420px] shrink-0">
-                        <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-5 tracking-tight leading-tight">
+                        <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-5 tracking-tight leading-tight font-family:var(--font-grotesk) uppercase">
                             Our mission
                         </h2>
-                        <p className="text-slate-500 text-lg leading-relaxed">
+                        <p className="text-[#4a4a4a] text-lg leading-relaxed">
                             Connect the most talented, overlooked engineers in the world with companies building category-defining products — without the overhead of a traditional agency.
                         </p>
                     </div>
 
-                    <div className="flex-1 border border-slate-200 rounded-2xl overflow-hidden divide-y divide-slate-200">
+                    <div className="flex-1 border-[3px] border-[#0a0a0a] rounded-none overflow-hidden divide-y-[3px] divide-[#0a0a0a] bg-[#ffffff] shadow-neo">
                         {values.map((v) => (
-                            <div key={v.num} className="p-8 flex gap-8 items-start">
-                                <span className="text-sm font-ibmplexmonomedium text-slate-400 pt-0.5 shrink-0 w-8">{v.num}</span>
+                            <div key={v.num} className="p-8 flex gap-8 items-start border-l-[4px] border-l-[#ff8c00]">
+                                <span className="text-sm font-ibmplexmonomedium text-[#ff8c00] pt-0.5 shrink-0 w-8 font-black uppercase">{v.num}</span>
                                 <div>
-                                    <h3 className="text-lg font-dmsans font-medium text-slate-900 mb-2">{v.title}</h3>
-                                    <p className="text-slate-500 text-sm leading-relaxed">{v.description}</p>
+                                    <h3 className="text-lg font-dmsans font-black text-[#0a0a0a] mb-2 uppercase">{v.title}</h3>
+                                    <p className="text-[#4a4a4a] text-sm leading-relaxed">{v.description}</p>
                                 </div>
                             </div>
                         ))}

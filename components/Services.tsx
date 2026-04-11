@@ -54,52 +54,62 @@ export default function Services() {
 
             const content = box.querySelector(".service-content");
             const brief = box.querySelector(".service-brief");
+            const image = box.querySelector(".service-image");
             const isActive = activeIndex === index;
 
             // Desktop Animation (Flex Width)
             if (!isMobile) {
                 gsap.to(box, {
                     flex: isActive ? 6 : 1,
-                    duration: 0.7,
-                    ease: "power4.inOut"
+                    duration: 0.8,
+                    ease: "power3.inOut"
                 });
 
                 gsap.to(content, {
                     opacity: isActive ? 1 : 0,
-                    x: isActive ? 0 : 20,
-                    duration: 0.5,
-                    ease: "power3.out",
-                    display: isActive ? "flex" : "none"
+                    x: isActive ? 0 : 30,
+                    duration: 0.6,
+                    ease: "power2.out",
+                    display: isActive ? "flex" : "none",
+                    delay: isActive ? 0.1 : 0
                 });
 
                 gsap.to(brief, {
                     opacity: isActive ? 0 : 1,
-                    duration: 0.3
+                    duration: 0.4,
+                    ease: "power2.inOut"
+                });
+
+                gsap.to(image, {
+                    filter: isActive ? "grayscale(0%)" : "grayscale(100%)",
+                    duration: 0.8,
+                    ease: "power2.out"
                 });
             }
             // Mobile Animation (Vertical Height)
             else {
                 gsap.to(box, {
-                    height: isActive ? "auto" : "100px",
+                    height: isActive ? "auto" : "80px",
                     duration: 0.6,
                     ease: "power3.inOut"
                 });
 
                 gsap.to(content, {
                     opacity: isActive ? 1 : 0,
-                    y: isActive ? 0 : 10,
+                    y: isActive ? 0 : 15,
                     height: isActive ? "auto" : 0,
                     duration: 0.5,
-                    ease: "power3.out",
+                    ease: "power2.out",
                     display: isActive ? "flex" : "none",
-                    marginTop: isActive ? "20px" : "0"
+                    marginTop: isActive ? "16px" : "0"
                 });
 
                 const arrow = brief?.querySelector(".mobile-arrow");
                 if (arrow) {
                     gsap.to(arrow, {
                         rotate: isActive ? 180 : 0,
-                        duration: 0.4
+                        duration: 0.4,
+                        ease: "power2.inOut"
                     });
                 }
             }
@@ -109,19 +119,22 @@ export default function Services() {
     return (
         <section className="bg-[#f5f0e8] border-t-[3px] border-[#0a0a0a]">
             {/* Header Area */}
-            <div className="container mx-auto pt-20 pb-10">
-                <div className="text-center mb-16 space-y-4">
+            <div className="container mx-auto pt-24 pb-16 px-6">
+                <div className="text-center mb-20 space-y-6">
                     <span className="text-[10px] md:text-xs font-ibmplexmonomedium uppercase tracking-widest text-[#ff8c00] block font-bold">
-                        Our Capabilities / 05
+                        / 05 Our Capabilities
                     </span>
-                    <h2 className="text-4xl md:text-6xl font-bold text-[#0a0a0a] font-family:var(--font-grotesk) tracking-tight uppercase leading-none">
+                    <h2 className="text-4xl md:text-7xl font-bold text-[#0a0a0a] font-family:var(--font-grotesk) tracking-tight uppercase leading-none max-w-3xl mx-auto">
                         Our Services
                     </h2>
+                    <p className="text-sm md:text-base text-[#4a4a4a] font-dmsans max-w-2xl mx-auto leading-relaxed">
+                        Hover over any service to explore our capabilities across all engineering disciplines
+                    </p>
                 </div>
             </div>
 
             {/* Interaction Area */}
-            <div className="flex flex-col lg:flex-row lg:h-[480px] border-y-[4px] border-[#0a0a0a] overflow-hidden bg-[#ffffff] shadow-neo">
+            <div className="flex flex-col lg:flex-row lg:h-[480px] border-y-[4px] border-[#0a0a0a] overflow-hidden bg-[#ffffff] shadow-neo relative">
                 {services.map((service, idx) => (
                     <div
                         key={service.id}
@@ -129,61 +142,64 @@ export default function Services() {
                         onMouseEnter={() => window.innerWidth >= 1024 && setActiveIndex(idx)}
                         onMouseLeave={() => window.innerWidth >= 1024 && setActiveIndex(null)}
                         onClick={() => window.innerWidth < 1024 && setActiveIndex(activeIndex === idx ? null : idx)}
-                        className={`relative flex-1 border-b-[3px] lg:border-b-0 lg:border-r-[3px] border-[#0a0a0a] last:border-r-0 cursor-pointer overflow-hidden transition-colors hover:bg-[#fff8f0] flex flex-col`}
+                        className={`relative flex-1 border-b-[3px] lg:border-b-0 lg:border-r-[3px] border-[#0a0a0a] last:border-r-0 cursor-pointer overflow-hidden transition-colors hover:bg-[#fff8f0] flex flex-col group`}
                     >
                         {/* Brief State */}
-                        <div className="service-brief relative lg:absolute top-0 lg:top-12 left-0 lg:left-1/2 lg:-translate-x-1/2 h-full flex flex-row lg:flex-col items-center p-8 lg:p-0 justify-between lg:justify-start">
-                            <span className="text-[10px] font-ibmplexmonomedium text-[#ff8c00] lg:mb-8 whitespace-nowrap font-bold">
-                                {service.id}
+                        <div className="service-brief relative lg:absolute top-0 lg:top-1/2 lg:-translate-y-1/2 left-0 lg:left-1/2 lg:-translate-x-1/2 w-full h-full lg:w-auto flex flex-row lg:flex-col items-center p-6 lg:p-8 justify-between lg:justify-center lg:gap-8 text-center">
+                            <span className="text-[9px] font-ibmplexmonomedium text-[#ff8c00] font-bold uppercase tracking-widest flex-shrink-0">
+                                {service.id.split('-')[1]}
                             </span>
-                            <div className="lg:rotate-90 lg:origin-center lg:translate-y-28">
-                                <h3 className="text-lg md:text-xl font-black text-[#0a0a0a] whitespace-nowrap uppercase tracking-tighter font-family:var(--font-grotesk)">
+                            <div className="flex-1 lg:flex-none">
+                                <h3
+                                    className="text-base md:text-lg lg:text-xl font-black text-[#0a0a0a] uppercase tracking-tighter font-family:var(--font-grotesk) leading-tight transition-all duration-300"
+                                    style={
+                                        activeIndex !== null && activeIndex !== idx
+                                            ? { writingMode: 'vertical-rl', textOrientation: 'mixed' }
+                                            : {}
+                                    }
+                                >
                                     {service.title}
                                 </h3>
                             </div>
-                            <div className="lg:hidden mobile-arrow">
+                            <div className="lg:hidden mobile-arrow text-[#0a0a0a] flex-shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                             </div>
                         </div>
 
                         {/* Expanded Content State */}
-                        <div className="service-content relative lg:absolute inset-0 p-8 md:p-12 flex flex-col opacity-0">
-                            <div className="flex justify-between items-start mb-6 md:mb-10">
-                                <span className="text-4xl md:text-6xl font-black text-[#ff8c00] font-family:var(--font-grotesk) tracking-tighter">
+                        <div className="service-content relative lg:absolute inset-0 p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col opacity-0 bg-gradient-to-br from-[#ffffff] to-[#fff8f0]">
+                            <div className="flex justify-between items-start mb-8 md:mb-12 gap-6">
+                                <span className="text-5xl md:text-7xl lg:text-8xl font-black text-[#ff8c00] font-family:var(--font-grotesk) tracking-tighter leading-none flex-shrink-0">
                                     {service.id.split('-')[1]}
                                 </span>
-                                <div className="text-right">
-                                    <h3 className="text-2xl md:text-4xl font-black text-[#0a0a0a] uppercase tracking-tighter mb-2 font-family:var(--font-grotesk)">
-                                        // {service.title}
+                                <div className="flex-1 text-right">
+                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#0a0a0a] uppercase tracking-tighter leading-tight font-family:var(--font-grotesk)">
+                                        {service.title}
                                     </h3>
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:grow">
-                                <div className="space-y-3 md:space-y-4">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 flex-1">
+                                <div className="space-y-4 md:space-y-5">
+                                    <div className="text-[9px] font-ibmplexmonomedium text-[#ff8c00] uppercase tracking-widest font-bold mb-4">Capabilities</div>
                                     {service.capabilities.map((cap) => (
-                                        <div key={cap} className="text-base md:text-lg text-[#0a0a0a] font-bold font-dmsans uppercase tracking-tight">
-                                            / {cap}
+                                        <div key={cap} className="flex items-start gap-3">
+                                            <div className="w-1.5 h-1.5 bg-[#ff8c00] rounded-none flex-shrink-0 mt-1.5"></div>
+                                            <span className="text-sm md:text-base text-[#0a0a0a] font-bold font-dmsans uppercase tracking-tight">{cap}</span>
                                         </div>
                                     ))}
                                 </div>
-                                <div className="hidden lg:block relative overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 h-64 border-[3px] border-[#0a0a0a] shadow-neo-sm rounded-none">
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
                             </div>
 
-                            <div className="mt-8 md:mt-12 lg:mt-auto border-t-[3px] border-[#0a0a0a] pt-6 md:pt-8">
-                                <p className="text-[10px] md:text-xs font-ibmplexmonomedium text-[#4a4a4a] uppercase tracking-widest max-w-sm leading-relaxed">
+                            <div className="mt-8 pt-8 md:pt-10 border-t-[3px] border-[#0a0a0a]">
+                                <p className="text-xs md:text-sm font-ibmplexmonomedium text-[#4a4a4a] uppercase tracking-wide max-w-md leading-relaxed">
                                     {service.description}
                                 </p>
                             </div>
                         </div>
                     </div>
                 ))}
+
             </div>
         </section>
     );

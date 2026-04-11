@@ -12,7 +12,7 @@ export default function DeveloperHero() {
     ];
 
     return (
-        <section className="relative px-6 pt-32 pb-24 bg-slate-50 border-b border-slate-100 overflow-hidden">
+        <section className="relative px-6 pt-32 pb-24 bg-[#f5f0e8] border-b-[3px] border-[#0a0a0a] overflow-hidden">
             {/* Technical Stroke Background (Grid) */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -36,30 +36,30 @@ export default function DeveloperHero() {
             <div className="container mx-auto max-w-[1400px] relative z-10">
                 <div className="flex flex-col md:flex-row gap-16 items-center mb-0">
                     <div className="flex-1 max-w-2xl">
-                        <div className="inline-flex items-center gap-3 mb-8 bg-white/50 backdrop-blur-sm p-2 pr-6 rounded-full border border-slate-200">
-                            <span className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-[10px] font-bold">BY</span>
-                            <span className="text-xs font-ibmplexmonomedium uppercase text-slate-500">
+                        <div className="inline-flex items-center gap-3 mb-8 bg-[#ffffff] p-3 pr-6 rounded-none border-[3px] border-[#0a0a0a] shadow-neo">
+                            <span className="w-8 h-8 bg-[#0a0a0a] text-[#f5f0e8] rounded-none flex items-center justify-center text-[10px] font-black font-ibmplexmonomedium uppercase">BY</span>
+                            <span className="text-xs font-ibmplexmonomedium uppercase text-[#4a4a4a]">
                                 Join the Elite Engineering Network
                             </span>
                         </div>
 
-                        <h1 className="text-6xl md:text-8xl font-light tracking-tight text-slate-900 leading-[0.92] mb-10 font-dmsans">
+                        <h1 className="text-6xl md:text-8xl font-black tracking-tight text-[#0a0a0a] leading-[0.92] mb-10 font-family:var(--font-grotesk) uppercase">
                             The Remote Career <br />
-                            <span className="font-medium">You&apos;ve Earned.</span>
+                            You&apos;ve Earned.
                         </h1>
 
-                        <p className="text-slate-500 text-lg md:text-2xl mb-12 max-w-2xl leading-relaxed font-dmsans">
+                        <p className="text-[#4a4a4a] text-lg md:text-2xl mb-12 max-w-2xl leading-relaxed font-dmsans">
                             Skip the job boards. We match you with high-growth US startups that respect your craft and pay what you&apos;re worth.
                         </p>
 
                         <div className="flex flex-wrap items-center gap-4">
                             <Link href="#apply">
-                                <button className="bg-black text-white text-xs font-ibmplexmonomedium px-10 py-5 rounded-xl uppercase hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 shadow-xl cursor-pointer">
+                                <button className="bg-[#0a0a0a] text-[#f5f0e8] text-xs font-ibmplexmonomedium px-10 py-5 rounded-none border-[4px] border-[#0a0a0a] uppercase hover:shadow-neo-lg transition-all shadow-neo active:translate-y-0.5 cursor-pointer">
                                     Apply to Join
                                 </button>
                             </Link>
                             <Link href="#process">
-                                <button className="bg-white text-black border border-slate-200 text-xs font-ibmplexmonomedium px-10 py-5 rounded-xl uppercase hover:bg-slate-50 transition-all hover:scale-105 active:scale-95 shadow-sm cursor-pointer">
+                                <button className="bg-[#f5f0e8] text-[#0a0a0a] border-[4px] border-[#0a0a0a] text-xs font-ibmplexmonomedium px-10 py-5 rounded-none uppercase hover:shadow-neo-lg transition-all shadow-neo active:translate-y-0.5 cursor-pointer">
                                     Our Vetting Process
                                 </button>
                             </Link>
@@ -79,13 +79,13 @@ export default function DeveloperHero() {
                 </div>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-slate-100">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t-[3px] border-[#0a0a0a]">
                     {stats.map((stat, idx) => (
                         <div key={idx} className="space-y-2">
-                            <p className="text-[10px] font-ibmplexmonomedium uppercase tracking-[0.2em] text-slate-400">
+                            <p className="text-[10px] font-ibmplexmonomedium uppercase tracking-[0.2em] text-[#4a4a4a]">
                                 {stat.label}
                             </p>
-                            <p className="text-3xl md:text-4xl font-medium text-slate-900 font-dmsans">
+                            <p className="text-3xl md:text-4xl font-black text-[#ff8c00] font-family:var(--font-grotesk)">
                                 {stat.val}
                             </p>
                         </div>

@@ -21,28 +21,28 @@ export default function ClientTestimonials() {
     ];
 
     return (
-        <section className="bg-slate-50 py-24 px-6 font-dmsans">
+        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-                    <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 tracking-tight max-w-md">
+                    <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] tracking-tight max-w-md font-family:var(--font-grotesk) uppercase">
                         From the clients themselves
                     </h2>
-                    <span className="text-sm font-ibmplexmonomedium text-slate-400 uppercase tracking-widest">4.9 / 5 rating</span>
+                    <span className="text-sm font-ibmplexmonomedium text-[#4a4a4a] uppercase tracking-widest font-black">4.9 / 5 rating</span>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 border border-slate-200 rounded-2xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-slate-200">
+                <div className="grid grid-cols-1 md:grid-cols-3 border-[3px] border-[#0a0a0a] rounded-none overflow-hidden divide-y-[3px] md:divide-y-0 md:divide-x-[3px] divide-[#0a0a0a] shadow-neo bg-[#ffffff]">
                     {testimonials.map((t, i) => (
-                        <div key={i} className="p-8 flex flex-col justify-between gap-8">
-                            <p className="text-slate-600 leading-relaxed text-base">
+                        <div key={i} className="p-8 flex flex-col justify-between gap-8 border-l-[6px] border-l-[#ff8c00]">
+                            <p className="text-[#4a4a4a] leading-relaxed text-base">
                                 &ldquo;{t.quote}&rdquo;
                             </p>
                             <div className="flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-xs font-ibmplexmonomedium text-slate-500 shrink-0">
+                                <div className="w-9 h-9 rounded-none bg-[#ff8c00] border-[2px] border-[#0a0a0a] flex items-center justify-center text-xs font-ibmplexmonomedium text-[#ffffff] shrink-0 font-black">
                                     {t.initials}
                                 </div>
                                 <div>
-                                    <p className="font-dmsans font-medium text-slate-900 text-sm">{t.name}</p>
-                                    <p className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest mt-0.5">{t.role}</p>
+                                    <p className="font-dmsans font-black text-[#0a0a0a] text-sm">{t.name}</p>
+                                    <p className="text-xs font-ibmplexmonomedium text-[#4a4a4a] uppercase tracking-widest mt-0.5">{t.role}</p>
                                 </div>
                             </div>
                         </div>
