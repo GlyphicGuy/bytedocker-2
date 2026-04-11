@@ -107,21 +107,21 @@ export default function Services() {
     }, [activeIndex]);
 
     return (
-        <section className="bg-slate-50 border-t border-slate-200">
+        <section className="bg-[#f5f0e8] border-t-[3px] border-[#0a0a0a]">
             {/* Header Area */}
             <div className="container mx-auto pt-20 pb-10">
                 <div className="text-center mb-16 space-y-4">
-                    <span className="text-[10px] md:text-xs font-ibmplexmonomedium uppercase tracking-widest text-slate-400 block">
+                    <span className="text-[10px] md:text-xs font-ibmplexmonomedium uppercase tracking-widest text-[#ff8c00] block font-bold">
                         Our Capabilities / 05
                     </span>
-                    <h2 className="text-4xl md:text-6xl font-medium text-slate-900 font-dmsans tracking-tight uppercase leading-none">
+                    <h2 className="text-4xl md:text-6xl font-bold text-[#0a0a0a] font-family:var(--font-grotesk) tracking-tight uppercase leading-none">
                         Our Services
                     </h2>
                 </div>
             </div>
 
             {/* Interaction Area */}
-            <div className="flex flex-col lg:flex-row lg:h-[480px] border-y border-black overflow-hidden bg-white">
+            <div className="flex flex-col lg:flex-row lg:h-[480px] border-y-[4px] border-[#0a0a0a] overflow-hidden bg-[#ffffff] shadow-neo">
                 {services.map((service, idx) => (
                     <div
                         key={service.id}
@@ -129,15 +129,15 @@ export default function Services() {
                         onMouseEnter={() => window.innerWidth >= 1024 && setActiveIndex(idx)}
                         onMouseLeave={() => window.innerWidth >= 1024 && setActiveIndex(null)}
                         onClick={() => window.innerWidth < 1024 && setActiveIndex(activeIndex === idx ? null : idx)}
-                        className={`relative flex-1 border-b lg:border-b-0 lg:border-r border-black last:border-r-0 cursor-pointer overflow-hidden transition-colors hover:bg-slate-50 flex flex-col`}
+                        className={`relative flex-1 border-b-[3px] lg:border-b-0 lg:border-r-[3px] border-[#0a0a0a] last:border-r-0 cursor-pointer overflow-hidden transition-colors hover:bg-[#fff8f0] flex flex-col`}
                     >
                         {/* Brief State */}
                         <div className="service-brief relative lg:absolute top-0 lg:top-12 left-0 lg:left-1/2 lg:-translate-x-1/2 h-full flex flex-row lg:flex-col items-center p-8 lg:p-0 justify-between lg:justify-start">
-                            <span className="text-[10px] font-ibmplexmonomedium text-slate-400 lg:mb-8 whitespace-nowrap">
+                            <span className="text-[10px] font-ibmplexmonomedium text-[#ff8c00] lg:mb-8 whitespace-nowrap font-bold">
                                 {service.id}
                             </span>
                             <div className="lg:rotate-90 lg:origin-center lg:translate-y-28">
-                                <h3 className="text-lg md:text-xl font-black text-slate-900 whitespace-nowrap uppercase tracking-tighter font-dmsans">
+                                <h3 className="text-lg md:text-xl font-black text-[#0a0a0a] whitespace-nowrap uppercase tracking-tighter font-family:var(--font-grotesk)">
                                     {service.title}
                                 </h3>
                             </div>
@@ -149,11 +149,11 @@ export default function Services() {
                         {/* Expanded Content State */}
                         <div className="service-content relative lg:absolute inset-0 p-8 md:p-12 flex flex-col opacity-0">
                             <div className="flex justify-between items-start mb-6 md:mb-10">
-                                <span className="text-4xl md:text-6xl font-black text-slate-900 font-dmsans tracking-tighter">
+                                <span className="text-4xl md:text-6xl font-black text-[#ff8c00] font-family:var(--font-grotesk) tracking-tighter">
                                     {service.id.split('-')[1]}
                                 </span>
                                 <div className="text-right">
-                                    <h3 className="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter mb-2 font-dmsans">
+                                    <h3 className="text-2xl md:text-4xl font-black text-[#0a0a0a] uppercase tracking-tighter mb-2 font-family:var(--font-grotesk)">
                                         // {service.title}
                                     </h3>
                                 </div>
@@ -162,12 +162,12 @@ export default function Services() {
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:grow">
                                 <div className="space-y-3 md:space-y-4">
                                     {service.capabilities.map((cap) => (
-                                        <div key={cap} className="text-base md:text-lg text-slate-900 font-bold font-dmsans uppercase tracking-tight">
+                                        <div key={cap} className="text-base md:text-lg text-[#0a0a0a] font-bold font-dmsans uppercase tracking-tight">
                                             / {cap}
                                         </div>
                                     ))}
                                 </div>
-                                <div className="hidden lg:block relative rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 h-64 border border-black/5">
+                                <div className="hidden lg:block relative overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 h-64 border-[3px] border-[#0a0a0a] shadow-neo-sm rounded-none">
                                     <img
                                         src={service.image}
                                         alt={service.title}
@@ -176,8 +176,8 @@ export default function Services() {
                                 </div>
                             </div>
 
-                            <div className="mt-8 md:mt-12 lg:mt-auto border-t border-slate-100 pt-6 md:pt-8">
-                                <p className="text-[10px] md:text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest max-w-sm leading-relaxed">
+                            <div className="mt-8 md:mt-12 lg:mt-auto border-t-[3px] border-[#0a0a0a] pt-6 md:pt-8">
+                                <p className="text-[10px] md:text-xs font-ibmplexmonomedium text-[#4a4a4a] uppercase tracking-widest max-w-sm leading-relaxed">
                                     {service.description}
                                 </p>
                             </div>

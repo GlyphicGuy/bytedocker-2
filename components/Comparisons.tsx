@@ -60,40 +60,40 @@ export default function Comparisons() {
     }, []);
 
     return (
-        <section ref={containerRef} id="how-it-works" className="relative bg-white">
+        <section ref={containerRef} id="how-it-works" className="relative bg-[#f5f0e8]">
             <div className="flex flex-col">
                 {steps.map((step, idx) => (
                     <div
                         key={idx}
                         ref={(el) => { cardsRef.current[idx] = el; }}
-                        className="h-dvh w-full relative flex items-center justify-center overflow-hidden border-b border-slate-100 bg-white"
+                        className="h-dvh w-full relative flex items-center justify-center overflow-hidden border-b-[3px] border-[#0a0a0a] bg-[#f5f0e8]"
                         style={{ zIndex: idx + 1 }}
                     >
-                        {/* Technical Stroke Background (Grid) - Solid Stroke */}
+                        {/* Technical Stroke Background (Dots Pattern) */}
                         <div className="absolute inset-0 pointer-events-none">
                             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
-                                    <pattern id={`grid-${idx}`} width="40" height="40" patternUnits="userSpaceOnUse">
-                                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" strokeWidth="1" />
+                                    <pattern id={`dots-${idx}`} x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+                                        <circle cx="15" cy="15" r="2" fill="#d4cfc4" />
                                     </pattern>
                                 </defs>
-                                <rect width="100%" height="100%" fill={`url(#grid-${idx})`} />
+                                <rect width="100%" height="100%" fill={`url(#dots-${idx})`} />
                             </svg>
                         </div>
 
                         {/* Dashed Line Accents - Solid Stroke */}
                         <div className="absolute inset-0 pointer-events-none">
-                            <div className="absolute top-1/4 left-0 w-full border-t border-dashed border-slate-200/50"></div>
-                            <div className="absolute bottom-1/4 left-0 w-full border-t border-dashed border-slate-200/50"></div>
-                            <div className="absolute left-[15%] md:left-1/4 top-0 h-full border-l border-dashed border-slate-200/50"></div>
-                            <div className="absolute right-[15%] md:right-1/4 top-0 h-full border-l border-dashed border-slate-200/50"></div>
+                            <div className="absolute top-1/4 left-0 w-full border-t-[2px] border-dashed border-[#0a0a0a]/20"></div>
+                            <div className="absolute bottom-1/4 left-0 w-full border-t-[2px] border-dashed border-[#0a0a0a]/20"></div>
+                            <div className="absolute left-[15%] md:left-1/4 top-0 h-full border-l-[2px] border-dashed border-[#0a0a0a]/20"></div>
+                            <div className="absolute right-[15%] md:right-1/4 top-0 h-full border-l-[2px] border-dashed border-[#0a0a0a]/20"></div>
                         </div>
 
                         <div className="container mx-auto px-6 relative z-10">
                             <div className="grid grid-cols-12 gap-4 md:gap-8 items-center">
                                 {/* Large Number Accent - Solid Color */}
                                 <div className="col-span-12 lg:col-span-4 flex justify-center lg:justify-start">
-                                    <span className="text-[10rem] sm:text-[15rem] md:text-[20rem] font-bold text-slate-50 leading-none block select-none font-dmsans">
+                                    <span className="text-[10rem] sm:text-[15rem] md:text-[20rem] font-bold text-[#ff8c00] leading-none block select-none font-family:var(--font-grotesk)">
                                         {step.id}
                                     </span>
                                 </div>
@@ -101,22 +101,22 @@ export default function Comparisons() {
                                 {/* Content Section */}
                                 <div className="col-span-12 lg:col-span-8 space-y-6 md:space-y-8 text-center lg:text-left -mt-8 md:mt-0">
                                     <div className="inline-flex items-center gap-4">
-                                        <div className="hidden md:block w-12 h-[1px] bg-slate-900"></div>
-                                        <span className="text-[9px] md:text-xs font-ibmplexmonomedium uppercase tracking-[0.3em] text-slate-400">
+                                        <div className="hidden md:block w-12 h-[3px] bg-[#0a0a0a]"></div>
+                                        <span className="text-[9px] md:text-xs font-ibmplexmonomedium uppercase tracking-[0.3em] text-[#4a4a4a]">
                                             {step.subtitle}
                                         </span>
                                     </div>
 
-                                    <h2 className="text-3xl sm:text-5xl md:text-7xl font-medium text-slate-900 font-dmsans leading-[1.1] tracking-tight px-4 md:px-0">
+                                    <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold text-[#0a0a0a] font-family:var(--font-grotesk) leading-[1.1] tracking-tight px-4 md:px-0 uppercase">
                                         {step.title}
                                     </h2>
 
-                                    <p className="text-sm md:text-xl text-slate-500 max-w-xl mx-auto lg:mx-0 font-dmsans leading-relaxed px-4 md:px-0">
+                                    <p className="text-sm md:text-xl text-[#4a4a4a] max-w-xl mx-auto lg:mx-0 font-dmsans leading-relaxed px-4 md:px-0">
                                         {step.description}
                                     </p>
 
                                     <div className="pt-2 md:pt-8 flex justify-center lg:justify-start">
-                                        <button className="group flex items-center gap-4 md:gap-6 text-[10px] md:text-[12px] font-black uppercase tracking-widest text-white bg-black px-8 md:px-10 py-3 md:py-4 rounded-xl hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 shadow-lg">
+                                        <button className="group flex items-center gap-4 md:gap-6 text-[10px] md:text-[12px] font-black uppercase tracking-widest text-[#f5f0e8] bg-[#0a0a0a] px-8 md:px-10 py-3 md:py-4 rounded-none border-[4px] border-[#0a0a0a] hover:shadow-neo-lg transition-all shadow-neo active:translate-y-0.5">
                                             Hire Now
                                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-2 transition-transform">
                                                 <path d="M5 12h14M12 5l7 7-7 7" />
@@ -128,7 +128,7 @@ export default function Comparisons() {
                         </div>
 
                         {/* Technical Labels (Vertical) */}
-                        <div className="absolute top-1/2 -translate-y-1/2 left-4 md:left-8 hidden xl:flex flex-col gap-24 text-[10px] font-ibmplexmonomedium text-slate-300 uppercase tracking-[0.5em] rotate-180 [writing-mode:vertical-lr]">
+                        <div className="absolute top-1/2 -translate-y-1/2 left-4 md:left-8 hidden xl:flex flex-col gap-24 text-[10px] font-ibmplexmonomedium text-[#4a4a4a] uppercase tracking-[0.5em] rotate-180 [writing-mode:vertical-lr]">
                             <span>Infrastructure Layer // {step.id}</span>
                             <span>Deployment Logic // 04-2026</span>
                         </div>

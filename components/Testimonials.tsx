@@ -58,14 +58,14 @@ export default function Testimonials() {
     }, [currentIndex]);
 
     return (
-        <section className="bg-slate-50 py-20 overflow-hidden border-t border-black">
+        <section className="bg-[#f5f0e8] py-20 overflow-hidden border-t-[3px] border-[#0a0a0a]">
             <div className="container mx-auto px-6">
                 {/* Header */}
                 <div className="text-center mb-16 md:mb-24 space-y-4 md:space-y-6">
-                    <span className="text-[10px] md:text-xs font-ibmplexmonomedium uppercase block text-slate-400">
+                    <span className="text-[10px] md:text-xs font-ibmplexmonomedium uppercase block text-[#ff8c00] font-bold">
                         Testimonials ( 03 )
                     </span>
-                    <h2 className="text-3xl md:text-6xl font-medium text-slate-900 font-dmsans tracking-tight uppercase leading-tight md:leading-none">
+                    <h2 className="text-3xl md:text-6xl font-bold text-[#0a0a0a] font-family:var(--font-grotesk) tracking-tight uppercase leading-tight md:leading-none">
                         What Our <br className="md:hidden" /> Partners Say
                     </h2>
                 </div>
@@ -79,30 +79,30 @@ export default function Testimonials() {
                         >
                             {testimonials.map((t) => (
                                 <div key={t.id} className="w-full shrink-0 px-2 md:px-4">
-                                    <div className="bg-white border border-black/10 rounded-2xl p-8 md:p-16 relative flex flex-col justify-between group min-h-[400px] md:min-h-[500px]">
+                                    <div className="bg-[#ffffff] border-[4px] border-[#0a0a0a] rounded-none p-8 md:p-16 relative flex flex-col justify-between group min-h-[400px] md:min-h-[500px] shadow-neo">
                                         {/* Quote Icon */}
-                                        <div className="text-5xl md:text-7xl text-slate-900 font-serif leading-none opacity-10 absolute top-8 left-8 md:top-12 md:left-10 group-hover:opacity-20 transition-opacity">
-                                            “
+                                        <div className="text-5xl md:text-7xl text-[#ff8c00] font-serif leading-none opacity-20 absolute top-8 left-8 md:top-12 md:left-10 group-hover:opacity-40 transition-opacity">
+                                            "
                                         </div>
 
                                         <div className="relative z-10 pt-8 md:pt-12">
-                                            <p className="text-xl md:text-4xl font-medium text-slate-900 leading-[1.3] md:leading-[1.2] font-dmsans max-w-4xl tracking-tight">
+                                            <p className="text-xl md:text-4xl font-medium text-[#0a0a0a] leading-[1.3] md:leading-[1.2] font-dmsans max-w-4xl tracking-tight">
                                                 {t.quote}
                                             </p>
                                         </div>
 
-                                        <div className="mt-12 md:mt-16 flex flex-col md:flex-row md:items-end justify-between gap-8 pt-8 md:pt-12 border-t border-slate-100">
-                                            <div className="text-xl md:text-3xl font-black text-slate-900 font-dmsans tracking-tighter opacity-100 uppercase">
+                                        <div className="mt-12 md:mt-16 flex flex-col md:flex-row md:items-end justify-between gap-8 pt-8 md:pt-12 border-t-[3px] border-[#0a0a0a]">
+                                            <div className="text-xl md:text-3xl font-black text-[#ff8c00] font-family:var(--font-grotesk) tracking-tighter opacity-100 uppercase">
                                                 {t.logo}
                                             </div>
 
                                             <div className="text-left md:text-right flex flex-col items-start md:items-end gap-2 md:gap-3">
-                                                <div className="inline-block border border-black/20 px-4 md:px-6 py-2 rounded-full bg-slate-50/50">
-                                                    <span className="text-[10px] md:text-xs font-bold text-slate-900 font-ibmplexmonomedium uppercase tracking-widest leading-none">
+                                                <div className="inline-block border-[3px] border-[#0a0a0a] px-4 md:px-6 py-2 rounded-none bg-[#f5f0e8] shadow-neo-sm">
+                                                    <span className="text-[10px] md:text-xs font-bold text-[#0a0a0a] font-ibmplexmonomedium uppercase tracking-widest leading-none">
                                                         {t.author}
                                                     </span>
                                                 </div>
-                                                <span className="text-[8px] md:text-[10px] font-black text-slate-400 font-ibmplexmonomedium uppercase tracking-widest">
+                                                <span className="text-[8px] md:text-[10px] font-black text-[#4a4a4a] font-ibmplexmonomedium uppercase tracking-widest">
                                                     {t.role}
                                                 </span>
                                             </div>
@@ -117,7 +117,7 @@ export default function Testimonials() {
                     <div className="mt-12 md:mt-16 flex items-center justify-between max-w-6xl mx-auto px-4">
                         {/* Pagination Indicator */}
                         <div className="flex items-center gap-4">
-                            <span className="text-[10px] md:text-xs font-ibmplexmonomedium text-slate-900 font-bold border border-black/10 px-4 py-2 rounded-full bg-white">
+                            <span className="text-[10px] md:text-xs font-ibmplexmonomedium text-[#0a0a0a] font-bold border-[3px] border-[#0a0a0a] px-4 py-2 rounded-none bg-[#ffffff] shadow-neo-sm">
                                 {currentIndex + 1} / {testimonials.length}
                             </span>
                         </div>
@@ -126,7 +126,7 @@ export default function Testimonials() {
                         <div className="flex items-center gap-3 md:gap-4">
                             <button
                                 onClick={prev}
-                                className="w-12 h-6 md:w-16 md:h-8 border border-black/20 rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-all group active:scale-95 bg-white"
+                                className="w-12 h-6 md:w-16 md:h-8 border-[3px] border-[#0a0a0a] rounded-none flex items-center justify-center hover:bg-[#0a0a0a] hover:text-[#f5f0e8] transition-all group active:translate-y-0.5 bg-[#ffffff] shadow-neo-sm"
                             >
                                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transform group-active:scale-90 transition-transform">
                                     <path d="M19 12H5M12 19l-7-7 7-7" />
@@ -134,7 +134,7 @@ export default function Testimonials() {
                             </button>
                             <button
                                 onClick={next}
-                                className="w-12 h-6 md:w-16 md:h-8 border border-black/20 rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-all group active:scale-95 bg-white"
+                                className="w-12 h-6 md:w-16 md:h-8 border-[3px] border-[#0a0a0a] rounded-none flex items-center justify-center hover:bg-[#0a0a0a] hover:text-[#f5f0e8] transition-all group active:translate-y-0.5 bg-[#ffffff] shadow-neo-sm"
                             >
                                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transform group-active:scale-90 transition-transform">
                                     <path d="M5 12h14M12 5l7 7-7 7" />

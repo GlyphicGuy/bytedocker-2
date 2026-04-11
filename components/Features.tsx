@@ -37,31 +37,31 @@ export default function Features() {
     ];
 
     return (
-        <section id="process" className="bg-slate-50 relative overflow-x-clip">
+        <section id="process" className="bg-[#f5f0e8] relative overflow-x-clip border-t-[3px] border-[#0a0a0a]">
             {/* Intro Header */}
             <div className="container mx-auto px-6 pt-24 pb-12">
-                <h2 className="text-4xl md:text-6xl font-medium text-slate-900 font-dmsans max-w-2xl">
+                <h2 className="text-4xl md:text-6xl font-bold text-[#0a0a0a] font-family:var(--font-grotesk) max-w-2xl uppercase">
                     The Engineering Deployment Layer
                 </h2>
             </div>
 
-            {/* Sticky Sub-header */}
-            <div className="sticky top-0 z-40 bg-slate-50/90 backdrop-blur-md border-b border-slate-100 font-ibmplexmonomedium">
+
+            <div className="sticky top-0 z-40 bg-[#f5f0e8] border-b-[3px] border-[#0a0a0a] font-ibmplexmonomedium">
                 <div className="container mx-auto px-6 overflow-x-auto no-scrollbar">
                     <div className="flex items-stretch min-w-[400px] md:min-w-0">
                         {steps.map((step) => (
                             <div
                                 key={step.id}
-                                className={`flex-1 py-6 md:py-8 border-t-4 transition-all duration-500 cursor-pointer ${activeSection === step.id
-                                    ? "border-slate-950 opacity-100"
-                                    : "border-slate-50 opacity-30 hover:opacity-100"
+                                className={`flex-1 py-6 md:py-8 border-b-[4px] transition-all duration-500 cursor-pointer ${activeSection === step.id
+                                    ? "border-[#0a0a0a] opacity-100"
+                                    : "border-[#e5dfcf] opacity-30 hover:opacity-100"
                                     }`}
                                 onClick={() => {
                                     document.getElementById(step.id)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                                 }}
                             >
-                                <h4 className="text-[10px] md:text-sm font-black uppercase tracking-widest text-slate-900 mb-1">{step.title}</h4>
-                                <p className="text-[8px] md:text-[10px] uppercase font-bold text-slate-500 tracking-wider">
+                                <h4 className="text-[10px] md:text-sm font-black uppercase tracking-widest text-[#0a0a0a] mb-1">{step.title}</h4>
+                                <p className="text-[8px] md:text-[10px] uppercase font-bold text-[#4a4a4a] tracking-wider">
                                     {step.subtitle}
                                 </p>
                             </div>
@@ -72,13 +72,13 @@ export default function Features() {
 
             {/* Content Sections */}
             <div className="container mx-auto px-6 pb-24">
-                <div className="divide-y divide-slate-100">
+                <div className="divide-y-[3px] divide-[#0a0a0a]">
 
                     {/* Source Section */}
                     <div id="source" className="min-h-[80vh] py-32 flex flex-col md:flex-row items-center gap-16 md:gap-24">
                         <div className="flex-1 space-y-8">
-                            <h3 className="text-3xl md:text-5xl font-medium text-slate-900 font-dmsans">
-                                Define Once. <br /> Source Everywhere.
+                            <h3 className="text-3xl md:text-5xl font-bold text-[#0a0a0a] font-family:var(--font-grotesk) uppercase">
+                                Define Once. <br /> <span className="text-[#ff8c00]">Source Everywhere.</span>
                             </h3>
                             <p className="text-lg text-slate-500 leading-relaxed font-dmsans max-w-lg">
                                 Tell us your technical stack, team culture, and project milestones. We build a custom sourcing profile that scans our elite network of 20,000+ developers.
@@ -90,20 +90,20 @@ export default function Features() {
                                     </li>
                                 ))}
                             </ul>
-                            <button className="bg-slate-950 text-white font-black uppercase tracking-widest text-[10px] py-4 px-10 rounded-xl hover:scale-105 active:scale-95 transition-all">
+                            <button className="bg-[#0a0a0a] text-[#f5f0e8] font-black uppercase tracking-widest text-[10px] py-4 px-10 rounded-none border-[4px] border-[#0a0a0a] shadow-neo hover:shadow-neo-lg active:translate-y-0.5 transition-all">
                                 Learn More
                             </button>
                         </div>
                         <div className="flex-1 w-full">
-                            <div className="aspect-4/3 bg-slate-50 border border-slate-100 rounded-3xl p-10 flex flex-col justify-center">
+                            <div className="aspect-4/3 bg-[#ffffff] border-[3px] border-[#0a0a0a] rounded-none p-10 flex flex-col justify-center shadow-neo">
                                 <div className="space-y-4 opacity-40 grayscale">
                                     <div className="h-4 w-3/4 bg-slate-200 rounded-full"></div>
                                     <div className="h-4 w-1/2 bg-slate-200 rounded-full"></div>
                                     <div className="h-4 w-2/3 bg-slate-200 rounded-full"></div>
                                     <div className="pt-8 flex gap-3">
-                                        <div className="w-12 h-12 rounded-xl bg-slate-200"></div>
-                                        <div className="w-12 h-12 rounded-xl bg-slate-200"></div>
-                                        <div className="w-12 h-12 rounded-xl bg-slate-200"></div>
+                                        <div className="w-12 h-12 rounded-none bg-slate-200"></div>
+                                        <div className="w-12 h-12 rounded-none bg-slate-200"></div>
+                                        <div className="w-12 h-12 rounded-none bg-slate-200"></div>
                                     </div>
                                 </div>
                             </div>
@@ -113,8 +113,8 @@ export default function Features() {
                     {/* Screen Section */}
                     <div id="screen" className="min-h-[80vh] py-32 flex flex-col md:flex-row items-center gap-16 md:gap-24">
                         <div className="flex-1 w-full md:order-1 order-2">
-                            <div className="aspect-4/3 bg-slate-50 border border-slate-100 rounded-[40px] p-8 relative overflow-hidden">
-                                <div className="w-full h-full border border-slate-200 rounded-3xl bg-white shadow-sm p-6 space-y-6">
+                            <div className="aspect-4/3 bg-[#ffffff] border-[3px] border-[#0a0a0a] rounded-none p-8 relative overflow-hidden shadow-neo">
+                                <div className="w-full h-full border-[2px] border-[#0a0a0a] rounded-none bg-white shadow-sm p-6 space-y-6">
                                     <div className="flex items-center gap-4 border-b border-slate-100 pb-4">
                                         <div className="w-10 h-10 rounded-full bg-slate-100"></div>
                                         <div>
@@ -135,25 +135,25 @@ export default function Features() {
                             </div>
                         </div>
                         <div className="flex-1 space-y-8 md:order-2 order-1">
-                            <h3 className="text-3xl md:text-5xl font-medium text-slate-900 font-dmsans">
-                                Vet Rigorously. <br /> Hire Confidently.
+                            <h3 className="text-3xl md:text-5xl font-bold text-[#0a0a0a] font-family:var(--font-grotesk) uppercase">
+                                Vet Rigorously. <br /> <span className="text-[#ff8c00]">Hire Confidently.</span>
                             </h3>
                             <p className="text-lg text-slate-500 leading-relaxed font-dmsans max-w-lg">
                                 We screen for 200+ data points, including technical fundamentals, live coding proficiency, and communication excellence.
                             </p>
                             <div className="grid grid-cols-2 gap-4">
                                 {[
-                                    { label: "Rejected", val: "80%" },
-                                    { label: "Elite", val: "TOP 5%" }
+                                    { label: "Rejected", val: "80%", isHighlight: false },
+                                    { label: "Elite", val: "TOP 5%", isHighlight: true }
                                 ].map(s => (
-                                    <div key={s.label} className="p-5 border border-slate-100 rounded-2xl bg-slate-50">
-                                        <p className="text-[10px] font-black uppercase text-slate-400 mb-1">{s.label}</p>
-                                        <p className="text-2xl font-black text-slate-900 font-ibmplexmonomedium">{s.val}</p>
+                                    <div key={s.label} className={`p-5 border-[3px] border-[#0a0a0a] rounded-none bg-[#ffffff] shadow-neo ${s.isHighlight ? 'border-l-[4px] border-l-[#ff8c00]' : ''}`}>
+                                        <p className={`text-[10px] font-black uppercase mb-1 ${s.isHighlight ? 'text-[#ff8c00]' : 'text-[#999999]'}`}>{s.label}</p>
+                                        <p className="text-2xl font-black text-[#0a0a0a] font-ibmplexmonomedium">{s.val}</p>
                                     </div>
                                 ))}
                             </div>
                             <Link href="/hire">
-                                <button className="bg-slate-950 text-white font-ibmplexmonomedium uppercase tracking-widest text-[10px] py-4 px-10 rounded-xl hover:scale-105 active:scale-95 transition-all">
+                                <button className="bg-[#0a0a0a] text-[#f5f0e8] font-ibmplexmonomedium uppercase tracking-widest text-[10px] py-4 px-10 rounded-none border-[4px] border-[#0a0a0a] shadow-neo hover:shadow-neo-lg active:translate-y-0.5 transition-all">
                                     Hire Now
                                 </button>
                             </Link>
@@ -163,30 +163,30 @@ export default function Features() {
                     {/* Match Section */}
                     <div id="deploy" className="min-h-[80vh] py-32 flex flex-col md:flex-row items-center gap-16 md:gap-24">
                         <div className="flex-1 space-y-8">
-                            <h3 className="text-3xl md:text-5xl font-medium text-slate-900 font-dmsans">
-                                Deploy Speed. <br /> SCALE FASTER.
+                            <h3 className="text-3xl md:text-5xl font-bold text-[#0a0a0a] font-family:var(--font-grotesk) uppercase">
+                                Deploy Speed. <br /> <span className="text-[#ff8c00]">SCALE FASTER.</span>
                             </h3>
-                            <p className="text-lg text-slate-500 leading-relaxed font-dmsans max-w-lg">
+                            <p className="text-lg text-[#4a4a4a] leading-relaxed font-dmsans max-w-lg">
                                 Once vetted, we match you with 1-3 hand-picked engineers who are ready to integrate.
                             </p>
                             <div className="space-y-4">
-                                <div className="flex items-center gap-6 p-4 border border-slate-100 rounded-2xl hover:bg-slate-50 transition-colors cursor-default group">
-                                    <div className="text-2xl opacity-40 group-hover:opacity-100 transition-opacity">⚡</div>
-                                    <span className="text-xs font-black uppercase tracking-widest text-slate-600">48-Hour Shortlist</span>
+                                <div className="flex items-center gap-6 p-4 border-[3px] border-[#0a0a0a] rounded-none hover:bg-[#f5f0e8] transition-colors cursor-default group shadow-neo border-l-[4px] border-l-[#ff8c00]">
+                                    <div className="w-2 h-2 bg-[#ff8c00] rounded-none"></div>
+                                    <span className="text-xs font-black uppercase tracking-widest text-[#4a4a4a]">48-Hour Shortlist</span>
                                 </div>
-                                <div className="flex items-center gap-6 p-4 border border-slate-100 rounded-2xl hover:bg-slate-50 transition-colors cursor-default group">
-                                    <div className="text-2xl opacity-40 group-hover:opacity-100 transition-opacity">🛡️</div>
-                                    <span className="text-xs font-black uppercase tracking-widest text-slate-600">Replacement Guarantee</span>
+                                <div className="flex items-center gap-6 p-4 border-[3px] border-[#0a0a0a] rounded-none hover:bg-[#f5f0e8] transition-colors cursor-default group shadow-neo">
+                                    <div className="w-2 h-2 bg-[#0a0a0a] rounded-none"></div>
+                                    <span className="text-xs font-black uppercase tracking-widest text-[#4a4a4a]">Replacement Guarantee</span>
                                 </div>
                             </div>
-                            <button className="bg-slate-950 text-white font-black uppercase tracking-widest text-[10px] py-4 px-10 rounded-xl hover:scale-105 active:scale-95 transition-all">
+                            <button className="bg-[#0a0a0a] text-[#f5f0e8] font-black uppercase tracking-widest text-[10px] py-4 px-10 rounded-none border-[4px] border-[#0a0a0a] shadow-neo hover:shadow-neo-lg active:translate-y-0.5 transition-all">
                                 Hire a Dev
                             </button>
                         </div>
                         <div className="flex-1 w-full">
-                            <div className="aspect-square bg-slate-50 border border-slate-100 rounded-[50%] p-16 flex items-center justify-center relative">
-                                <div className="w-full aspect-square border-2 border-dashed border-slate-200 rounded-full animate-[spin_20s_linear_infinite] absolute"></div>
-                                <div className="w-24 h-24 bg-white border border-slate-200 rounded-2xl shadow-xl flex items-center justify-center text-4xl z-10">👨‍💻</div>
+                            <div className="aspect-square bg-[#ffffff] border-[3px] border-[#0a0a0a] rounded-none p-16 flex items-center justify-center relative shadow-neo">
+                                <div className="w-full aspect-square border-[2px] border-dashed border-[#ff8c00] rounded-none animate-[spin_20s_linear_infinite] absolute"></div>
+                                <div className="w-24 h-24 bg-[#ff8c00] border-[3px] border-[#0a0a0a] rounded-none shadow-neo flex items-center justify-center text-4xl z-10">✓</div>
                             </div>
                         </div>
                     </div>
