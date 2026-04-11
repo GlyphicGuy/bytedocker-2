@@ -23,26 +23,26 @@ export default function WhyChooseUs() {
     ];
 
     return (
-        <section className="bg-slate-50 py-24 px-6 font-dmsans">
+        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
-                <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-16 max-w-xl tracking-tight leading-tight">
+                <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-16 max-w-xl tracking-tight leading-tight font-family:var(--font-grotesk) uppercase">
                     Why companies trust our infrastructure
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 border border-slate-200 rounded-2xl overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-2 divide-y-[3px] md:divide-y-0 border-[3px] border-[#0a0a0a] rounded-none overflow-hidden shadow-neo bg-[#ffffff]">
                     {items.map((item, i) => (
-                        <div key={item.num} className={`p-8 flex gap-6 items-start ${i % 2 === 0 ? "md:border-r border-slate-200" : ""} ${i < 2 ? "border-b border-slate-200" : ""}`}>
-                            <span className="text-sm font-ibmplexmonomedium text-slate-400 shrink-0 w-8 pt-0.5">{item.num}</span>
+                        <div key={item.num} className={`p-8 flex gap-6 items-start border-b-[3px] border-[#0a0a0a] ${i % 2 === 0 ? "md:border-r-[3px] md:border-b-0" : ""} ${i % 2 === 0 ? "" : ""}`}>
+                            <span className="text-sm font-ibmplexmonomedium text-[#ff8c00] shrink-0 w-8 pt-0.5 font-black">{item.num}</span>
                             <div>
-                                <h3 className="text-lg font-dmsans font-medium text-slate-900 mb-2">{item.title}</h3>
-                                <p className="text-slate-500 text-sm leading-relaxed">{item.description}</p>
+                                <h3 className="text-lg font-dmsans font-black text-[#0a0a0a] mb-2">{item.title}</h3>
+                                <p className="text-[#4a4a4a] text-sm leading-relaxed">{item.description}</p>
                             </div>
                         </div>
                     ))}
                 </div>
 
                 <div className="mt-12">
-                    <button className="bg-black hover:bg-slate-800 text-white font-medium text-base px-7 py-3.5 rounded-xl transition-colors font-dmsans">
+                    <button className="bg-[#0a0a0a] hover:shadow-neo-lg text-[#f5f0e8] font-black text-base px-7 py-3.5 rounded-none transition-all font-ibmplexmonomedium border-[4px] border-[#0a0a0a] shadow-neo active:translate-y-0.5 uppercase tracking-widest text-xs">
                         Start your process
                     </button>
                 </div>

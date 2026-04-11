@@ -23,29 +23,29 @@ export default function TooStrict() {
     ];
 
     return (
-        <section className="bg-slate-50 py-24 px-6 font-dmsans">
+        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
                 <div className="flex flex-col lg:flex-row gap-16 items-start">
 
                     <div className="lg:w-[380px] shrink-0">
-                        <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-5 tracking-tight leading-tight">
+                        <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-5 tracking-tight leading-tight font-family:var(--font-grotesk) uppercase">
                             Too strict, too good to be true?
                         </h2>
-                        <p className="text-slate-500 text-lg leading-relaxed mb-8">
+                        <p className="text-[#4a4a4a] text-lg leading-relaxed mb-8">
                             It&apos;s a common concern. But rigorous screening is exactly what makes our developers reliable.
                         </p>
-                        <button className="bg-black hover:bg-slate-800 text-white font-medium text-base px-7 py-3.5 rounded-xl transition-colors font-dmsans">
+                        <button className="bg-[#0a0a0a] hover:shadow-neo-lg text-[#f5f0e8] font-black text-base px-7 py-3.5 rounded-none transition-all font-ibmplexmonomedium border-[4px] border-[#0a0a0a] shadow-neo active:translate-y-0.5 uppercase tracking-widest text-xs">
                             Hire a vetted dev
                         </button>
                     </div>
 
-                    <div className="flex-1 divide-y divide-slate-200 border-t border-slate-200">
+                    <div className="flex-1 divide-y-[3px] divide-[#0a0a0a] border-t-[3px] border-[#0a0a0a]">
                         {items.map((item) => (
                             <div key={item.num} className="py-8 flex gap-8 items-start">
-                                <span className="text-sm font-ibmplexmonomedium text-slate-400 pt-0.5 shrink-0 w-8">{item.num}</span>
+                                <span className="text-sm font-ibmplexmonomedium text-[#ff8c00] pt-0.5 shrink-0 w-8 font-black">{item.num}</span>
                                 <div>
-                                    <h3 className="text-lg font-dmsans font-medium text-slate-900 mb-2">{item.title}</h3>
-                                    <p className="text-slate-500 text-sm leading-relaxed">{item.description}</p>
+                                    <h3 className="text-lg font-dmsans font-black text-[#0a0a0a] mb-2">{item.title}</h3>
+                                    <p className="text-[#4a4a4a] text-sm leading-relaxed">{item.description}</p>
                                 </div>
                             </div>
                         ))}

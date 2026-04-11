@@ -39,31 +39,31 @@ export default function TestimonialsWall() {
     ];
 
     return (
-        <section className="bg-white py-24 px-6 font-dmsans">
+        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-                    <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 tracking-tight max-w-md">
+                    <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] tracking-tight max-w-md font-family:var(--font-grotesk) uppercase">
                         What our clients say
                     </h2>
-                    <span className="text-sm font-ibmplexmonomedium text-slate-400 uppercase tracking-widest">4.9 / 5 — 180+ reviews</span>
+                    <span className="text-sm font-ibmplexmonomedium text-[#ff8c00] uppercase tracking-widest font-black">4.9 / 5 — 180+ reviews</span>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-slate-200 rounded-2xl overflow-hidden divide-y lg:divide-y-0 [&>*:nth-child(n+4)]:lg:border-t [&>*:nth-child(n+4)]:border-slate-200">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-[3px] border-[#0a0a0a] rounded-none overflow-hidden divide-y-[3px] lg:divide-y-0 divide-[#0a0a0a] [&>*:nth-child(n+4)]:lg:border-t-[3px] [&>*:nth-child(n+4)]:border-t-[#0a0a0a] shadow-neo bg-[#ffffff]">
                     {testimonials.map((t, i) => (
                         <div
                             key={i}
-                            className={`p-8 flex flex-col justify-between gap-8 ${i % 3 !== 2 ? "lg:border-r border-slate-200" : ""} ${i % 2 !== 1 ? "md:border-r lg:border-r-0 border-slate-200" : ""}`}
+                            className={`p-8 flex flex-col justify-between gap-8 border-l-[6px] border-l-[#ff8c00] ${i % 3 !== 2 ? "lg:border-r-[3px] lg:border-r-[#0a0a0a]" : ""} ${i % 2 !== 1 ? "md:border-r-[3px] lg:border-r-0 md:border-r-[#0a0a0a]" : ""}`}
                         >
-                            <p className="text-slate-600 leading-relaxed text-base">
+                            <p className="text-[#4a4a4a] leading-relaxed text-base">
                                 &ldquo;{t.quote}&rdquo;
                             </p>
                             <div className="flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-xs font-ibmplexmonomedium text-slate-500 shrink-0">
+                                <div className="w-9 h-9 rounded-none bg-[#ff8c00] border-[2px] border-[#0a0a0a] flex items-center justify-center text-xs font-ibmplexmonomedium text-[#ffffff] shrink-0 font-black">
                                     {t.initials}
                                 </div>
                                 <div>
-                                    <p className="font-dmsans font-medium text-slate-900 text-sm">{t.name}</p>
-                                    <p className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest mt-0.5">{t.role}</p>
+                                    <p className="font-dmsans font-black text-[#0a0a0a] text-sm">{t.name}</p>
+                                    <p className="text-xs font-ibmplexmonomedium text-[#4a4a4a] uppercase tracking-widest mt-0.5">{t.role}</p>
                                 </div>
                             </div>
                         </div>

@@ -28,29 +28,29 @@ export default function TechInterviewsTimeline() {
     ];
 
     return (
-        <section className="bg-slate-900 py-24 px-6 font-dmsans text-white">
+        <section className="bg-[#0a0a0a] py-24 px-6 font-dmsans text-[#f5f0e8] border-y-[3px] border-[#f5f0e8]">
             <div className="container mx-auto max-w-[1200px]">
-                <h2 className="text-4xl md:text-5xl font-dmsans font-medium mb-4 tracking-tight max-w-2xl">
+                <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight max-w-2xl font-family:var(--font-grotesk) uppercase">
                     Tech interviews designed to spot the right talent
                 </h2>
-                <p className="text-slate-400 text-lg mb-16 max-w-xl">
+                <p className="text-[#cccccc] text-lg mb-16 max-w-xl">
                     Every interview consists of several specific stages supervised by a relevant technical team lead.
                 </p>
 
-                <div className="max-w-3xl divide-y divide-slate-800 border-t border-slate-800">
+                <div className="max-w-3xl divide-y-[3px] divide-[#f5f0e8] border-t-[3px] border-[#f5f0e8]">
                     {steps.map((step) => (
                         <div key={step.num} className="py-8 flex gap-8 items-start">
-                            <span className="text-sm font-ibmplexmonomedium text-slate-600 pt-0.5 shrink-0 w-8">{step.num}</span>
+                            <span className="text-sm font-ibmplexmonomedium text-[#ff8c00] pt-0.5 shrink-0 w-8 font-black">{step.num}</span>
                             <div>
-                                <h3 className="text-lg font-dmsans font-medium text-white mb-2">{step.title}</h3>
-                                <p className="text-slate-400 leading-relaxed text-sm">{step.description}</p>
+                                <h3 className="text-lg font-dmsans font-black text-[#f5f0e8] mb-2">{step.title}</h3>
+                                <p className="text-[#cccccc] leading-relaxed text-sm">{step.description}</p>
                             </div>
                         </div>
                     ))}
                 </div>
 
                 <div className="mt-14">
-                    <button className="bg-white hover:bg-slate-100 text-slate-900 font-medium text-base px-7 py-3.5 rounded-xl transition-colors font-dmsans">
+                    <button className="bg-[#f5f0e8] hover:shadow-neo-lg text-[#0a0a0a] font-black text-base px-7 py-3.5 rounded-none transition-all font-ibmplexmonomedium border-[4px] border-[#f5f0e8] shadow-neo active:translate-y-0.5 uppercase tracking-widest text-xs">
                         Hire vetted developer
                     </button>
                 </div>

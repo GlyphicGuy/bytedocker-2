@@ -73,41 +73,41 @@ export default function FAQAccordion() {
     const [open, setOpen] = useState<string | null>(null);
 
     return (
-        <section className="bg-white py-24 px-6 font-dmsans">
+        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans border-y-[3px] border-[#0a0a0a]">
             <div className="container mx-auto max-w-[1200px]">
-                <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-4 tracking-tight">
+                <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-4 tracking-tight font-family:var(--font-grotesk) uppercase">
                     Your questions, answered
                 </h2>
-                <p className="text-slate-500 text-lg mb-16 max-w-lg">
+                <p className="text-[#4a4a4a] text-lg mb-16 max-w-lg">
                     Everything you need to know before submitting your first brief.
                 </p>
 
-                <div className="space-y-12">
+                <div className="space-y-4">
                     {faqs.map((section) => (
                         <div key={section.category}>
-                            <p className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest mb-4">{section.category}</p>
-                            <div className="divide-y divide-slate-200 border-t border-slate-200">
+                            <p className="text-xs font-ibmplexmonomedium text-[#ff8c00] uppercase tracking-widest mb-4 font-black">{section.category}</p>
+                            <div className="divide-y-[3px] divide-[#0a0a0a]">
                                 {section.items.map((item) => {
                                     const id = `${section.category}-${item.q}`;
                                     const isOpen = open === id;
                                     return (
-                                        <div key={id}>
+                                        <div key={id} className={`border-[3px] border-[#0a0a0a] bg-[#ffffff] rounded-none mb-4 transition-all ${isOpen ? "shadow-neo-lg border-l-[6px] border-l-[#ff8c00]" : "shadow-neo"}`}>
                                             <button
-                                                className="w-full py-6 flex items-start justify-between gap-6 text-left group"
+                                                className="w-full py-6 px-6 flex items-start justify-between gap-6 text-left group"
                                                 onClick={() => setOpen(isOpen ? null : id)}
                                             >
-                                                <span className="text-lg font-dmsans font-medium text-slate-900 group-hover:text-slate-700 transition-colors">
+                                                <span className="text-lg font-dmsans font-black text-[#0a0a0a] group-hover:text-[#ff8c00] transition-colors">
                                                     {item.q}
                                                 </span>
-                                                <span className={`text-slate-400 shrink-0 mt-1 transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`}>
+                                                <span className={`text-[#0a0a0a] shrink-0 mt-1 transition-transform duration-200 font-black ${isOpen ? "rotate-45" : ""}`}>
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                                                         <path d="M12 5v14M5 12h14" />
                                                     </svg>
                                                 </span>
                                             </button>
                                             {isOpen && (
-                                                <div className="pb-6 pr-8">
-                                                    <p className="text-slate-500 leading-relaxed">{item.a}</p>
+                                                <div className="pb-6 px-6 border-t-[3px] border-[#0a0a0a] pt-6">
+                                                    <p className="text-[#4a4a4a] leading-relaxed">{item.a}</p>
                                                 </div>
                                             )}
                                         </div>
