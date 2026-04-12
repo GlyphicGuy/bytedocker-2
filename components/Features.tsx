@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Features() {
     const [activeSection, setActiveSection] = useState("source");
@@ -95,17 +96,15 @@ export default function Features() {
                             </button>
                         </div>
                         <div className="flex-1 w-full">
-                            <div className="aspect-4/3 bg-[#ffffff] border-[3px] border-[#0a0a0a] rounded-none p-10 flex flex-col justify-center shadow-neo">
-                                <div className="space-y-4 opacity-40 grayscale">
-                                    <div className="h-4 w-3/4 bg-slate-200 rounded-full"></div>
-                                    <div className="h-4 w-1/2 bg-slate-200 rounded-full"></div>
-                                    <div className="h-4 w-2/3 bg-slate-200 rounded-full"></div>
-                                    <div className="pt-8 flex gap-3">
-                                        <div className="w-12 h-12 rounded-none bg-slate-200"></div>
-                                        <div className="w-12 h-12 rounded-none bg-slate-200"></div>
-                                        <div className="w-12 h-12 rounded-none bg-slate-200"></div>
-                                    </div>
-                                </div>
+                            <div className="aspect-4/3 bg-[#ffffff] border-[3px] border-[#0a0a0a] rounded-none overflow-hidden shadow-neo">
+                                <Image
+                                    src="/define-once-source.png"
+                                    alt="Define requirements once and source developers everywhere — neobrutalist illustration"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-full object-cover"
+                                    priority
+                                />
                             </div>
                         </div>
                     </div>
