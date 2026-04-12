@@ -11,20 +11,22 @@ export default function CTA() {
     };
 
     return (
-        <section className="px-4 md:px-6 py-16 md:py-24 bg-[#0a0a0a] border-t-[3px] border-[#f5f0e8]">
+        <section className="px-4 md:px-6 py-16 md:py-24 bg-[#0a0a0a] border-t-[3px] border-[#f5f0e8] relative overflow-hidden">
             <div className="relative w-full max-w-[1400px] mx-auto overflow-hidden flex flex-col items-center p-6 md:p-16 group">
-                {/* Background Video with Dark Overlay */}
-                <div className="absolute inset-0 bg-[#0a0a0a]">
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-30"
-                    >
-                        <source src="/cta-bg.mp4" type="video/mp4" />
-                    </video>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
+                {/* Decorative Animated Background Elements */}
+                <div className="absolute inset-0 pointer-events-none">
+                    {/* Corner accent squares - Animated */}
+                    <div className="absolute top-8 left-8 w-20 h-20 border-[2px] border-dashed border-[#ff8c00] opacity-20 animate-rotate-slow" style={{ transform: "rotate(45deg)" }}></div>
+                    <div className="absolute bottom-8 right-8 w-16 h-16 border-[2px] border-dashed border-[#ff8c00] opacity-25 animate-rotate-slow" style={{ animationDirection: "reverse", transform: "rotate(45deg)" }}></div>
+
+                    {/* Floating dots with pulse animation */}
+                    <div className="absolute top-1/4 right-1/3 w-2 h-2 bg-[#ff8c00] rounded-full opacity-40 animate-pulse-gentle"></div>
+                    <div className="absolute bottom-1/3 left-1/4 w-1.5 h-1.5 bg-[#ff8c00] rounded-full opacity-30 animate-pulse-gentle" style={{ animationDelay: "0.5s" }}></div>
+                    <div className="absolute top-1/2 right-1/4 w-2.5 h-2.5 bg-[#ff8c00] rounded-full opacity-35 animate-pulse-gentle" style={{ animationDelay: "1s" }}></div>
+
+                    {/* Diagonal accent lines - Animated */}
+                    <div className="absolute top-12 left-[5%] w-80 h-[2px] bg-gradient-to-r from-[#ff8c00] to-transparent opacity-20 animate-drift-left" style={{ transform: "rotateZ(25deg)" }}></div>
+                    <div className="absolute bottom-1/4 right-[5%] w-96 h-[2px] bg-gradient-to-l from-[#ff8c00] to-transparent opacity-20 animate-drift-right" style={{ transform: "rotateZ(-25deg)" }}></div>
                 </div>
 
                 <div className="relative z-10 w-full flex flex-col lg:flex-row gap-12 md:gap-16 items-center lg:items-end">
@@ -74,6 +76,13 @@ export default function CTA() {
                     {/* Right Testimonial Card */}
                     <div className="w-full lg:w-[420px] shrink-0">
                         <div className="bg-[#ffffff] border-[4px] border-[#f5f0e8] p-8 md:p-10 shadow-neo-lg relative overflow-hidden group/card text-left">
+                            {/* Decorative corner dots */}
+                            <div className="absolute -top-2 -right-2 w-2 h-2 bg-[#ff8c00] rounded-full"></div>
+                            <div className="absolute -bottom-2 -left-2 w-2 h-2 bg-[#ff8c00] rounded-full"></div>
+
+                            {/* Dashed border accent */}
+                            <div className="absolute top-0 right-0 w-12 h-12 border-t-[2px] border-r-[2px] border-dashed border-[#ff8c00] opacity-30"></div>
+
                             <div className="relative z-10 space-y-6 md:space-y-8">
                                 <p className="text-lg md:text-2xl text-[#0a0a0a] font-medium leading-relaxed font-dmsans tracking-tight">
                                     "Our team moves faster because they focus on building, not hiring. Bytedocker engineers are ready to push code from day one."
@@ -91,6 +100,66 @@ export default function CTA() {
                     </div>
                 </div>
             </div>
+
+            <style jsx>{`
+                @keyframes rotate-subtle {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes pulse-gentle {
+                    0%, 100% {
+                        opacity: 0.3;
+                        transform: scale(1);
+                    }
+                    50% {
+                        opacity: 0.6;
+                        transform: scale(1.3);
+                    }
+                }
+
+                @keyframes drift-right {
+                    0%, 100% {
+                        transform: rotateZ(-25deg) translateX(0);
+                        opacity: 0.2;
+                    }
+                    50% {
+                        transform: rotateZ(-25deg) translateX(-20px);
+                        opacity: 0.3;
+                    }
+                }
+
+                @keyframes drift-left {
+                    0%, 100% {
+                        transform: rotateZ(25deg) translateX(0);
+                        opacity: 0.2;
+                    }
+                    50% {
+                        transform: rotateZ(25deg) translateX(20px);
+                        opacity: 0.3;
+                    }
+                }
+
+                .animate-rotate-slow {
+                    animation: rotate-subtle 20s linear infinite;
+                }
+
+                .animate-pulse-gentle {
+                    animation: pulse-gentle 3s ease-in-out infinite;
+                }
+
+                .animate-drift-right {
+                    animation: drift-right 4s ease-in-out infinite;
+                }
+
+                .animate-drift-left {
+                    animation: drift-left 4s ease-in-out infinite;
+                }
+            `}</style>
         </section>
     );
 }
