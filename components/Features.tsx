@@ -112,25 +112,14 @@ export default function Features() {
                     {/* Screen Section */}
                     <div id="screen" className="min-h-[80vh] py-32 flex flex-col md:flex-row items-center gap-16 md:gap-24">
                         <div className="flex-1 w-full md:order-1 order-2">
-                            <div className="aspect-4/3 bg-[#ffffff] border-[3px] border-[#0a0a0a] rounded-none p-8 relative overflow-hidden shadow-neo">
-                                <div className="w-full h-full border-[2px] border-[#0a0a0a] rounded-none bg-white shadow-sm p-6 space-y-6">
-                                    <div className="flex items-center gap-4 border-b border-slate-100 pb-4">
-                                        <div className="w-10 h-10 rounded-full bg-slate-100"></div>
-                                        <div>
-                                            <div className="h-3 w-24 bg-slate-100 rounded-full mb-2"></div>
-                                            <div className="h-2 w-16 bg-slate-50 rounded-full"></div>
-                                        </div>
-                                    </div>
-                                    <div className="space-y-3">
-                                        <div className="h-2 w-full bg-slate-50 rounded-full"></div>
-                                        <div className="h-2 w-full bg-slate-50 rounded-full"></div>
-                                        <div className="h-2 w-2/3 bg-slate-50 rounded-full"></div>
-                                    </div>
-                                    <div className="pt-4 flex justify-between">
-                                        <div className="h-8 w-24 bg-green-50 rounded-lg border border-green-100"></div>
-                                        <div className="h-8 w-24 bg-slate-100 rounded-lg"></div>
-                                    </div>
-                                </div>
+                            <div className="aspect-4/3 bg-[#ffffff] border-[3px] border-[#0a0a0a] rounded-none overflow-hidden shadow-neo">
+                                <Image
+                                    src="/vet-rigorously.png"
+                                    alt="Rigorous developer vetting process — screening for code, communication, and live tests to find the top 5%"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
                         </div>
                         <div className="flex-1 space-y-8 md:order-2 order-1">
