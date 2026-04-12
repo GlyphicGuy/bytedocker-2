@@ -72,7 +72,7 @@ export default function Features() {
             </div>
 
             {/* Content Sections */}
-            <div className="container mx-auto px-6 pb-24">
+            <div className="container mx-auto px-6 pb-12">
                 <div className="divide-y-[3px] divide-[#0a0a0a]">
 
                     {/* Source Section */}
@@ -149,7 +149,7 @@ export default function Features() {
                     </div>
 
                     {/* Match Section */}
-                    <div id="deploy" className="min-h-[80vh] py-32 flex flex-col md:flex-row items-center gap-16 md:gap-24">
+                    <div id="deploy" className="min-h-[50vh] py-20 flex flex-col md:flex-row items-center gap-16 md:gap-24">
                         <div className="flex-1 space-y-8">
                             <h3 className="text-3xl md:text-5xl font-bold text-[#0a0a0a] font-family:var(--font-grotesk) uppercase">
                                 Deploy Speed. <br /> <span className="text-[#ff8c00]">SCALE FASTER.</span>
@@ -172,9 +172,14 @@ export default function Features() {
                             </button>
                         </div>
                         <div className="flex-1 w-full">
-                            <div className="aspect-square bg-[#ffffff] border-[3px] border-[#0a0a0a] rounded-none p-16 flex items-center justify-center relative shadow-neo">
-                                <div className="w-full aspect-square border-[2px] border-dashed border-[#ff8c00] rounded-none animate-[spin_20s_linear_infinite] absolute"></div>
-                                <div className="w-24 h-24 bg-[#ff8c00] border-[3px] border-[#0a0a0a] rounded-none shadow-neo flex items-center justify-center text-4xl z-10">✓</div>
+                            <div className="bg-[#ffffff] border-[3px] border-[#0a0a0a] rounded-none overflow-hidden shadow-neo aspect-4/3">
+                                <Image
+                                    src="/deploy-scale.png"
+                                    alt="Rapid 48-hour developer deployment conveyor belt — from start to deployed"
+                                    width={800}
+                                    height={800}
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
                         </div>
                     </div>
