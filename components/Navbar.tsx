@@ -66,11 +66,6 @@ export default function Navbar() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-56 mt-2 font-ibmplexmonomedium p-2 bg-[#f5f0e8] border-[3px] border-[#0a0a0a] shadow-neo-lg">
-                  <Link href="/rate-calculator" className="w-full block">
-                    <DropdownMenuItem className="cursor-pointer hover:bg-[#e5dfcf] focus:bg-[#e5dfcf] p-3">
-                      <span className="font-bold text-[#0a0a0a]">Rate Calculator</span>
-                    </DropdownMenuItem>
-                  </Link>
                   <Link href="/how-we-vet-developers" className="w-full block">
                     <DropdownMenuItem className="cursor-pointer hover:bg-[#e5dfcf] focus:bg-[#e5dfcf] p-3">
                       <span className="font-bold text-[#0a0a0a]">How we vet developers</span>
@@ -333,7 +328,6 @@ export default function Navbar() {
 
             <div className="flex flex-col gap-6 pt-6">
               <Link onClick={() => setIsMobileMenuOpen(false)} href="/how-we-vet" className="text-2xl font-bold text-[#0a0a0a] font-family:var(--font-grotesk) uppercase">How we vet</Link>
-              <Link onClick={() => setIsMobileMenuOpen(false)} href="/rate-calculator" className="text-2xl font-bold text-[#0a0a0a] font-family:var(--font-grotesk) uppercase">Rate Calculator</Link>
             </div>
           </div>
 
