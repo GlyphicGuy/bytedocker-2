@@ -96,7 +96,7 @@ export default function Hero() {
                     <div className="p-8 md:p-10 relative group hover:bg-[#f5f0e8] hover:bg-opacity-50 transition-all">
                         <div className="absolute top-2 right-2 w-1.5 h-1.5 bg-[#ff8c00] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         <p className="text-xs font-ibmplexmonomedium text-[#ff8c00] uppercase tracking-widest font-black mb-3">Vetting Since</p>
-                        <p className="text-3xl md:text-4xl font-black text-[#0a0a0a]">2015</p>
+                        <p className="text-3xl md:text-4xl font-black text-[#0a0a0a]">2022</p>
                     </div>
                 </div>
 

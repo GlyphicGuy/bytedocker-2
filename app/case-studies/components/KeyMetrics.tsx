@@ -16,7 +16,7 @@ export default function KeyMetrics() {
                             Results that speak for themselves
                         </h2>
                         <p className="text-[#4a4a4a] text-lg leading-relaxed">
-                            Aggregated across all Bytedocker placements since 2015.
+                            Aggregated across all Bytedocker placements since 2022.
                         </p>
                     </div>
 

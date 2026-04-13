@@ -13,7 +13,7 @@ export default function TopVettedDevelopers() {
                         </h2>
 
                         <div className="space-y-5 text-[#4a4a4a] leading-relaxed text-lg">
-                            <p>Since 2015, after screening thousands of candidates, we&apos;ve found how to filter for developers who can get things done without babysitting.</p>
+                            <p>Since 2022, after screening thousands of candidates, we&apos;ve found how to filter for developers who can get things done without babysitting.</p>
                             <p>We don&apos;t trust online tests, AI, and auto-screening software. Call it old-fashioned, but those are people of flesh and blood making your next hire happen fast and easily.</p>
                             <p className="text-[#0a0a0a] font-black">How do we identify a good candidate?</p>
                         </div>

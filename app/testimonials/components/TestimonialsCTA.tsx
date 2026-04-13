@@ -22,7 +22,7 @@ export default function TestimonialsCTA() {
                             {[
                                 ["180+", "Verified reviews"],
                                 ["4.9", "Average rating"],
-                                ["2015", "Placing developers since"],
+                                ["2022", "Placing developers since"],
                             ].map(([val, lbl], i) => (
                                 <div key={i} className="py-3">
                                     <p className="text-2xl font-black text-[#ff8c00]">{val}</p>

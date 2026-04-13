@@ -29,7 +29,7 @@ export default function VettingCTA() {
                                 <p className="text-sm text-[#cccccc] mt-1">Of screened candidates placed</p>
                             </div>
                             <div className="pt-4">
-                                <p className="text-3xl font-black text-[#ff8c00]">2015</p>
+                                <p className="text-3xl font-black text-[#ff8c00]">2022</p>
                                 <p className="text-sm text-[#cccccc] mt-1">Vetting developers since</p>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 export default function CompanyTimeline() {
     const milestones = [
-        { year: "2015", event: "Bytedocker founded in Kyiv with a team of three." },
+        { year: "2022", event: "Bytedocker founded in Kyiv with a team of three." },
         { year: "2017", event: "First 50 placements completed. Expanded vetting to include live coding rounds." },
         { year: "2019", event: "Launched our structured English proficiency evaluation for all candidates." },
         { year: "2021", event: "Crossed 500 successful placements. Expanded into the US and EU markets." },
