@@ -12,7 +12,7 @@ const faqs = [
             },
             {
                 q: "How fast will I receive a CV?",
-                a: "In most cases, you'll receive a shortlisted candidate within 48 hours of submitting your brief. Complex or niche roles may take slightly longer.",
+                a: "In most cases, you'll receive a shortlisted candidate within 18 hours of submitting your brief. Complex or niche roles may take slightly longer.",
             },
             {
                 q: "Do I need to sign a contract upfront?",

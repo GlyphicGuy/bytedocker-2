@@ -8,7 +8,7 @@ export default function HowItWorked() {
         {
             num: "02",
             title: "We match from our pool",
-            description: "Our team identifies the best available pre-vetted candidates from our active talent network — within 48 hours.",
+            description: "Our team identifies the best available pre-vetted candidates from our active talent network — within 18 hours.",
         },
         {
             num: "03",

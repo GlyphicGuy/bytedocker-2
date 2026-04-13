@@ -21,7 +21,7 @@ export default function CaseStudiesCTA() {
                         <p className="text-xs font-ibmplexmonomedium text-[#ff8c00] uppercase tracking-widest font-black">What you get</p>
                         <div className="border-t-[3px] border-[#f5f0e8] pt-4 divide-y-[3px] divide-[#f5f0e8]">
                             {[
-                                "CV within 48 hours",
+                                "CV within 18 hours",
                                 "Pre-vetted, no whiteboard tests",
                                 "Direct communication, no agency layer",
                                 "Ongoing support post-placement",

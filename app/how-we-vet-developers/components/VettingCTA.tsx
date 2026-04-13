@@ -21,7 +21,7 @@ export default function VettingCTA() {
                         <p className="text-xs font-ibmplexmonomedium text-[#ff8c00] uppercase tracking-widest font-black">By the numbers</p>
                         <div className="border-t-[3px] border-[#f5f0e8] pt-4 divide-y-[3px] divide-[#f5f0e8]">
                             <div className="pb-4">
-                                <p className="text-3xl font-black text-[#ff8c00]">48h</p>
+                                <p className="text-3xl font-black text-[#ff8c00]">18h</p>
                                 <p className="text-sm text-[#cccccc] mt-1">Average time to first CV</p>
                             </div>
                             <div className="pt-4 pb-4">

@@ -5,12 +5,12 @@ import SectionDivider from "@/components/SectionDivider";
 
 export const metadata = {
     title: "Hire a Developer | Bytedocker Talent",
-    description: "Submit your hiring brief and get matched with a pre-vetted senior developer within 48 hours.",
+    description: "Submit your hiring brief and get matched with a pre-vetted senior developer within 18 hours.",
 };
 
 const steps = [
     { num: "01", title: "Submit your brief", description: "Tell us your role, stack, and team context. Takes under 5 minutes." },
-    { num: "02", title: "Receive matched CVs", description: "We send you pre-vetted candidates within 48 hours — no noise, no volume plays." },
+    { num: "02", title: "Receive matched CVs", description: "We send you pre-vetted candidates within 18 hours — no noise, no volume plays." },
     { num: "03", title: "Interview & decide", description: "One conversation to confirm fit. Technical vetting is already done." },
     { num: "04", title: "Onboard and ship", description: "Your new engineer is ready to contribute from day one." },
 ];
@@ -49,14 +49,14 @@ export default function HireNowPage() {
                         <div className="flex-1 max-w-2xl">
                             <div className="inline-flex items-center gap-3 mb-8 bg-white/50 backdrop-blur-sm p-2 pr-6 rounded-full border border-slate-200">
                                 <span className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-[10px] font-bold">BY</span>
-                                <span className="text-xs font-ibmplexmonomedium uppercase text-slate-500">Hire in 48 hours</span>
+                                <span className="text-xs font-ibmplexmonomedium uppercase text-slate-500">Hire in 18 hours</span>
                             </div>
                             <h1 className="text-6xl md:text-8xl font-light tracking-tight text-slate-900 leading-[0.92] mb-8 font-dmsans">
                                 Find your next <br />
                                 <span className="font-medium">great engineer.</span>
                             </h1>
                             <p className="text-slate-500 text-lg md:text-xl max-w-xl leading-relaxed font-dmsans mb-10">
-                                Submit a brief. Get a pre-vetted CV in 48 hours. No agencies, no volume plays, no wasted time.
+                                Submit a brief. Get a pre-vetted CV in 18 hours. No agencies, no volume plays, no wasted time.
                             </p>
                             <a href="#brief">
                                 <button className="bg-black hover:bg-slate-800 text-white font-medium text-base px-8 py-4 rounded-xl transition-colors font-dmsans">
@@ -193,7 +193,7 @@ export default function HireNowPage() {
                             <div className="w-full md:w-[240px] shrink-0 border border-slate-800 rounded-xl p-6 flex flex-col gap-4">
                                 <p className="text-xs font-ibmplexmonomedium text-slate-500 uppercase tracking-widest">The numbers</p>
                                 <div className="border-t border-slate-800 pt-4 divide-y divide-slate-800">
-                                    {[["48h", "First CV delivered"], ["Top 5%", "Of candidates placed"], ["94%", "Client retention"]].map(([v, l], i) => (
+                                    {[["18h", "First CV delivered"], ["Top 5%", "Of candidates placed"], ["94%", "Client retention"]].map(([v, l], i) => (
                                         <div key={i} className="py-3">
                                             <p className="text-2xl font-dmsans font-medium text-white">{v}</p>
                                             <p className="text-xs text-slate-400 mt-0.5">{l}</p>

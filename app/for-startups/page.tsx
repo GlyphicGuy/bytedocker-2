@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
     title: "For Startups | Bytedocker Talent",
-    description: "Scale your startup with the top 5% Indian developers. Pre-vetted, matched in 48 hours, and ready to deploy.",
+    description: "Scale your startup with the top 5% Indian developers. Pre-vetted, matched in 18 hours, and ready to deploy.",
 };
 
 export default function ForStartupsPage() {

@@ -7,7 +7,7 @@ export default function FastProcessSteps() {
         },
         {
             num: "02",
-            title: "Get a CV in 48h",
+            title: "Get a CV in 18h",
             description: "We match you with the best available engineer from our pre-vetted talent pool — fast.",
         },
         {

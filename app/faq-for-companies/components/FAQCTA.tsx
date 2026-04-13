@@ -26,7 +26,7 @@ export default function FAQCTA() {
                         <div className="border-t-[3px] border-[#f5f0e8] pt-4 divide-y-[3px] divide-[#f5f0e8]">
                             {[
                                 ["&lt; 4 hours", "Typical reply time"],
-                                ["48 hours", "First CV delivery"],
+                                ["18 hours", "First CV delivery"],
                                 ["No sales calls", "Just answers"],
                             ].map(([val, lbl], i) => (
                                 <div key={i} className="py-3 flex items-start gap-3">

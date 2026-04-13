@@ -34,7 +34,7 @@ export default function Features() {
     const steps = [
         { id: "source", title: "Source", subtitle: "Define your requirements" },
         { id: "screen", title: "Screen", subtitle: "Rigorous tech vetting" },
-        { id: "deploy", title: "Deploy", subtitle: "Match in 48 hours" }
+        { id: "deploy", title: "Deploy", subtitle: "Match in 18 hours" }
     ];
 
     return (
@@ -160,7 +160,7 @@ export default function Features() {
                             <div className="space-y-4">
                                 <div className="flex items-center gap-6 p-4 border-[3px] border-[#0a0a0a] rounded-none hover:bg-[#f5f0e8] transition-colors cursor-default group shadow-neo border-l-[4px] border-l-[#ff8c00]">
                                     <div className="w-2 h-2 bg-[#ff8c00] rounded-none"></div>
-                                    <span className="text-xs font-black uppercase tracking-widest text-[#4a4a4a]">48-Hour Shortlist</span>
+                                    <span className="text-xs font-black uppercase tracking-widest text-[#4a4a4a]">18-Hour Shortlist</span>
                                 </div>
                                 <div className="flex items-center gap-6 p-4 border-[3px] border-[#0a0a0a] rounded-none hover:bg-[#f5f0e8] transition-colors cursor-default group shadow-neo">
                                     <div className="w-2 h-2 bg-[#0a0a0a] rounded-none"></div>

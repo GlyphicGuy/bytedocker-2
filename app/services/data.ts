@@ -70,7 +70,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Full-stack developers?",
-        "ctaBody": "Drop us a brief overview of your Full-stack needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Full-stack needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Full-stack developers",
@@ -155,7 +155,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Front-end developers?",
-        "ctaBody": "Drop us a brief overview of your Front-end needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Front-end needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Front-end developers",
@@ -240,7 +240,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Back-end developers?",
-        "ctaBody": "Drop us a brief overview of your Back-end needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Back-end needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Back-end developers",
@@ -325,7 +325,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Mobile developers?",
-        "ctaBody": "Drop us a brief overview of your Mobile needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Mobile needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Mobile developers",
@@ -410,7 +410,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Game developers?",
-        "ctaBody": "Drop us a brief overview of your Game needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Game needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Game developers",
@@ -495,7 +495,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert DevOps?",
-        "ctaBody": "Drop us a brief overview of your DevOps needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your DevOps needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "DevOps",
@@ -580,7 +580,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Cloud engineers?",
-        "ctaBody": "Drop us a brief overview of your Cloud needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Cloud needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Cloud engineers",
@@ -665,7 +665,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert AI engineers?",
-        "ctaBody": "Drop us a brief overview of your AI needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your AI needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "AI engineers",
@@ -750,7 +750,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Machine Learning engineers?",
-        "ctaBody": "Drop us a brief overview of your Machine needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Machine needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Machine Learning engineers",
@@ -835,7 +835,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Data analysts?",
-        "ctaBody": "Drop us a brief overview of your Data needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Data needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Data analysts",
@@ -920,7 +920,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Data engineers?",
-        "ctaBody": "Drop us a brief overview of your Data needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Data needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Data engineers",
@@ -1005,7 +1005,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Data scientists?",
-        "ctaBody": "Drop us a brief overview of your Data needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Data needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Data scientists",
@@ -1090,7 +1090,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Blockchain developers?",
-        "ctaBody": "Drop us a brief overview of your Blockchain needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Blockchain needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Blockchain developers",
@@ -1175,7 +1175,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Automation QA engineers?",
-        "ctaBody": "Drop us a brief overview of your Automation needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Automation needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Automation QA engineers",
@@ -1260,7 +1260,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert React developers?",
-        "ctaBody": "Drop us a brief overview of your React needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your React needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "React developers",
@@ -1345,7 +1345,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Angular developers?",
-        "ctaBody": "Drop us a brief overview of your Angular needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Angular needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Angular developers",
@@ -1430,7 +1430,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Node.js developers?",
-        "ctaBody": "Drop us a brief overview of your Node.js needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Node.js needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Node.js developers",
@@ -1515,7 +1515,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert JavaScript developers?",
-        "ctaBody": "Drop us a brief overview of your JavaScript needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your JavaScript needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "JavaScript developers",
@@ -1600,7 +1600,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Next.js developers?",
-        "ctaBody": "Drop us a brief overview of your Next.js needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Next.js needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Next.js developers",
@@ -1685,7 +1685,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Vue.js developers?",
-        "ctaBody": "Drop us a brief overview of your Vue.js needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Vue.js needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Vue.js developers",
@@ -1770,7 +1770,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Three.js developers?",
-        "ctaBody": "Drop us a brief overview of your Three.js needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Three.js needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Three.js developers",
@@ -1855,7 +1855,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Python developers?",
-        "ctaBody": "Drop us a brief overview of your Python needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Python needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Python developers",
@@ -1940,7 +1940,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Unity developers?",
-        "ctaBody": "Drop us a brief overview of your Unity needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Unity needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Unity developers",
@@ -2025,7 +2025,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Django developers?",
-        "ctaBody": "Drop us a brief overview of your Django needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Django needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Django developers",
@@ -2110,7 +2110,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Java developers?",
-        "ctaBody": "Drop us a brief overview of your Java needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Java needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Java developers",
@@ -2195,7 +2195,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Ruby on Rails developers?",
-        "ctaBody": "Drop us a brief overview of your Ruby needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Ruby needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Ruby on Rails developers",
@@ -2280,7 +2280,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert PHP developers?",
-        "ctaBody": "Drop us a brief overview of your PHP needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your PHP needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "PHP developers",
@@ -2365,7 +2365,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Laravel developers?",
-        "ctaBody": "Drop us a brief overview of your Laravel needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Laravel needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Laravel developers",
@@ -2450,7 +2450,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert .NET developers?",
-        "ctaBody": "Drop us a brief overview of your .NET needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your .NET needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 ".NET developers",
@@ -2535,7 +2535,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert ASP.NET developers?",
-        "ctaBody": "Drop us a brief overview of your ASP.NET needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your ASP.NET needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "ASP.NET developers",
@@ -2620,7 +2620,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert iOS developers?",
-        "ctaBody": "Drop us a brief overview of your iOS needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your iOS needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "iOS developers",
@@ -2705,7 +2705,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Flutter developers?",
-        "ctaBody": "Drop us a brief overview of your Flutter needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Flutter needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Flutter developers",
@@ -2790,7 +2790,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert React Native developers?",
-        "ctaBody": "Drop us a brief overview of your React needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your React Native needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "React Native developers",
@@ -2875,7 +2875,7 @@ const services: Service[] = [
             ]
         ],
         "ctaHeadline": "Need expert Android developers?",
-        "ctaBody": "Drop us a brief overview of your Android needs and we'll send you pre-vetted candidate options within 48 hours.",
+        "ctaBody": "Drop us a brief overview of your Android needs and we'll send you pre-vetted candidate options within 18 hours.",
         "panel": [
             [
                 "Android developers",

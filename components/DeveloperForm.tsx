@@ -116,7 +116,7 @@ export default function DeveloperForm() {
                                 <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-8">✓</div>
                                 <h4 className="text-3xl font-bold text-slate-900 mb-4">Application Received!</h4>
                                 <p className="text-slate-500 leading-relaxed mb-10 font-medium">
-                                    Our vetting team will review your profile. If you match our high standards, we&apos;ll reach out for a technical screening within 48 hours.
+                                    Our vetting team will review your profile. If you match our high standards, we&apos;ll reach out for a technical screening within 18 hours.
                                 </p>
                                 <button onClick={() => setStep(1)} className="text-blue-600 font-black uppercase tracking-[0.2em] text-[10px] hover:underline">
                                     Apply another role
