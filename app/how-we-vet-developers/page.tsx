@@ -13,7 +13,7 @@ import SectionDivider from "@/components/SectionDivider";
 
 export const metadata = {
     title: "How We Vet Developers | Bytedocker Talent",
-    description: "Learn about our rigorous multi-stage vetting process that ensures you only work with the top 5%.",
+    description: "Learn about our rigorous multi-stage vetting process that ensures you only work with the top 1%.",
 };
 
 export default function VettingProcessPage() {
@@ -47,7 +47,7 @@ export default function VettingProcessPage() {
                             <div className="inline-flex items-center gap-3 mb-8 bg-white/50 backdrop-blur-sm p-2 pr-6 rounded-full border border-slate-200">
                                 <span className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-[10px] font-bold">BY</span>
                                 <span className="text-xs font-ibmplexmonomedium uppercase text-slate-500">
-                                    The Top 5% Filter
+                                    The Top 1% Filter
                                 </span>
                             </div>
 

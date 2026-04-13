@@ -60,7 +60,7 @@ export default function FindJobsPage() {
                                 <span className="font-medium">proud of.</span>
                             </h1>
                             <p className="text-slate-500 text-lg md:text-xl max-w-xl leading-relaxed font-dmsans mb-10">
-                                Join the top 5% of engineers in the Bytedocker network. Work remotely with world-class product companies that value quality.
+                                Join the top 1% of engineers in the Bytedocker network. Work remotely with world-class product companies that value quality.
                             </p>
                             <a href="#apply">
                                 <button className="bg-black hover:bg-slate-800 text-white font-medium text-base px-8 py-4 rounded-xl transition-colors font-dmsans">
@@ -190,7 +190,7 @@ export default function FindJobsPage() {
                     <div className="container mx-auto max-w-[1200px]">
                         <div className="border border-slate-800 rounded-2xl p-12 md:p-16 flex flex-col md:flex-row items-start justify-between gap-12">
                             <div className="max-w-xl">
-                                <p className="text-sm font-ibmplexmonomedium text-slate-500 uppercase tracking-widest mb-6">Top 5% only</p>
+                                <p className="text-sm font-ibmplexmonomedium text-slate-500 uppercase tracking-widest mb-6">Top 1% only</p>
                                 <h2 className="text-4xl md:text-5xl font-dmsans font-medium mb-6 leading-[1.1] tracking-tight">
                                     Our bar is high for a reason.
                                 </h2>

@@ -7,7 +7,7 @@ const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
   title: "Bytedocker Talent | Pre-Vetted Remote Engineers for Funded Startups",
-  description: "Hire top 5% Indian developers matched to your startup within 18 hours. No hiring chaos. No long interviews. No guesswork.",
+  description: "Hire top 1% Indian developers matched to your startup within 18 hours. No hiring chaos. No long interviews. No guesswork.",
 };
 
 export default function RootLayout({

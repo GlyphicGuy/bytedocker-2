@@ -9,7 +9,7 @@ Running Technical Assessment...
 [✓] Security: JWT & OAuth2 Implementation
 [✓] Performance: Web Vitals Optimization
 
-Evaluation: TOP 5% (ELITE)
+Evaluation: TOP 1% (ELITE)
 Recommendation: HIRE IMMEDIATELY
     `;
 
@@ -30,7 +30,7 @@ Recommendation: HIRE IMMEDIATELY
                     </p>
                     <div className="grid grid-cols-2 gap-4 max-w-lg mb-12">
                         {[
-                            { label: "Applicants Rejected", val: "80%" },
+                            { label: "Applicants Rejected", val: "99%" },
                             { label: "Vetting Hours", val: "10+ hrs" }
                         ].map((stat) => (
                             <div key={stat.label} className="p-6 rounded-none bg-[#1a1a1a] border-[3px] border-[#f5f0e8] shadow-neo group hover:shadow-neo-lg transition-all">

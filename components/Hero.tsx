@@ -60,7 +60,7 @@ export default function Hero() {
 
                 {/* Subheading */}
                 <p className="text-lg md:text-xl text-[#4a4a4a] leading-relaxed max-w-2xl mb-12 md:mb-16 font-dmsans">
-                    Hire top 5% Indian developers matched to your startup within 18 hours. No hiring chaos. No long interviews. No guesswork.
+                    Hire top 1% Indian developers matched to your startup within 18 hours. No hiring chaos. No long interviews. No guesswork.
                 </p>
 
                 {/* CTA Buttons - Enhanced with more pop */}
@@ -91,7 +91,7 @@ export default function Hero() {
                     <div className="p-8 md:p-10 border-b-[3px] md:border-b-0 md:border-r-[3px] border-[#0a0a0a] relative group hover:bg-[#f5f0e8] hover:bg-opacity-50 transition-all">
                         <div className="absolute top-2 right-2 w-1.5 h-1.5 bg-[#ff8c00] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         <p className="text-xs font-ibmplexmonomedium text-[#ff8c00] uppercase tracking-widest font-black mb-3">Retention Rate</p>
-                        <p className="text-3xl md:text-4xl font-black text-[#0a0a0a]">95%+</p>
+                        <p className="text-3xl md:text-4xl font-black text-[#0a0a0a]">97%+</p>
                     </div>
                     <div className="p-8 md:p-10 relative group hover:bg-[#f5f0e8] hover:bg-opacity-50 transition-all">
                         <div className="absolute top-2 right-2 w-1.5 h-1.5 bg-[#ff8c00] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>

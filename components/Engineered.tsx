@@ -2,8 +2,8 @@
 
 export default function Engineered() {
     const reasons = [
-        { label: "Only Top 5% Accepted" },
-        { label: "48-Hour Matching" },
+        { label: "Only Top 1% Accepted" },
+        { label: "18-Hour Matching" },
         { label: "Startup-Focused Engineers" },
         { label: "Time-Zone Aligned" },
         { label: "Replacement Guarantee" }

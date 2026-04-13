@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import LogoCloud from "@/components/LogoCloud";
 import Features from "@/components/Features";
 import Comparisons from "@/components/Comparisons";
-import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -17,7 +16,6 @@ export default function Home() {
         <LogoCloud />
         <Features />
         <Comparisons />
-        <Services />
         <Testimonials />
         <CTA />
       </main>

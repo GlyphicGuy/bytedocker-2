@@ -25,7 +25,7 @@ export default function VettingCTA() {
                                 <p className="text-sm text-[#cccccc] mt-1">Average time to first CV</p>
                             </div>
                             <div className="pt-4 pb-4">
-                                <p className="text-3xl font-black text-[#ff8c00]">Top 5%</p>
+                                <p className="text-3xl font-black text-[#ff8c00]">Top 1%</p>
                                 <p className="text-sm text-[#cccccc] mt-1">Of screened candidates placed</p>
                             </div>
                             <div className="pt-4">

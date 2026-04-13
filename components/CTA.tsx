@@ -40,7 +40,7 @@ export default function CTA() {
                                 Build Your Elite <br className="hidden md:block" /> Engineering Team
                             </h2>
                             <p className="text-sm md:text-lg text-[#cccccc] max-w-xl mx-auto lg:mx-0 leading-relaxed font-dmsans">
-                                Join the top 5% of funded startups that leverage Bytedocker to integrate pre-vetted engineers into their remote team in 18 hours.
+                                Join the top 1% of funded startups that leverage Bytedocker to integrate pre-vetted engineers into their remote team in 18 hours.
                             </p>
                         </div>
 

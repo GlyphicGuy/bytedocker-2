@@ -1,9 +1,9 @@
 export default function KeyMetrics() {
     const metrics = [
         { value: "18h", label: "Average time to first CV" },
-        { value: "Top 5%", label: "Of candidates placed successfully" },
+        { value: "Top 1%", label: "Of candidates placed successfully" },
         { value: "11 days", label: "Median time-to-hire across all cases" },
-        { value: "94%", label: "Client retention after first placement" },
+        { value: "97%", label: "Client retention after first placement" },
     ];
 
     return (

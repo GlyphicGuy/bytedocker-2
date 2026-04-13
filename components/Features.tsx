@@ -115,7 +115,7 @@ export default function Features() {
                             <div className="aspect-4/3 bg-[#ffffff] border-[3px] border-[#0a0a0a] rounded-none overflow-hidden shadow-neo">
                                 <Image
                                     src="/vet-rigorously.png"
-                                    alt="Rigorous developer vetting process — screening for code, communication, and live tests to find the top 5%"
+                                    alt="Rigorous developer vetting process — screening for code, communication, and live tests to find the top 1%"
                                     width={800}
                                     height={600}
                                     className="w-full h-full object-cover"
@@ -131,8 +131,8 @@ export default function Features() {
                             </p>
                             <div className="grid grid-cols-2 gap-4">
                                 {[
-                                    { label: "Rejected", val: "80%", isHighlight: false },
-                                    { label: "Elite", val: "TOP 5%", isHighlight: true }
+                                    { label: "Rejected", val: "99%", isHighlight: false },
+                                    { label: "Elite", val: "TOP 1%", isHighlight: true }
                                 ].map(s => (
                                     <div key={s.label} className={`p-5 border-[3px] border-[#0a0a0a] rounded-none bg-[#ffffff] shadow-neo ${s.isHighlight ? 'border-l-[4px] border-l-[#ff8c00]' : ''}`}>
                                         <p className={`text-[10px] font-black uppercase mb-1 ${s.isHighlight ? 'text-[#ff8c00]' : 'text-[#999999]'}`}>{s.label}</p>

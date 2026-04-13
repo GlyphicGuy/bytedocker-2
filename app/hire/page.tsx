@@ -193,7 +193,7 @@ export default function HireNowPage() {
                             <div className="w-full md:w-[240px] shrink-0 border border-slate-800 rounded-xl p-6 flex flex-col gap-4">
                                 <p className="text-xs font-ibmplexmonomedium text-slate-500 uppercase tracking-widest">The numbers</p>
                                 <div className="border-t border-slate-800 pt-4 divide-y divide-slate-800">
-                                    {[["18h", "First CV delivered"], ["Top 5%", "Of candidates placed"], ["94%", "Client retention"]].map(([v, l], i) => (
+                                    {[["18h", "First CV delivered"], ["Top 1%", "Of candidates placed"], ["97%", "Client retention"]].map(([v, l], i) => (
                                         <div key={i} className="py-3">
                                             <p className="text-2xl font-dmsans font-medium text-white">{v}</p>
                                             <p className="text-xs text-slate-400 mt-0.5">{l}</p>

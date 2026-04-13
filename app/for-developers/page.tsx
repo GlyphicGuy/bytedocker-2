@@ -13,7 +13,7 @@ import SectionDivider from "@/components/SectionDivider";
 
 export const metadata = {
     title: "For Developers | Bytedocker Talent",
-    description: "Join the elite network of the top 5% Indian developers. Work with world-class US startups and build products that matter.",
+    description: "Join the elite network of the top 1% Indian developers. Work with world-class US startups and build products that matter.",
 };
 
 export default function ForDevelopersPage() {

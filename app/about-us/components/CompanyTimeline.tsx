@@ -5,7 +5,7 @@ export default function CompanyTimeline() {
         { year: "2019", event: "Launched our structured English proficiency evaluation for all candidates." },
         { year: "2021", event: "Crossed 500 successful placements. Expanded into the US and EU markets." },
         { year: "2023", event: "Introduced dedicated Tech Lead reviews for senior-level candidates." },
-        { year: "2025", event: "1,000+ placements across 40+ countries. 94% client retention rate." },
+        { year: "2025", event: "50+ placements across 40+ countries. 97% client retention rate." },
     ];
 
     return (
