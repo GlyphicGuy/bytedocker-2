@@ -55,7 +55,7 @@ export default function Hero() {
 
                 {/* Main Heading */}
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-[#0a0a0a] leading-[1.2] md:leading-[1.15] mb-8 max-w-4xl font-family:var(--font-grotesk) uppercase">
-                    Pre-Vetted Remote Engineers for Funded Startups
+                    Pre-Vetted.<br/>Remote.<br/>Ready to Ship.
                 </h1>
 
                 {/* Subheading */}
