@@ -30,12 +30,16 @@ export default function Hero() {
             {/* Floating geometric elements with dashed borders - Animated */}
             <div className="absolute top-1/3 right-[8%] w-24 h-24 border-[2px] border-dashed border-[#ff8c00] opacity-20 animate-float-slow" style={{ transform: "rotate(45deg)" }}></div>
             <div className="absolute bottom-1/4 left-[10%] w-16 h-16 border-[2px] border-dashed border-[#ff8c00] opacity-25 animate-float-slower" style={{ transform: "rotate(45deg)" }}></div>
+            <div className="absolute top-[18%] left-[18%] w-10 h-10 border-[2px] border-dashed border-[#ff8c00] opacity-15 animate-float-slower" style={{ transform: "rotate(45deg)" }}></div>
+            <div className="absolute bottom-[22%] right-[18%] w-12 h-12 border-[2px] border-[#ff8c00] opacity-12 animate-float-slow rounded-full"></div>
 
             {/* Accent dots scattered - Animated with pulse */}
             <div className="absolute top-1/4 right-1/3 w-2 h-2 bg-[#ff8c00] rounded-full opacity-40 animate-pulse-gentle"></div>
             <div className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-[#ff8c00] rounded-full opacity-30 animate-pulse-gentle" style={{ animationDelay: "0.5s" }}></div>
             <div className="absolute top-1/2 left-1/4 w-2.5 h-2.5 bg-[#ff8c00] rounded-full opacity-35 animate-pulse-gentle" style={{ animationDelay: "1s" }}></div>
             <div className="absolute bottom-1/2 right-1/2 w-1 h-1 bg-[#ff8c00] rounded-full opacity-40 animate-pulse-gentle" style={{ animationDelay: "1.5s" }}></div>
+            <div className="absolute top-[14%] right-[22%] w-1.5 h-1.5 bg-[#ff8c00] rounded-full opacity-25 animate-pulse-gentle" style={{ animationDelay: "0.8s" }}></div>
+            <div className="absolute bottom-[18%] left-[35%] w-1 h-1 bg-[#ff8c00] rounded-full opacity-30 animate-pulse-gentle" style={{ animationDelay: "1.8s" }}></div>
 
             {/* Corner accents with dashed style - Rotated animation */}
             <div className="absolute top-0 left-0 w-24 h-24 animate-rotate-slow">
@@ -55,7 +59,7 @@ export default function Hero() {
 
                 {/* Main Heading */}
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-[#0a0a0a] leading-[1.2] md:leading-[1.15] mb-8 max-w-4xl font-family:var(--font-grotesk) uppercase">
-                    Pre-Vetted.<br/>Remote.<br/>Ready to Ship.
+                    Pre-Vetted.<br />Remote.<br />Ready to Ship.
                 </h1>
 
                 {/* Subheading */}
@@ -71,7 +75,7 @@ export default function Hero() {
                         </button>
                     </Link>
                     <Link href="/for-developers">
-                        <button className="bg-transparent hover:bg-[#0a0a0a] hover:bg-opacity-8 text-[#0a0a0a] font-black text-sm px-8 py-3 rounded-none uppercase tracking-widest transition-all cursor-pointer font-ibmplexmonomedium border-[3px] border-[#0a0a0a] transform hover:scale-105">
+                        <button className="bg-transparent hover:bg-[#0a0a0a] hover:text-[#f5f0e8] hover:bg-opacity-8 text-[#0a0a0a] font-black text-sm px-8 py-3 rounded-none uppercase tracking-widest transition-all cursor-pointer font-ibmplexmonomedium border-[3px] border-[#0a0a0a] transform hover:scale-105">
                             Apply as Developer
                         </button>
                     </Link>
