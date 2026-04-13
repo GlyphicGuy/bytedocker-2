@@ -3,7 +3,7 @@ export default function CompanyStats() {
         { value: "50+", label: "Developers placed globally" },
         { value: "40+", label: "Countries served" },
         { value: "97%", label: "Client retention after first hire" },
-        { value: "2022", label: "Founded — operating for 10 years" },
+        { value: "2022", label: "Founded — operating for Years" },
     ];
 
     return (

@@ -27,7 +27,7 @@ export default function AboutCTA() {
                             {[
                                 ["Kyiv-founded", "Now global"],
                                 ["Human-led", "No AI screening"],
-                                ["10 years", "Of vetting experience"],
+                                ["Years", "Of vetting experience"],
                             ].map(([bold, rest], i) => (
                                 <div key={i} className="py-3">
                                     <p className="text-sm text-[#f5f0e8] font-black uppercase">{bold}</p>
