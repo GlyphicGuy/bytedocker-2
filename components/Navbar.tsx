@@ -17,6 +17,8 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const lastScrollY = useRef(0);
+  const servicesHoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const companiesHoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +38,15 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (servicesHoverTimeoutRef.current) {
+        clearTimeout(servicesHoverTimeoutRef.current);
+      }
+      if (companiesHoverTimeoutRef.current) {
+        clearTimeout(companiesHoverTimeoutRef.current);
+      }
+    };
   }, []);
 
   return (
@@ -56,8 +66,18 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-10">
             <div
-              onMouseEnter={() => setIsCompaniesOpen(true)}
-              onMouseLeave={() => setIsCompaniesOpen(false)}
+              onMouseEnter={() => {
+                if (companiesHoverTimeoutRef.current) {
+                  clearTimeout(companiesHoverTimeoutRef.current);
+                  companiesHoverTimeoutRef.current = null;
+                }
+                setIsCompaniesOpen(true);
+              }}
+              onMouseLeave={() => {
+                companiesHoverTimeoutRef.current = setTimeout(() => {
+                  setIsCompaniesOpen(false);
+                }, 150);
+              }}
               className="h-full py-2"
             >
               <DropdownMenu open={isCompaniesOpen} onOpenChange={setIsCompaniesOpen}>
@@ -96,8 +116,18 @@ export default function Navbar() {
             </div>
 
             <div
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
+              onMouseEnter={() => {
+                if (servicesHoverTimeoutRef.current) {
+                  clearTimeout(servicesHoverTimeoutRef.current);
+                  servicesHoverTimeoutRef.current = null;
+                }
+                setIsServicesOpen(true);
+              }}
+              onMouseLeave={() => {
+                servicesHoverTimeoutRef.current = setTimeout(() => {
+                  setIsServicesOpen(false);
+                }, 150);
+              }}
               className="h-full py-2"
             >
               <DropdownMenu open={isServicesOpen} onOpenChange={setIsServicesOpen}>
