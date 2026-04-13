@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import SectionDivider from "@/components/SectionDivider";
 import OurMission from "./components/OurMission";
-import CompanyTimeline from "./components/CompanyTimeline";
 import CompanyStats from "./components/CompanyStats";
 import AboutCTA from "./components/AboutCTA";
 
@@ -69,9 +68,6 @@ export default function AboutUsPage() {
                 <OurMission />
 
                 <SectionDivider bgTop="bg-white" fillBottom="fill-slate-50" />
-                <CompanyTimeline />
-
-                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
                 <CompanyStats />
 
                 <SectionDivider bgTop="bg-white" fillBottom="fill-slate-900" />

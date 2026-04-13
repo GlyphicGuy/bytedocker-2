@@ -15,7 +15,7 @@ export default function CompanyTimeline() {
                     A decade of doing it right
                 </h2>
                 <p className="text-[#4a4a4a] text-lg mb-16 max-w-lg">
-                    Ten years of refining our process, one placement at a time.
+                    Years of refining our process, one placement at a time.
                 </p>
 
                 <div className="max-w-3xl divide-y-[3px] divide-[#0a0a0a] border-t-[3px] border-[#0a0a0a]">

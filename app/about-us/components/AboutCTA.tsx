@@ -9,7 +9,7 @@ export default function AboutCTA() {
                             Hire the engineers we spent years finding.
                         </h2>
                         <p className="text-[#cccccc] text-lg leading-relaxed mb-10">
-                            Ten years of building a talent network so you don&apos;t have to. Let us find your next great engineer.
+                            Years of building a talent network so you don&apos;t have to. Let us find your next great engineer.
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <button className="bg-[#f5f0e8] hover:shadow-neo-lg text-[#0a0a0a] font-black text-base px-7 py-3.5 rounded-none transition-all font-ibmplexmonomedium border-[4px] border-[#f5f0e8] shadow-neo active:translate-y-0.5 uppercase tracking-widest text-xs">
