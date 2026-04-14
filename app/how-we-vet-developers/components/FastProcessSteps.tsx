@@ -23,9 +23,9 @@ export default function FastProcessSteps() {
     ];
 
     return (
-        <section className="py-24 px-6 bg-[#f5f0e8] font-dmsans border-b-[3px] border-[#0a0a0a]">
+        <section className="py-20 px-6 bg-[#f5f0e8] font-dmsans border-b-[3px] border-[#0a0a0a]">
             <div className="container mx-auto max-w-[1200px]">
-                <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-16 tracking-tight font-family:var(--font-grotesk) uppercase">
+                <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-12 tracking-tight font-family:var(--font-grotesk) uppercase">
                     Things moving fast at <br /> Bytedocker.
                 </h2>
 

@@ -28,12 +28,12 @@ export default function TechInterviewsTimeline() {
     ];
 
     return (
-        <section className="bg-[#0a0a0a] py-24 px-6 font-dmsans text-[#f5f0e8] border-y-[3px] border-[#f5f0e8]">
+        <section className="bg-[#0a0a0a] py-20 px-6 font-dmsans text-[#f5f0e8] border-y-[3px] border-[#f5f0e8]">
             <div className="container mx-auto max-w-[1200px]">
                 <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight max-w-2xl font-family:var(--font-grotesk) uppercase">
                     Tech interviews designed to spot the right talent
                 </h2>
-                <p className="text-[#cccccc] text-lg mb-16 max-w-xl">
+                <p className="text-[#cccccc] text-lg mb-12 max-w-xl">
                     Every interview consists of several specific stages supervised by a relevant technical team lead.
                 </p>
 
@@ -49,7 +49,7 @@ export default function TechInterviewsTimeline() {
                     ))}
                 </div>
 
-                <div className="mt-14">
+                <div className="mt-10">
                     <button className="bg-[#f5f0e8] hover:shadow-neo-lg text-[#0a0a0a] font-black text-base px-7 py-3.5 rounded-none transition-all font-ibmplexmonomedium border-[4px] border-[#f5f0e8] shadow-neo active:translate-y-0.5 uppercase tracking-widest text-xs">
                         Hire vetted developer
                     </button>

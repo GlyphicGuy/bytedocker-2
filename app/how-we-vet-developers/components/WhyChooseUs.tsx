@@ -23,9 +23,9 @@ export default function WhyChooseUs() {
     ];
 
     return (
-        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans">
+        <section className="bg-[#f5f0e8] py-20 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
-                <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-16 max-w-xl tracking-tight leading-tight font-family:var(--font-grotesk) uppercase">
+                <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-12 max-w-xl tracking-tight leading-tight font-family:var(--font-grotesk) uppercase">
                     Why companies trust our infrastructure
                 </h2>
 
@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
                     ))}
                 </div>
 
-                <div className="mt-12">
+                <div className="mt-10">
                     <button className="bg-[#0a0a0a] hover:shadow-neo-lg text-[#f5f0e8] font-black text-base px-7 py-3.5 rounded-none transition-all font-ibmplexmonomedium border-[4px] border-[#0a0a0a] shadow-neo active:translate-y-0.5 uppercase tracking-widest text-xs">
                         Start your process
                     </button>

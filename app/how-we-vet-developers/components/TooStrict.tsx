@@ -23,15 +23,15 @@ export default function TooStrict() {
     ];
 
     return (
-        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans">
+        <section className="bg-[#f5f0e8] py-20 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
-                <div className="flex flex-col lg:flex-row gap-16 items-start">
+            <div className="flex flex-col lg:flex-row gap-12 items-start">
 
                     <div className="lg:w-[380px] shrink-0">
                         <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-5 tracking-tight leading-tight font-family:var(--font-grotesk) uppercase">
                             Too strict, too good to be true?
                         </h2>
-                        <p className="text-[#4a4a4a] text-lg leading-relaxed mb-8">
+                        <p className="text-[#4a4a4a] text-lg leading-relaxed mb-6">
                             It&apos;s a common concern. But rigorous screening is exactly what makes our developers reliable.
                         </p>
                         <button className="bg-[#0a0a0a] hover:shadow-neo-lg text-[#f5f0e8] font-black text-base px-7 py-3.5 rounded-none transition-all font-ibmplexmonomedium border-[4px] border-[#0a0a0a] shadow-neo active:translate-y-0.5 uppercase tracking-widest text-xs">

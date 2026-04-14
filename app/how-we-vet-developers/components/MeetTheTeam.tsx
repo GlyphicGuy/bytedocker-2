@@ -15,13 +15,13 @@ export default function MeetTheTeam() {
     ];
 
     return (
-        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans">
+        <section className="bg-[#f5f0e8] py-20 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
-                <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-16 tracking-tight font-family:var(--font-grotesk) uppercase">
+                <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-12 tracking-tight font-family:var(--font-grotesk) uppercase">
                     Meet the team
                 </h2>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
                     {team.map((member, i) => (
                         <div key={i} className="flex flex-col">
                             <div className="aspect-4/5 bg-[#ffffff] mb-4 rounded-none overflow-hidden relative border-[3px] border-[#0a0a0a] shadow-neo">
