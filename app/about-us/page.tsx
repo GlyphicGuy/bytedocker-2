@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import SectionDivider from "@/components/SectionDivider";
 import OurMission from "./components/OurMission";
 import CompanyStats from "./components/CompanyStats";
 import AboutCTA from "./components/AboutCTA";
@@ -63,13 +62,10 @@ export default function AboutUsPage() {
                     </div>
                 </section>
 
-                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
                 <OurMission />
 
-                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-50" />
                 <CompanyStats />
 
-                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-900" />
                 <AboutCTA />
 
             </main>

@@ -23,7 +23,7 @@ export default function OurMission() {
     ];
 
     return (
-        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans border-t-[3px] border-[#0a0a0a]">
+        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
                 <div className="flex flex-col lg:flex-row gap-16 items-start mb-20">
                     <div className="lg:w-[420px] shrink-0">

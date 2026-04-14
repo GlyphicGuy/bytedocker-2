@@ -1,6 +1,6 @@
 export default function AboutCTA() {
     return (
-        <section className="bg-[#0a0a0a] text-[#f5f0e8] py-24 px-6 font-dmsans border-y-[3px] border-[#0a0a0a]">
+        <section className="bg-[#0a0a0a] text-[#f5f0e8] py-24 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
                 <div className="border-[3px] border-[#f5f0e8] rounded-none p-12 md:p-16 flex flex-col md:flex-row items-start justify-between gap-12 shadow-neo bg-[#0a0a0a]">
                     <div className="max-w-xl">
