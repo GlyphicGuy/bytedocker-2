@@ -7,9 +7,9 @@ export default function FAQQuickLinks() {
     ];
 
     return (
-        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans border-t-[3px] border-[#0a0a0a]">
+        <section className="bg-[#f5f0e8] py-20 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
-                <div className="flex flex-col lg:flex-row gap-16 items-start">
+                <div className="flex flex-col lg:flex-row gap-12 items-start">
                     <div className="lg:w-[340px] shrink-0">
                         <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-5 tracking-tight leading-tight font-family:var(--font-grotesk) uppercase">
                             Topics covered

@@ -73,12 +73,12 @@ export default function FAQAccordion() {
     const [open, setOpen] = useState<string | null>(null);
 
     return (
-        <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans border-y-[3px] border-[#0a0a0a]">
+        <section className="bg-[#f5f0e8] py-20 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
                 <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] mb-4 tracking-tight font-family:var(--font-grotesk) uppercase">
                     Your questions, answered
                 </h2>
-                <p className="text-[#4a4a4a] text-lg mb-16 max-w-lg">
+                <p className="text-[#4a4a4a] text-lg mb-12 max-w-lg">
                     Everything you need to know before submitting your first brief.
                 </p>
 
