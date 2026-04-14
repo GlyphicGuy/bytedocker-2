@@ -28,7 +28,7 @@ export default function TopVettedDevelopers() {
 
                     {/* Image placeholder — drop your image here */}
                     <div className="w-full lg:w-[450px] shrink-0 aspect-4/3 flex flex-col items-center justify-center gap-3 border-[3px] border-[#0a0a0a] bg-[#ffffff] shadow-neo relative overflow-hidden">
-                        <Image src="/undraw_grading-papers_lty0.svg" alt="Top vetted developers" width={300} height={300} className="w-full h-full object-contain" />
+                        <Image src="/illustrations/top-vetted-neo.svg" alt="Top vetted checklist graphic" width={300} height={300} className="w-full h-full object-contain" />
                     </div>
                 </div>
 

@@ -17,7 +17,7 @@ export default function Testimonials() {
     return (
         <section className="bg-[#f5f0e8] py-20 px-6 font-dmsans">
             <div className="container mx-auto max-w-[1200px]">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                     <h2 className="text-4xl md:text-5xl font-black text-[#0a0a0a] tracking-tight max-w-md font-family:var(--font-grotesk) uppercase">
                         What clients have to say
                     </h2>

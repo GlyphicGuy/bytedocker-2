@@ -63,8 +63,8 @@ export default function VettingProcessPage() {
 
                         <div className="w-full md:w-[520px] aspect-square md:aspect-[4/3] flex items-center justify-center border-[3px] border-[#0a0a0a] bg-[#ffffff] shadow-neo relative overflow-hidden">
                             <Image
-                                src="/undraw_remote-meeting_kqj0.svg"
-                                alt="Vetting Process"
+                                src="/illustrations/vetting-hero-neo.svg"
+                                alt="Vetting checklist graphic"
                                 width={520}
                                 height={520}
                                 className="w-full h-full object-contain"
