@@ -12,43 +12,36 @@ export default function DeveloperHero() {
     ];
 
     return (
-        <section className="relative px-6 pt-32 pb-24 bg-[#f5f0e8] border-b-[3px] border-[#0a0a0a] overflow-hidden">
-            {/* Technical Stroke Background (Grid) */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <section className="relative px-6 pt-24 pb-16 bg-[#f5f0e8] overflow-hidden">
+            <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        <pattern id="grid-hero" width="40" height="40" patternUnits="userSpaceOnUse">
-                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="black" strokeWidth="1" />
+                        <pattern id="grid-hero" width="36" height="36" patternUnits="userSpaceOnUse">
+                            <path d="M 36 0 L 0 0 0 36" fill="none" stroke="black" strokeWidth="1" />
                         </pattern>
                     </defs>
                     <rect width="100%" height="100%" fill="url(#grid-hero)" />
                 </svg>
             </div>
-
-            {/* Dashed Line Accents */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-1/4 left-0 w-full border-t border-dashed border-black/5"></div>
-                <div className="absolute bottom-1/4 left-0 w-full border-t border-dashed border-black/5"></div>
-                <div className="absolute left-1/4 top-0 h-full border-l border-dashed border-black/5"></div>
-                <div className="absolute right-1/4 top-0 h-full border-l border-dashed border-black/5"></div>
-            </div>
+            <div className="absolute -top-6 left-10 w-24 h-24 bg-[#ff8c00] border-[3px] border-[#0a0a0a] rotate-6 shadow-neo"></div>
+            <div className="absolute bottom-10 right-12 w-20 h-20 bg-[#ffffff] border-[3px] border-[#0a0a0a] -rotate-6 shadow-neo"></div>
 
             <div className="container mx-auto max-w-[1400px] relative z-10">
                 <div className="flex flex-col md:flex-row gap-16 items-center mb-0">
                     <div className="flex-1 max-w-2xl">
-                        <div className="inline-flex items-center gap-3 mb-8 bg-[#ffffff] p-3 pr-6 rounded-none border-[3px] border-[#0a0a0a] shadow-neo">
-                            <span className="w-8 h-8 bg-[#0a0a0a] text-[#f5f0e8] rounded-none flex items-center justify-center text-[10px] font-black font-ibmplexmonomedium uppercase">BY</span>
-                            <span className="text-xs font-ibmplexmonomedium uppercase text-[#4a4a4a]">
+                        <div className="inline-flex items-center gap-3 mb-8 bg-[#ffffff] px-4 py-2 border-[3px] border-[#0a0a0a] shadow-neo uppercase tracking-widest text-xs font-ibmplexmonomedium">
+                            <span className="w-8 h-8 bg-[#0a0a0a] text-[#f5f0e8] flex items-center justify-center text-[10px] font-black">BY</span>
+                            <span className="text-[#0a0a0a]">
                                 Join the Elite Engineering Network
                             </span>
                         </div>
 
-                        <h1 className="text-6xl md:text-8xl font-black tracking-tight text-[#0a0a0a] leading-[0.92] mb-10 font-family:var(--font-grotesk) uppercase">
+                        <h1 className="text-5xl md:text-7xl font-black tracking-tight text-[#0a0a0a] leading-[0.95] mb-8 font-dmsans">
                             The Remote Career <br />
-                            You&apos;ve Earned.
+                            <span className="text-[#ff8c00]">You&apos;ve Earned.</span>
                         </h1>
 
-                        <p className="text-[#4a4a4a] text-lg md:text-2xl mb-12 max-w-2xl leading-relaxed font-dmsans">
+                        <p className="text-[#4a4a4a] text-lg md:text-xl mb-10 max-w-2xl leading-relaxed font-dmsans">
                             Skip the job boards. We match you with high-growth US startups that respect your craft and pay what you&apos;re worth.
                         </p>
 
@@ -68,10 +61,10 @@ export default function DeveloperHero() {
 
                     <div className="hidden md:flex w-full md:w-[480px] shrink-0 items-center justify-center">
                         <Image
-                            src="/undraw_career-progress_vfq5.svg"
-                            alt="Developer Career Illustration"
+                            src="/illustrations/developer-hero-neo.svg"
+                            alt="Developer illustration"
                             width={480}
-                            height={400}
+                            height={360}
                             className="w-full h-auto"
                             priority
                         />
@@ -79,7 +72,7 @@ export default function DeveloperHero() {
                 </div>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t-[3px] border-[#0a0a0a]">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-10">
                     {stats.map((stat, idx) => (
                         <div key={idx} className="space-y-2">
                             <p className="text-[10px] font-ibmplexmonomedium uppercase tracking-[0.2em] text-[#4a4a4a]">

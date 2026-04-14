@@ -1,0 +1,24 @@
+<svg width="520" height="520" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="520" fill="#f5f0e8"/>
+
+  <rect x="60" y="70" width="220" height="140" fill="#ffffff" stroke="#0a0a0a" stroke-width="4"/>
+  <path d="M90 110c0-18 14-32 32-32h24c18 0 32 14 32 32 0 12-7 22-16 28-8 4-12 10-12 18" stroke="#0a0a0a" stroke-width="6" fill="none"/>
+  <circle cx="158" cy="164" r="6" fill="#0a0a0a"/>
+  <path d="M110 186h120" stroke="#0a0a0a" stroke-width="5"/>
+
+  <rect x="260" y="120" width="200" height="120" fill="#ff8c00" stroke="#0a0a0a" stroke-width="4"/>
+  <path d="M286 160c0-14 12-26 26-26h18c14 0 26 12 26 26 0 10-6 18-14 22-6 4-10 8-10 16" stroke="#0a0a0a" stroke-width="5" fill="none"/>
+  <circle cx="340" cy="198" r="5" fill="#0a0a0a"/>
+  <path d="M286 214h120" stroke="#0a0a0a" stroke-width="5"/>
+
+  <rect x="100" y="260" width="300" height="160" fill="#ffffff" stroke="#0a0a0a" stroke-width="4"/>
+  <circle cx="160" cy="310" r="16" fill="#ff8c00" stroke="#0a0a0a" stroke-width="4"/>
+  <path d="M150 310l6 6 12-12" stroke="#0a0a0a" stroke-width="4" fill="none"/>
+  <path d="M190 300h170" stroke="#0a0a0a" stroke-width="5"/>
+  <path d="M190 330h140" stroke="#0a0a0a" stroke-width="5"/>
+  <path d="M190 360h120" stroke="#0a0a0a" stroke-width="5"/>
+
+  <rect x="360" y="300" width="100" height="80" fill="#0a0a0a" stroke="#0a0a0a" stroke-width="4"/>
+  <path d="M378 330h64" stroke="#f5f0e8" stroke-width="5"/>
+  <path d="M378 350h48" stroke="#f5f0e8" stroke-width="5"/>
+</svg>

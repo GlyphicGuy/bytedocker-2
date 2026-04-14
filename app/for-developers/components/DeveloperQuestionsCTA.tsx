@@ -59,9 +59,11 @@ export default function DeveloperQuestionsCTA() {
 
                     {/* Illustration / Graphic Column */}
                     <div className="lg:w-2/5 flex justify-center">
-                        <div className="relative w-64 h-64">
+                        <div className="relative w-72 h-72">
                             <img
-                                src={"/undraw_message-sent_iyz6.svg"}
+                                src="/illustrations/developer-questions-neo.svg"
+                                alt="Questions and answers graphic"
+                                className="w-full h-full"
                             />
                         </div>
                     </div>

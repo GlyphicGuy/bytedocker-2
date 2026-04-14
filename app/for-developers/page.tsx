@@ -9,7 +9,6 @@ import DeveloperQuestionsCTA from "@/app/for-developers/components/DeveloperQues
 import DeveloperForm from "@/components/DeveloperForm";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
-import SectionDivider from "@/components/SectionDivider";
 
 export const metadata = {
     title: "For Developers | Bytedocker Talent",
@@ -22,19 +21,12 @@ export default function ForDevelopersPage() {
             <Navbar />
             <main className="grow pt-20">
                 <DeveloperHero />
-                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-slate-50" />
                 <LogoCloud />
-                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
                 <DeveloperProcess />
-                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-50" />
                 <ProjectShowcase />
-                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
                 <DeveloperBenefits />
-                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-50" />
                 <DeveloperFAQ />
-                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-slate-100" />
                 <DeveloperQuestionsCTA />
-                <SectionDivider bgTop="bg-slate-100" fillBottom="fill-slate-50" />
                 <CTA />
             </main>
             <Footer />
