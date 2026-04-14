@@ -146,6 +146,15 @@ export default function Footer() {
                                     Concorde Towers, Vittal Mallya Rd<br />
                                     Bengaluru, Karnataka 560001<br />
                                 </address>
+                                <a
+                                    href="https://www.google.com/maps/place/Bytedocker/@12.9715895,77.5914451,17z/data=!3m2!4b1!5s0x3bae16775b3b1d3d:0x5ce03bb2785b2a10!4m6!3m5!1s0xf7ff5c4e8e6969d:0x3c2f8aaec08d06b5!8m2!3d12.9715895!4d77.5960585!16s%2Fg%2F11y7gdrj3v?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="inline-flex items-center gap-2 text-[10px] md:text-xs font-ibmplexmonomedium uppercase tracking-widest text-[#0a0a0a] opacity-70 hover:opacity-100 hover:text-[#ff8c00] transition-all group"
+                                >
+                                    Open in Maps
+                                    <span className="inline-block translate-y-[1px] transition-transform duration-300 group-hover:translate-x-1">↗</span>
+                                </a>
                             </div>
                         </div>
 
