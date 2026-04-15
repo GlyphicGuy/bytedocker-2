@@ -261,70 +261,71 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     if (!service) notFound();
 
     return (
-        <div className="flex min-h-screen flex-col bg-slate-50 selection:bg-slate-100 selection:text-slate-900">
+        <div className="flex min-h-screen flex-col bg-[#f8f4ef] selection:bg-black selection:text-white">
             <Navbar />
             <main className="grow pt-20">
 
                 {/* Hero */}
-                <section className="relative px-4 md:px-6 pt-24 md:pt-32 pb-16 md:pb-24 bg-slate-50 overflow-hidden border-b border-slate-100 min-h-[50vh] md:min-h-[60vh] flex items-center">
-                    <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
-                        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <pattern id={`grid-${slug}`} width="40" height="40" patternUnits="userSpaceOnUse">
-                                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="black" strokeWidth="1" />
-                                </pattern>
-                            </defs>
-                            <rect width="100%" height="100%" fill={`url(#grid-${slug})`} />
-                        </svg>
-                    </div>
+                <section className="relative px-4 md:px-6 pt-24 md:pt-32 pb-16 md:pb-24 bg-[#f8f4ef] overflow-hidden border-b-4 border-black min-h-[50vh] md:min-h-[60vh] flex items-center">
                     <div className="absolute inset-0 pointer-events-none">
-                        <div className="absolute top-1/4 left-0 w-full border-t border-dashed border-black/5"></div>
-                        <div className="absolute bottom-1/4 left-0 w-full border-t border-dashed border-black/5"></div>
-                        <div className="absolute left-1/4 top-0 h-full border-l border-dashed border-black/5"></div>
-                        <div className="absolute right-1/4 top-0 h-full border-l border-dashed border-black/5"></div>
+                        <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-[#ffe24b] border-4 border-black"></div>
+                        <div className="absolute -bottom-24 right-8 w-64 h-64 rounded-full bg-[#ff8a5b] border-4 border-black"></div>
+                        <div className="absolute top-16 right-1/2 translate-x-1/2 w-24 h-24 bg-white border-4 border-black rotate-12"></div>
+                        <div className="absolute inset-0 opacity-[0.08]">
+                            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <pattern id={`grid-${slug}`} width="36" height="36" patternUnits="userSpaceOnUse">
+                                        <path d="M 36 0 L 0 0 0 36" fill="none" stroke="black" strokeWidth="2" />
+                                    </pattern>
+                                </defs>
+                                <rect width="100%" height="100%" fill={`url(#grid-${slug})`} />
+                            </svg>
+                        </div>
                     </div>
 
                     <div className="container mx-auto max-w-[1400px] relative z-10 flex flex-col md:flex-row gap-12 md:gap-16 items-center">
                         <div className="flex-1 max-w-2xl text-center md:text-left">
-                            <div className="inline-flex items-center gap-3 mb-8 bg-white/50 backdrop-blur-sm p-2 pr-6 rounded-full border border-slate-200">
-                                <span className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-[10px] font-bold">BY</span>
-                                <span className="text-xs font-ibmplexmonomedium uppercase text-slate-500">{service.badge}</span>
+                            <div className="inline-flex items-center gap-3 mb-8 bg-white p-2 pr-6 border-4 border-black shadow-[6px_6px_0_#000]">
+                                <span className="w-8 h-8 bg-black text-white flex items-center justify-center text-[10px] font-bold">BY</span>
+                                <span className="text-xs font-ibmplexmonomedium uppercase text-black">{service.badge}</span>
                             </div>
-                            <h1 className="text-4xl sm:text-5xl md:text-8xl font-light tracking-tight text-slate-900 leading-[1.1] md:leading-[0.92] mb-6 md:mb-8 font-dmsans">
+                            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-black leading-[1.05] md:leading-[0.95] mb-6 md:mb-8 font-dmsans">
                                 {service.headline[0]} <br />
-                                <span className="font-medium">{service.headline[1]}</span>
+                                <span className="text-black bg-[#b7ffd6] border-4 border-black px-2 inline-block -rotate-1">{service.headline[1]}</span>
                             </h1>
-                            <p className="text-slate-500 text-base md:text-xl max-w-xl mx-auto md:mx-0 leading-relaxed font-dmsans mb-10">
+                            <p className="text-black/80 text-base md:text-xl max-w-xl mx-auto md:mx-0 leading-relaxed font-dmsans mb-10">
                                 {service.description}
                             </p>
                             <a href="#contact">
-                                <button className="bg-black text-white text-[12px] md:text-[13px] font-black px-10 py-4 rounded-xl uppercase tracking-widest hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 shadow-lg font-ibmplexmonomedium">
+                                <button className="bg-black text-white text-[12px] md:text-[13px] font-black px-10 py-4 uppercase tracking-widest border-4 border-black shadow-[6px_6px_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#000] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0_#000] transition-all font-ibmplexmonomedium">
                                     Hire Now
                                 </button>
                             </a>
                         </div>
 
-                        <div className="flex w-full md:w-[480px] shrink-0 items-center justify-center -mb-20 md:mb-0">
-                            <Image
-                                src={service.image}
-                                alt={`${service.label} Illustration`}
-                                width={480}
-                                height={400}
-                                className="w-[80%] md:w-full h-auto"
-                                priority
-                            />
+                        <div className="flex w-full md:w-[520px] shrink-0 items-center justify-center -mb-20 md:mb-0">
+                            <div className="bg-white border-4 border-black shadow-[10px_10px_0_#000] p-6 rotate-1">
+                                <Image
+                                    src={service.image}
+                                    alt={`${service.label} Illustration`}
+                                    width={480}
+                                    height={400}
+                                    className="w-[80%] md:w-full h-auto"
+                                    priority
+                                />
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 {/* Snapshot band */}
-                <section className="bg-slate-50 border-b border-slate-100 px-6 py-12 md:py-16 font-dmsans">
+                <section className="bg-[#f8f4ef] border-b-4 border-black px-6 py-12 md:py-16 font-dmsans">
                     <div className="container mx-auto max-w-[1200px] flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12 text-center lg:text-left">
                         <div className="max-w-md space-y-3">
-                            <p className="text-[10px] md:text-xs font-ibmplexmonomedium uppercase tracking-[0.2em] text-slate-400">
+                            <p className="text-[10px] md:text-xs font-ibmplexmonomedium uppercase tracking-[0.2em] text-black">
                                 At a glance
                             </p>
-                            <p className="text-lg text-slate-600 leading-relaxed">
+                            <p className="text-lg text-black/80 leading-relaxed">
                                 A focused {service.label.toLowerCase()} track with senior engineers, clear rates, and a process that feels calm
                                 instead of chaotic.
                             </p>
@@ -333,12 +334,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                             {service.stats.map(([val, lbl], i) => (
                                 <div
                                     key={`${val}-${i}`}
-                                    className="border border-slate-200 rounded-2xl bg-white/60 backdrop-blur-sm px-6 py-5 flex flex-col justify-between"
+                                    className="border-4 border-black bg-white px-6 py-5 flex flex-col justify-between shadow-[6px_6px_0_#000]"
                                 >
-                                    <span className="text-[10px] font-ibmplexmonomedium uppercase tracking-[0.18em] text-slate-400 mb-3">
+                                    <span className="text-[10px] font-ibmplexmonomedium uppercase tracking-[0.18em] text-black mb-3">
                                         {lbl}
                                     </span>
-                                    <span className="text-2xl md:text-3xl font-dmsans font-medium text-slate-900">{val}</span>
+                                    <span className="text-2xl md:text-3xl font-dmsans font-black text-black">{val}</span>
                                 </div>
                             ))}
                         </div>
@@ -346,19 +347,24 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </section>
 
                 {/* How it works */}
-                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
+                <SectionDivider bgTop="bg-[#f8f4ef]" fillBottom="fill-white" />
                 <section className="bg-white py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
-                        <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-4 tracking-tight">How it works</h2>
-                        <p className="text-slate-500 text-lg mb-16 max-w-lg">A straightforward process from brief to results.</p>
+                        <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black mb-4 tracking-tight">How it works</h2>
+                        <p className="text-black/70 text-lg mb-16 max-w-lg">A straightforward process from brief to results.</p>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-slate-200 rounded-2xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-slate-200">
-                            {service.steps.map((s) => (
-                                <div key={s.num} className="p-8 flex flex-col gap-5">
-                                    <span className="text-sm font-ibmplexmonomedium text-slate-400">{s.num}</span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {service.steps.map((s, idx) => (
+                                <div
+                                    key={s.num}
+                                    className="border-4 border-black bg-[#fef6da] p-8 flex flex-col gap-5 shadow-[6px_6px_0_#000]"
+                                >
+                                    <span className="text-sm font-ibmplexmonomedium text-black">
+                                        {(idx + 1).toString().padStart(2, "0")}
+                                    </span>
                                     <div>
-                                        <h3 className="text-lg font-dmsans font-medium text-slate-900 mb-2">{s.title}</h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed">{s.description}</p>
+                                        <h3 className="text-lg font-dmsans font-black text-black mb-2">{s.title}</h3>
+                                        <p className="text-black/70 text-sm leading-relaxed">{s.description}</p>
                                     </div>
                                 </div>
                             ))}
@@ -367,41 +373,41 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </section>
 
                 {/* What you get */}
-                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-50" />
-                <section className="bg-slate-50 py-24 px-6 font-dmsans">
+                <SectionDivider bgTop="bg-white" fillBottom="fill-[#f8f4ef]" />
+                <section className="bg-[#f8f4ef] py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
                         <div className="flex flex-col lg:flex-row items-start justify-between gap-12 mb-12">
                             <div className="max-w-md">
-                                <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-4 tracking-tight">
+                                <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black mb-4 tracking-tight">
                                     What you get with {service.label}
                                 </h2>
-                                <p className="text-slate-500 text-lg leading-relaxed">
+                                <p className="text-black/70 text-lg leading-relaxed">
                                     Opinionated, senior-level execution wrapped in a process that keeps you in control of scope, quality, and
                                     timelines.
                                 </p>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
-                                <div className="border border-slate-200 rounded-2xl bg-white px-6 py-5 flex flex-col gap-3">
-                                    <p className="text-xs font-ibmplexmonomedium uppercase tracking-[0.2em] text-slate-400">
+                                <div className="border-4 border-black bg-white px-6 py-5 flex flex-col gap-3 shadow-[6px_6px_0_#000]">
+                                    <p className="text-xs font-ibmplexmonomedium uppercase tracking-[0.2em] text-black">
                                         Senior-only talent
                                     </p>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
+                                    <p className="text-sm text-black/70 leading-relaxed">
                                         Every engineer has shipped real products in production. No juniors learning the basics on your time.
                                     </p>
                                 </div>
-                                <div className="border border-slate-200 rounded-2xl bg-white px-6 py-5 flex flex-col gap-3">
-                                    <p className="text-xs font-ibmplexmonomedium uppercase tracking-[0.2em] text-slate-400">
+                                <div className="border-4 border-black bg-white px-6 py-5 flex flex-col gap-3 shadow-[6px_6px_0_#000]">
+                                    <p className="text-xs font-ibmplexmonomedium uppercase tracking-[0.2em] text-black">
                                         Clear communication
                                     </p>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
+                                    <p className="text-sm text-black/70 leading-relaxed">
                                         Async-friendly updates, written docs, and demos that show progress instead of slides that promise it.
                                     </p>
                                 </div>
-                                <div className="border border-slate-200 rounded-2xl bg-white px-6 py-5 flex flex-col gap-3">
-                                    <p className="text-xs font-ibmplexmonomedium uppercase tracking-[0.2em] text-slate-400">
+                                <div className="border-4 border-black bg-white px-6 py-5 flex flex-col gap-3 shadow-[6px_6px_0_#000]">
+                                    <p className="text-xs font-ibmplexmonomedium uppercase tracking-[0.2em] text-black">
                                         Modern practices
                                     </p>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
+                                    <p className="text-sm text-black/70 leading-relaxed">
                                         Testing, code review, observability, and security are part of the engagement, not optional extras.
                                     </p>
                                 </div>
@@ -411,25 +417,30 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </section>
 
                 {/* Benefits */}
-                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-slate-100" />
-                <section className="bg-slate-50 py-24 px-6 font-dmsans">
+                <SectionDivider bgTop="bg-[#f8f4ef]" fillBottom="fill-[#fff7d6]" />
+                <section className="bg-[#fff7d6] py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
                         <div className="flex flex-col lg:flex-row gap-16 items-start">
                             <div className="lg:w-[340px] shrink-0">
-                                <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-5 tracking-tight leading-tight">
+                                <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black mb-5 tracking-tight leading-tight">
                                     Why choose this service
                                 </h2>
-                                <p className="text-slate-500 text-lg leading-relaxed">
+                                <p className="text-black/70 text-lg leading-relaxed">
                                     What makes our {service.label.toLowerCase()} offering different from the alternatives.
                                 </p>
                             </div>
-                            <div className="flex-1 divide-y divide-slate-200 border-t border-slate-200">
+                            <div className="flex-1 flex flex-col gap-6">
                                 {service.benefits.map((b) => (
-                                    <div key={b.num} className="py-8 flex gap-8 items-start">
-                                        <span className="text-sm font-ibmplexmonomedium text-slate-400 pt-0.5 shrink-0 w-8">{b.num}</span>
+                                    <div
+                                        key={b.num}
+                                        className="border-4 border-black bg-white px-6 py-6 flex gap-6 items-start shadow-[6px_6px_0_#000]"
+                                    >
+                                        <span className="text-sm font-ibmplexmonomedium text-black pt-0.5 shrink-0 w-10">
+                                            {b.num}
+                                        </span>
                                         <div>
-                                            <h3 className="text-lg font-dmsans font-medium text-slate-900 mb-2">{b.title}</h3>
-                                            <p className="text-slate-500 text-sm leading-relaxed">{b.description}</p>
+                                            <h3 className="text-lg font-dmsans font-black text-black mb-2">{b.title}</h3>
+                                            <p className="text-black/70 text-sm leading-relaxed">{b.description}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -439,68 +450,72 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </section>
 
                 {/* Sample talent profiles & rates */}
-                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
+                <SectionDivider bgTop="bg-[#fff7d6]" fillBottom="fill-white" />
                 <section className="bg-white py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px] space-y-10">
                         <div className="flex flex-col lg:flex-row items-start justify-between gap-10">
                             <div className="max-w-md space-y-4">
-                                <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 tracking-tight">
+                                <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black tracking-tight">
                                     Sample profiles &amp; rates
                                 </h2>
-                                <p className="text-slate-500 text-lg leading-relaxed">
+                                <p className="text-black/70 text-lg leading-relaxed">
                                     Actual numbers depend on seniority, stack, and engagement length, but this should give you a realistic range
                                     for planning.
                                 </p>
                             </div>
-                            <div className="flex-1 w-full overflow-hidden rounded-2xl border border-slate-200">
-                                <div className="grid grid-cols-[2fr,1fr,1fr,1fr] bg-slate-950 text-xs font-ibmplexmonomedium uppercase tracking-[0.16em] text-slate-300">
-                                    <div className="px-5 py-3 border-r border-slate-800">Role</div>
-                                    <div className="px-5 py-3 border-r border-slate-800">Seniority</div>
-                                    <div className="px-5 py-3 border-r border-slate-800">Focus</div>
+                            <div className="flex-1 w-full overflow-hidden border-4 border-black shadow-[6px_6px_0_#000]">
+                                <div className="grid grid-cols-[2fr,1fr,1fr,1fr] bg-black text-xs font-ibmplexmonomedium uppercase tracking-[0.16em] text-white">
+                                    <div className="px-5 py-3 border-r-4 border-white">Role</div>
+                                    <div className="px-5 py-3 border-r-4 border-white">Seniority</div>
+                                    <div className="px-5 py-3 border-r-4 border-white">Focus</div>
                                     <div className="px-5 py-3">Typical rate</div>
                                 </div>
-                                <div className="divide-y divide-slate-200 bg-white">
+                                <div className="divide-y-4 divide-black bg-white">
                                     {getProfilesForService(service.label).map((row, i) => (
                                         <div
                                             key={`${row.title}-${i}`}
-                                            className="grid grid-cols-[2fr,1fr,1fr,1fr] text-sm text-slate-800"
+                                            className="grid grid-cols-[2fr,1fr,1fr,1fr] text-sm text-black"
                                         >
-                                            <div className="px-5 py-4 border-r border-slate-100">
-                                                <p className="font-medium">{row.title}</p>
+                                            <div className="px-5 py-4 border-r-4 border-black">
+                                                <p className="font-black">{row.title}</p>
                                             </div>
-                                            <div className="px-5 py-4 border-r border-slate-100">
-                                                <p className="text-slate-600">{row.seniority}</p>
+                                            <div className="px-5 py-4 border-r-4 border-black">
+                                                <p className="text-black/70">{row.seniority}</p>
                                             </div>
-                                            <div className="px-5 py-4 border-r border-slate-100">
-                                                <p className="text-slate-600">{row.stack}</p>
+                                            <div className="px-5 py-4 border-r-4 border-black">
+                                                <p className="text-black/70">{row.stack}</p>
                                             </div>
                                             <div className="px-5 py-4">
-                                                <p className="font-ibmplexmonomedium text-slate-900">{row.rate}</p>
+                                                <p className="font-ibmplexmonomedium text-black">{row.rate}</p>
                                             </div>
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         </div>
-                        <p className="text-xs text-slate-400 font-ibmplexmonomedium uppercase tracking-[0.18em]">
+                        <p className="text-xs text-black font-ibmplexmonomedium uppercase tracking-[0.18em]">
                             These are illustrative only. We’ll confirm exact profiles and rates once we understand your scope and timeline.
                         </p>
                     </div>
                 </section>
 
                 {/* Other services */}
-                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-50" />
+                <SectionDivider bgTop="bg-white" fillBottom="fill-[#f8f4ef]" />
                 <section className="bg-white py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
-                        <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-16 tracking-tight">Other services</h2>
-                        <div className="divide-y divide-slate-200 border-t border-slate-200">
+                        <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black mb-16 tracking-tight">Other services</h2>
+                        <div className="flex flex-col gap-4">
                             {services.filter((s) => s.slug !== slug).map((s, i) => (
-                                <a key={s.slug} href={`/services/${s.slug}`} className="py-6 flex items-center justify-between gap-6 group">
+                                <a
+                                    key={s.slug}
+                                    href={`/services/${s.slug}`}
+                                    className="border-4 border-black bg-[#f8f4ef] px-6 py-5 flex items-center justify-between gap-6 shadow-[6px_6px_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#000] transition-all"
+                                >
                                     <div className="flex items-center gap-8">
-                                        <span className="text-sm font-ibmplexmonomedium text-slate-400 w-8 shrink-0">{String(i + 1).padStart(2, "0")}</span>
-                                        <span className="text-xl font-dmsans font-medium text-slate-900 group-hover:text-slate-600 transition-colors">{s.label}</span>
+                                        <span className="text-sm font-ibmplexmonomedium text-black w-8 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                                        <span className="text-xl font-dmsans font-black text-black">{s.label}</span>
                                     </div>
-                                    <span className="text-sm font-ibmplexmonomedium text-slate-400 group-hover:text-slate-600 transition-colors">→</span>
+                                    <span className="text-sm font-ibmplexmonomedium text-black">→</span>
                                 </a>
                             ))}
                         </div>
@@ -508,14 +523,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </section>
 
                 {/* FAQ */}
-                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
+                <SectionDivider bgTop="bg-[#f8f4ef]" fillBottom="fill-white" />
                 <section className="bg-white py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
                         <div className="max-w-xl mb-10">
-                            <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-4 tracking-tight">
+                            <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black mb-4 tracking-tight">
                                 Frequently asked questions
                             </h2>
-                            <p className="text-slate-500 text-lg leading-relaxed">
+                            <p className="text-black/70 text-lg leading-relaxed">
                                 Straight answers to the things teams usually ask us before starting a {service.label.toLowerCase()} engagement.
                             </p>
                         </div>
@@ -523,20 +538,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                             {getFaqForService(service.label).map((item, idx) => (
                                 <details
                                     key={`${item.question}-${idx}`}
-                                    className="group border border-slate-200 rounded-2xl px-6 py-4 bg-slate-50/60"
+                                    className="group border-4 border-black px-6 py-4 bg-[#f8f4ef] shadow-[6px_6px_0_#000]"
                                 >
                                     <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
-                                        <span className="text-sm md:text-base font-medium text-slate-900">
+                                        <span className="text-sm md:text-base font-black text-black">
                                             {item.question}
                                         </span>
-                                        <span className="text-xs font-ibmplexmonomedium text-slate-500 group-open:hidden">
+                                        <span className="text-xs font-ibmplexmonomedium text-black group-open:hidden">
                                             +
                                         </span>
-                                        <span className="text-xs font-ibmplexmonomedium text-slate-500 hidden group-open:inline">
-                                            –
+                                        <span className="text-xs font-ibmplexmonomedium text-black hidden group-open:inline">
+                                            -
                                         </span>
                                     </summary>
-                                    <div className="mt-3 text-sm text-slate-600 leading-relaxed">
+                                    <div className="mt-3 text-sm text-black/70 leading-relaxed">
                                         {item.answer}
                                     </div>
                                 </details>
@@ -546,30 +561,30 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </section>
 
                 {/* CTA */}
-                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-900" />
-                <section id="contact" className="bg-slate-900 text-white py-24 px-6 font-dmsans">
+                <SectionDivider bgTop="bg-white" fillBottom="fill-black" />
+                <section id="contact" className="bg-black text-white py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
-                        <div className="border border-slate-800 rounded-2xl p-12 md:p-16 flex flex-col md:flex-row items-start justify-between gap-12">
+                        <div className="border-4 border-white p-12 md:p-16 flex flex-col md:flex-row items-start justify-between gap-12 shadow-[8px_8px_0_#fff] bg-black">
                             <div className="max-w-xl">
-                                <p className="text-sm font-ibmplexmonomedium text-slate-500 uppercase tracking-widest mb-6">{service.label}</p>
-                                <h2 className="text-4xl md:text-5xl font-dmsans font-medium mb-6 leading-[1.1] tracking-tight">
+                                <p className="text-sm font-ibmplexmonomedium text-white uppercase tracking-widest mb-6">{service.label}</p>
+                                <h2 className="text-4xl md:text-5xl font-dmsans font-black mb-6 leading-[1.1] tracking-tight">
                                     {service.ctaHeadline}
                                 </h2>
-                                <p className="text-slate-400 text-lg leading-relaxed mb-10">
+                                <p className="text-white/70 text-lg leading-relaxed mb-10">
                                     {service.ctaBody}
                                 </p>
-                                <button className="bg-white hover:bg-slate-100 text-slate-900 font-medium text-base px-7 py-3.5 rounded-xl transition-colors font-dmsans">
+                                <button className="bg-white text-black font-black text-base px-7 py-3.5 uppercase tracking-widest border-4 border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium">
                                     Submit your brief
                                 </button>
                             </div>
 
-                            <div className="w-full md:w-[240px] shrink-0 border border-slate-800 rounded-xl p-6 flex flex-col gap-4">
-                                <p className="text-xs font-ibmplexmonomedium text-slate-500 uppercase tracking-widest">At a glance</p>
-                                <div className="border-t border-slate-800 pt-4 divide-y divide-slate-800">
+                            <div className="w-full md:w-[240px] shrink-0 border-4 border-white p-6 flex flex-col gap-4 bg-black shadow-[6px_6px_0_#fff]">
+                                <p className="text-xs font-ibmplexmonomedium text-white uppercase tracking-widest">At a glance</p>
+                                <div className="border-t-4 border-white pt-4 divide-y-4 divide-white">
                                     {service.stats.map(([val, lbl], i) => (
                                         <div key={i} className="py-3">
-                                            <p className="text-2xl font-dmsans font-medium text-white">{val}</p>
-                                            <p className="text-xs text-slate-400 mt-0.5">{lbl}</p>
+                                            <p className="text-2xl font-dmsans font-black text-white">{val}</p>
+                                            <p className="text-xs text-white/70 mt-0.5">{lbl}</p>
                                         </div>
                                     ))}
                                 </div>
