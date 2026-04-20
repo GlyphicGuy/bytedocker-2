@@ -1,7 +1,37 @@
 import { NextResponse } from "next/server";
 
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX = 12;
+const rateLimitBuckets = new Map<string, number[]>();
+
+const getClientIp = (req: Request) => {
+    const forwardedFor = req.headers.get("x-forwarded-for");
+    if (forwardedFor) {
+        return forwardedFor.split(",")[0]?.trim() || "unknown";
+    }
+
+    return req.headers.get("x-real-ip") || "unknown";
+};
+
+const isRateLimited = (ip: string, now: number) => {
+    const bucket = rateLimitBuckets.get(ip) || [];
+    const fresh = bucket.filter((timestamp) => now - timestamp < RATE_LIMIT_WINDOW_MS);
+    fresh.push(now);
+    rateLimitBuckets.set(ip, fresh);
+    return fresh.length > RATE_LIMIT_MAX;
+};
+
 export async function POST(req: Request) {
-    const { company, role, stack, email, requirements, timeline } = await req.json();
+    const { company, role, stack, email, requirements, timeline, website } = await req.json();
+
+    const clientIp = getClientIp(req);
+    if (isRateLimited(clientIp, Date.now())) {
+        return NextResponse.json({ message: "Success! Brief submitted" }, { status: 200 });
+    }
+
+    if (typeof website === "string" && website.trim().length > 0) {
+        return NextResponse.json({ message: "Success! Brief submitted" }, { status: 200 });
+    }
 
     try {
         const response = await fetch(process.env.DISCORD_WEBHOOK_URL as string, {

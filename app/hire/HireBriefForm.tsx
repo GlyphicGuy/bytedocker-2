@@ -11,6 +11,7 @@ const initialFormData = {
     email: "",
     requirements: "",
     timeline: "asap",
+    website: "",
 };
 
 export default function HireBriefForm() {
@@ -77,6 +78,18 @@ export default function HireBriefForm() {
                 className="border-[4px] border-black overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-[8px_8px_0_#000]"
                 onSubmit={handleSubmit}
             >
+                <div className="absolute left-[-9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden="true">
+                    <label htmlFor="website">Website</label>
+                    <input
+                        id="website"
+                        name="website"
+                        type="text"
+                        value={formData.website}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, website: e.target.value }))}
+                        tabIndex={-1}
+                        autoComplete="off"
+                    />
+                </div>
                 <div className="p-10 md:p-14 border-b-[4px] lg:border-b-0 lg:border-r-[4px] border-black space-y-6 bg-[#fef6da]">
                     <div>
                         <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Company / Project name</label>
