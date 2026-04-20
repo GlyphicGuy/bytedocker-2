@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import SectionDivider from "@/components/SectionDivider";
 import services, { getAllServiceSlugs, getService } from "@/app/services/data";
+import Link from "next/link";
 
 type ProfileRow = {
     title: string;
@@ -573,9 +574,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                                 <p className="text-white/70 text-lg leading-relaxed mb-10">
                                     {service.ctaBody}
                                 </p>
-                                <button className="bg-white text-black font-black text-base px-7 py-3.5 uppercase tracking-widest border-4 border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium">
+                                <Link
+                                    href="/hire#brief"
+                                    className="inline-flex bg-white text-black font-black text-base px-7 py-3.5 uppercase tracking-widest border-4 border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium"
+                                >
                                     Submit your brief
-                                </button>
+                                </Link>
                             </div>
 
                             <div className="w-full md:w-[240px] shrink-0 border-4 border-white p-6 flex flex-col gap-4 bg-black shadow-[6px_6px_0_#fff]">
