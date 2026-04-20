@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import SectionDivider from "@/components/SectionDivider";
+import FindJobsForm from "@/app/find-jobs/FindJobsForm";
 
 export const metadata = {
     title: "Find Jobs | Bytedocker Talent",
@@ -149,45 +150,7 @@ export default function FindJobsPage() {
                         <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black mb-4 tracking-tight">Apply to join</h2>
                         <p className="text-black/70 text-lg mb-16 max-w-lg">Tell us about yourself. If your profile looks like a fit, we&apos;ll invite you to the vetting process.</p>
 
-                        <div className="border-[4px] border-black overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-[8px_8px_0_#000]">
-                            <div className="p-10 md:p-14 border-b-[4px] lg:border-b-0 lg:border-r-[4px] border-black space-y-6 bg-[#fef6da]">
-                                <div>
-                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Full name</label>
-                                    <input className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white" placeholder="Your full name" />
-                                </div>
-                                <div>
-                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Email</label>
-                                    <input type="email" className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white" placeholder="you@email.com" />
-                                </div>
-                                <div>
-                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Primary stack</label>
-                                    <input className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white" placeholder="e.g. React, Node.js, PostgreSQL" />
-                                </div>
-                                <div>
-                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Years of experience</label>
-                                    <select className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white">
-                                        <option>3–5 years</option>
-                                        <option>5–8 years</option>
-                                        <option>8–12 years</option>
-                                        <option>12+ years</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="p-10 md:p-14 space-y-6 bg-white">
-                                <div>
-                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">LinkedIn or portfolio URL</label>
-                                    <input className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white" placeholder="https://linkedin.com/in/yourname" />
-                                </div>
-                                <div>
-                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Tell us about yourself</label>
-                                    <textarea rows={6} className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white resize-none" placeholder="What have you built? What kind of work are you looking for?" />
-                                </div>
-                                <button className="w-full bg-black text-white font-black text-base px-7 py-4 uppercase tracking-widest border-[4px] border-black shadow-[6px_6px_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#000] transition-all font-ibmplexmonomedium">
-                                    Submit application →
-                                </button>
-                            </div>
-                        </div>
+                        <FindJobsForm />
                     </div>
                 </section>
 
