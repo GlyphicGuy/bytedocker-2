@@ -22,76 +22,82 @@ const stackOptions = [
 
 export default function HireNowPage() {
     return (
-        <div className="flex min-h-screen flex-col bg-slate-50 selection:bg-slate-100 selection:text-slate-900">
+        <div className="flex min-h-screen flex-col bg-[#f5f0e8] selection:bg-black selection:text-white">
             <Navbar />
             <main className="grow pt-20">
 
                 {/* Hero */}
-                <section className="relative px-6 pt-32 pb-24 bg-slate-50 overflow-hidden border-b border-slate-100 min-h-[60vh] flex items-center">
-                    <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
-                        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <pattern id="grid-hire" width="40" height="40" patternUnits="userSpaceOnUse">
-                                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="black" strokeWidth="1" />
-                                </pattern>
-                            </defs>
-                            <rect width="100%" height="100%" fill="url(#grid-hire)" />
-                        </svg>
-                    </div>
+                <section className="relative px-6 pt-32 pb-24 bg-[#f5f0e8] overflow-hidden border-b-[4px] border-black min-h-[60vh] flex items-center">
                     <div className="absolute inset-0 pointer-events-none">
-                        <div className="absolute top-1/4 left-0 w-full border-t border-dashed border-black/5"></div>
-                        <div className="absolute bottom-1/4 left-0 w-full border-t border-dashed border-black/5"></div>
-                        <div className="absolute left-1/4 top-0 h-full border-l border-dashed border-black/5"></div>
-                        <div className="absolute right-1/4 top-0 h-full border-l border-dashed border-black/5"></div>
+                        <div className="absolute -top-16 -left-16 w-56 h-56 rounded-full bg-[#ffe24b] border-[4px] border-black"></div>
+                        <div className="absolute -bottom-16 right-10 w-56 h-56 rounded-full bg-[#ff8a5b] border-[4px] border-black"></div>
+                        <div className="absolute top-12 right-1/3 w-20 h-20 bg-white border-[4px] border-black rotate-12"></div>
+                        <div className="absolute inset-0 opacity-[0.08]">
+                            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <pattern id="grid-hire" width="36" height="36" patternUnits="userSpaceOnUse">
+                                        <path d="M 36 0 L 0 0 0 36" fill="none" stroke="black" strokeWidth="2" />
+                                    </pattern>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#grid-hire)" />
+                            </svg>
+                        </div>
                     </div>
 
                     <div className="container mx-auto max-w-[1400px] relative z-10 flex flex-col md:flex-row gap-16 items-center">
                         <div className="flex-1 max-w-2xl">
-                            <div className="inline-flex items-center gap-3 mb-8 bg-white/50 backdrop-blur-sm p-2 pr-6 rounded-full border border-slate-200">
-                                <span className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-[10px] font-bold">BY</span>
-                                <span className="text-xs font-ibmplexmonomedium uppercase text-slate-500">Hire in 18 hours</span>
+                            <div className="inline-flex items-center gap-3 mb-8 bg-white p-2 pr-6 border-[4px] border-black shadow-[6px_6px_0_#000]">
+                                <span className="w-8 h-8 bg-black text-white flex items-center justify-center text-[10px] font-bold">BY</span>
+                                <span className="text-xs font-ibmplexmonomedium uppercase text-black">Hire in 18 hours</span>
                             </div>
-                            <h1 className="text-6xl md:text-8xl font-light tracking-tight text-slate-900 leading-[0.92] mb-8 font-dmsans">
+                            <h1 className="text-5xl md:text-7xl font-black tracking-tight text-black leading-[0.98] mb-8 font-dmsans">
                                 Find your next <br />
-                                <span className="font-medium">great engineer.</span>
+                                <span className="bg-[#b7ffd6] border-[4px] border-black px-2 inline-block -rotate-1">great engineer.</span>
                             </h1>
-                            <p className="text-slate-500 text-lg md:text-xl max-w-xl leading-relaxed font-dmsans mb-10">
+                            <p className="text-black/80 text-lg md:text-xl max-w-xl leading-relaxed font-dmsans mb-10">
                                 Submit a brief. Get a pre-vetted CV in 18 hours. No agencies, no volume plays, no wasted time.
                             </p>
                             <a href="#brief">
-                                <button className="bg-black hover:bg-slate-800 text-white font-medium text-base px-8 py-4 rounded-xl transition-colors font-dmsans">
+                                <button className="bg-black text-white font-black text-base px-8 py-4 uppercase tracking-widest border-[4px] border-black shadow-[6px_6px_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#000] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0_#000] transition-all font-ibmplexmonomedium">
                                     Submit your brief
                                 </button>
                             </a>
                         </div>
 
                         <div className="hidden md:flex w-full md:w-[480px] shrink-0 items-center justify-center">
-                            <Image
-                                src="/undraw_agreement_ftet.svg"
-                                alt="Hire a Developer"
-                                width={480}
-                                height={400}
-                                className="w-full h-auto"
-                                priority
-                            />
+                            <div className="bg-white border-[4px] border-black shadow-[10px_10px_0_#000] p-6 rotate-1">
+                                <Image
+                                    src="/undraw_agreement_ftet.svg"
+                                    alt="Hire a Developer"
+                                    width={480}
+                                    height={400}
+                                    className="w-full h-auto"
+                                    priority
+                                />
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 {/* How it works */}
-                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
+                <SectionDivider bgTop="bg-[#f5f0e8]" fillBottom="fill-white" />
                 <section className="bg-white py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
-                        <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-4 tracking-tight">How it works</h2>
-                        <p className="text-slate-500 text-lg mb-16 max-w-lg">From brief to first commit — here&apos;s what to expect.</p>
+                        <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black mb-4 tracking-tight">How it works</h2>
+                        <p className="text-black/70 text-lg mb-16 max-w-lg">From brief to first commit — here&apos;s what to expect.</p>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-slate-200 rounded-2xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-slate-200">
-                            {steps.map((s) => (
-                                <div key={s.num} className="p-8 flex flex-col gap-5">
-                                    <span className="text-sm font-ibmplexmonomedium text-slate-400">{s.num}</span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {steps.map((s, idx) => (
+                                <div
+                                    key={s.num}
+                                    className="border-[4px] border-black bg-[#fef6da] p-8 flex flex-col gap-5 shadow-[6px_6px_0_#000]"
+                                >
+                                    <span className="text-sm font-ibmplexmonomedium text-black">
+                                        {(idx + 1).toString().padStart(2, "0")}
+                                    </span>
                                     <div>
-                                        <h3 className="text-lg font-dmsans font-medium text-slate-900 mb-2">{s.title}</h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed">{s.description}</p>
+                                        <h3 className="text-lg font-dmsans font-black text-black mb-2">{s.title}</h3>
+                                        <p className="text-black/70 text-sm leading-relaxed">{s.description}</p>
                                     </div>
                                 </div>
                             ))}
@@ -100,21 +106,21 @@ export default function HireNowPage() {
                 </section>
 
                 {/* Stack tags */}
-                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-50" />
-                <section className="bg-slate-50 py-24 px-6 font-dmsans">
+                <SectionDivider bgTop="bg-white" fillBottom="fill-[#f5f0e8]" />
+                <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
                         <div className="flex flex-col lg:flex-row gap-16 items-start">
                             <div className="lg:w-[340px] shrink-0">
-                                <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-5 tracking-tight leading-tight">
+                                <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black mb-5 tracking-tight leading-tight">
                                     Popular stacks we cover
                                 </h2>
-                                <p className="text-slate-500 text-lg leading-relaxed">
+                                <p className="text-black/70 text-lg leading-relaxed">
                                     We have pre-vetted engineers across all major technologies. Don&apos;t see yours? Mention it in your brief.
                                 </p>
                             </div>
                             <div className="flex-1 flex flex-wrap gap-3">
                                 {stackOptions.map((stack) => (
-                                    <span key={stack} className="text-sm font-ibmplexmonomedium text-slate-600 border border-slate-200 bg-white px-4 py-2 rounded-lg">
+                                    <span key={stack} className="text-sm font-ibmplexmonomedium text-black border-[3px] border-black bg-white px-4 py-2 shadow-[4px_4px_0_#000]">
                                         {stack}
                                     </span>
                                 ))}
@@ -124,47 +130,47 @@ export default function HireNowPage() {
                 </section>
 
                 {/* Brief form */}
-                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
+                <SectionDivider bgTop="bg-[#f5f0e8]" fillBottom="fill-white" />
                 <section id="brief" className="bg-white py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
-                        <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-4 tracking-tight">Submit your brief</h2>
-                        <p className="text-slate-500 text-lg mb-16 max-w-lg">Fill in the details below and we&apos;ll get back to you within a few hours.</p>
+                        <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black mb-4 tracking-tight">Submit your brief</h2>
+                        <p className="text-black/70 text-lg mb-16 max-w-lg">Fill in the details below and we&apos;ll get back to you within a few hours.</p>
 
-                        <div className="border border-slate-200 rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
-                            <div className="p-10 md:p-14 border-b lg:border-b-0 lg:border-r border-slate-200 space-y-6">
+                        <div className="border-[4px] border-black overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-[8px_8px_0_#000]">
+                            <div className="p-10 md:p-14 border-b-[4px] lg:border-b-0 lg:border-r-[4px] border-black space-y-6 bg-[#fef6da]">
                                 <div>
-                                    <label className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest block mb-2">Company / Project name</label>
-                                    <input className="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 font-dmsans text-base focus:outline-none focus:border-slate-400 transition-colors bg-slate-50" placeholder="e.g. Acme Inc." />
+                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Company / Project name</label>
+                                    <input className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white" placeholder="e.g. Acme Inc." />
                                 </div>
                                 <div>
-                                    <label className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest block mb-2">Role needed</label>
-                                    <input className="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 font-dmsans text-base focus:outline-none focus:border-slate-400 transition-colors bg-slate-50" placeholder="e.g. Senior Backend Engineer" />
+                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Role needed</label>
+                                    <input className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white" placeholder="e.g. Senior Backend Engineer" />
                                 </div>
                                 <div>
-                                    <label className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest block mb-2">Tech stack</label>
-                                    <input className="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 font-dmsans text-base focus:outline-none focus:border-slate-400 transition-colors bg-slate-50" placeholder="e.g. Node.js, PostgreSQL, AWS" />
+                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Tech stack</label>
+                                    <input className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white" placeholder="e.g. Node.js, PostgreSQL, AWS" />
                                 </div>
                                 <div>
-                                    <label className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest block mb-2">Your email</label>
-                                    <input type="email" className="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 font-dmsans text-base focus:outline-none focus:border-slate-400 transition-colors bg-slate-50" placeholder="you@company.com" />
+                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Your email</label>
+                                    <input type="email" className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white" placeholder="you@company.com" />
                                 </div>
                             </div>
 
-                            <div className="p-10 md:p-14 space-y-6">
+                            <div className="p-10 md:p-14 space-y-6 bg-white">
                                 <div>
-                                    <label className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest block mb-2">Team context & requirements</label>
-                                    <textarea rows={6} className="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 font-dmsans text-base focus:outline-none focus:border-slate-400 transition-colors bg-slate-50 resize-none" placeholder="Tell us about your team, the problem you're solving, and what a great candidate looks like." />
+                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Team context & requirements</label>
+                                    <textarea rows={6} className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white resize-none" placeholder="Tell us about your team, the problem you're solving, and what a great candidate looks like." />
                                 </div>
                                 <div>
-                                    <label className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest block mb-2">Timeline</label>
-                                    <select className="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 font-dmsans text-base focus:outline-none focus:border-slate-400 transition-colors bg-slate-50">
+                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Timeline</label>
+                                    <select className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white">
                                         <option>As soon as possible</option>
                                         <option>Within 2 weeks</option>
                                         <option>Within a month</option>
                                         <option>Just exploring</option>
                                     </select>
                                 </div>
-                                <button className="w-full bg-black hover:bg-slate-800 text-white font-medium text-base px-7 py-4 rounded-xl transition-colors font-dmsans">
+                                <button className="w-full bg-black text-white font-black text-base px-7 py-4 uppercase tracking-widest border-[4px] border-black shadow-[6px_6px_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#000] transition-all font-ibmplexmonomedium">
                                     Send brief →
                                 </button>
                             </div>
@@ -173,30 +179,34 @@ export default function HireNowPage() {
                 </section>
 
                 {/* Dark CTA */}
-                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-900" />
-                <section className="bg-slate-900 text-white py-24 px-6 font-dmsans">
+                <SectionDivider bgTop="bg-white" fillBottom="fill-black" />
+                <section className="bg-black text-white py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
-                        <div className="border border-slate-800 rounded-2xl p-12 md:p-16 flex flex-col md:flex-row items-start justify-between gap-12">
+                        <div className="border-[4px] border-white p-12 md:p-16 flex flex-col md:flex-row items-start justify-between gap-12 shadow-[8px_8px_0_#fff]">
                             <div className="max-w-xl">
-                                <p className="text-sm font-ibmplexmonomedium text-slate-500 uppercase tracking-widest mb-6">No commitment needed</p>
-                                <h2 className="text-4xl md:text-5xl font-dmsans font-medium mb-6 leading-[1.1] tracking-tight">
+                                <p className="text-sm font-ibmplexmonomedium text-white uppercase tracking-widest mb-6">No commitment needed</p>
+                                <h2 className="text-4xl md:text-5xl font-dmsans font-black mb-6 leading-[1.1] tracking-tight">
                                     Not ready to submit a brief yet?
                                 </h2>
-                                <p className="text-slate-400 text-lg leading-relaxed mb-10">
+                                <p className="text-white/70 text-lg leading-relaxed mb-10">
                                     Browse our case studies to see what other companies achieved with Bytedocker — or read how our vetting process works.
                                 </p>
                                 <div className="flex flex-wrap gap-4">
-                                    <button className="bg-white hover:bg-slate-100 text-slate-900 font-medium text-base px-7 py-3.5 rounded-xl transition-colors font-dmsans">View case studies</button>
-                                    <button className="border border-slate-700 hover:border-slate-500 text-white font-medium text-base px-7 py-3.5 rounded-xl transition-colors font-dmsans">How we vet</button>
+                                    <button className="bg-white text-black font-black text-base px-7 py-3.5 uppercase tracking-widest border-[4px] border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium">
+                                        View case studies
+                                    </button>
+                                    <button className="bg-black text-white font-black text-base px-7 py-3.5 uppercase tracking-widest border-[4px] border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium">
+                                        How we vet
+                                    </button>
                                 </div>
                             </div>
-                            <div className="w-full md:w-[240px] shrink-0 border border-slate-800 rounded-xl p-6 flex flex-col gap-4">
-                                <p className="text-xs font-ibmplexmonomedium text-slate-500 uppercase tracking-widest">The numbers</p>
-                                <div className="border-t border-slate-800 pt-4 divide-y divide-slate-800">
+                            <div className="w-full md:w-[240px] shrink-0 border-[4px] border-white p-6 flex flex-col gap-4 shadow-[6px_6px_0_#fff]">
+                                <p className="text-xs font-ibmplexmonomedium text-white uppercase tracking-widest">The numbers</p>
+                                <div className="border-t-[4px] border-white pt-4 divide-y-[4px] divide-white">
                                     {[["18h", "First CV delivered"], ["Top 1%", "Of candidates placed"], ["97%", "Client retention"]].map(([v, l], i) => (
                                         <div key={i} className="py-3">
-                                            <p className="text-2xl font-dmsans font-medium text-white">{v}</p>
-                                            <p className="text-xs text-slate-400 mt-0.5">{l}</p>
+                                            <p className="text-2xl font-dmsans font-black text-white">{v}</p>
+                                            <p className="text-xs text-white/70 mt-0.5">{l}</p>
                                         </div>
                                     ))}
                                 </div>

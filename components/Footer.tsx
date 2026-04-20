@@ -46,14 +46,18 @@ export default function Footer() {
                         {/* Navigation links */}
                         <div className="space-y-4 md:space-y-5 flex-1">
                             {[
-                                { id: "01", name: "Our Process" },
-                                { id: "02", name: "Vetting Standards" },
-                                { id: "03", name: "Success Stories" },
-                                { id: "04", name: "Join Network" }
+                                { id: "01", name: "Our Process", href: "/#process" },
+                                { id: "02", name: "Vetting Standards", href: "/how-we-vet-developers" },
+                                { id: "03", name: "Success Stories", href: "/case-studies" },
+                                { id: "04", name: "Join Network", href: "/for-developers" },
+                                { id: "05", name: "Hire Now", href: "/hire" },
+                                { id: "06", name: "FAQ for Companies", href: "/faq-for-companies" },
+                                { id: "07", name: "Testimonials", href: "/testimonials" },
+                                { id: "08", name: "About Us", href: "/about-us" }
                             ].map((link) => (
                                 <Link
                                     key={link.id}
-                                    href={`#${link.name.toLowerCase().replace(/\s+/g, '-')}`}
+                                    href={link.href}
                                     className="flex items-center gap-3 group block"
                                 >
                                     <span className="text-xs font-bold text-[#ff8c00] opacity-60 font-ibmplexmonomedium">{link.id}</span>
