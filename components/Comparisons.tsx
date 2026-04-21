@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -116,12 +117,15 @@ export default function Comparisons() {
                                     </p>
 
                                     <div className="pt-2 md:pt-8 flex justify-center lg:justify-start">
-                                        <button className="group flex items-center gap-4 md:gap-6 text-[10px] md:text-[12px] font-black uppercase tracking-widest text-[#f5f0e8] bg-[#0a0a0a] px-8 md:px-10 py-3 md:py-4 rounded-none border-[4px] border-[#0a0a0a] hover:shadow-neo-lg transition-all shadow-neo active:translate-y-0.5">
+                                        <Link
+                                            href="/hire"
+                                            className="group inline-flex items-center gap-4 md:gap-6 text-[10px] md:text-[12px] font-black uppercase tracking-widest text-[#f5f0e8] bg-[#0a0a0a] px-8 md:px-10 py-3 md:py-4 rounded-none border-[4px] border-[#0a0a0a] hover:shadow-neo-lg transition-all shadow-neo active:translate-y-0.5"
+                                        >
                                             Hire Now
                                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-2 transition-transform">
                                                 <path d="M5 12h14M12 5l7 7-7 7" />
                                             </svg>
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

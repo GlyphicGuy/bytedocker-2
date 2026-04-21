@@ -93,7 +93,7 @@ export default function DeveloperProcess() {
                 </div>
 
                 <div className="mt-16">
-                    <Link href="#apply">
+                    <Link href="/find-jobs#apply">
                         <button className="bg-[#0a0a0a] text-[#f5f0e8] font-ibmplexmonomedium uppercase text-sm px-8 py-4 rounded-none border-[4px] border-[#0a0a0a] hover:shadow-neo-lg transition-all flex items-center gap-2 group shadow-neo active:translate-y-0.5">
                             Apply now
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 group-hover:translate-x-1 transition-transform">

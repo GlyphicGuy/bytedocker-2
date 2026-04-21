@@ -91,9 +91,11 @@ export default function Features() {
                                     </li>
                                 ))}
                             </ul>
-                            <button className="bg-[#0a0a0a] text-[#f5f0e8] font-black uppercase tracking-widest text-[10px] py-4 px-10 rounded-none border-[4px] border-[#0a0a0a] shadow-neo hover:shadow-neo-lg active:translate-y-0.5 transition-all">
-                                Learn More
-                            </button>
+                            <Link href="/how-we-vet-developers">
+                                <button className="bg-[#0a0a0a] text-[#f5f0e8] font-black uppercase tracking-widest text-[10px] py-4 px-10 rounded-none border-[4px] border-[#0a0a0a] shadow-neo hover:shadow-neo-lg active:translate-y-0.5 transition-all">
+                                    Learn More
+                                </button>
+                            </Link>
                         </div>
                         <div className="flex-1 w-full">
                             <div className="aspect-4/3 bg-[#ffffff] border-[3px] border-[#0a0a0a] rounded-none overflow-hidden shadow-neo">
@@ -167,9 +169,11 @@ export default function Features() {
                                     <span className="text-xs font-black uppercase tracking-widest text-[#4a4a4a]">Replacement Guarantee</span>
                                 </div>
                             </div>
-                            <button className="bg-[#0a0a0a] text-[#f5f0e8] font-black uppercase tracking-widest text-[10px] py-4 px-10 rounded-none border-[4px] border-[#0a0a0a] shadow-neo hover:shadow-neo-lg active:translate-y-0.5 transition-all">
-                                Hire a Dev
-                            </button>
+                            <Link href="/hire">
+                                <button className="bg-[#0a0a0a] text-[#f5f0e8] font-black uppercase tracking-widest text-[10px] py-4 px-10 rounded-none border-[4px] border-[#0a0a0a] shadow-neo hover:shadow-neo-lg active:translate-y-0.5 transition-all">
+                                    Hire a Dev
+                                </button>
+                            </Link>
                         </div>
                         <div className="flex-1 w-full">
                             <div className="bg-[#ffffff] border-[3px] border-[#0a0a0a] rounded-none overflow-hidden shadow-neo aspect-4/3">

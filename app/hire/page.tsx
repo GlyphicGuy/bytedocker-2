@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import SectionDivider from "@/components/SectionDivider";
 import HireBriefForm from "@/app/hire/HireBriefForm";
+import Link from "next/link";
 
 export const metadata = {
     title: "Hire a Developer | Bytedocker Talent",
@@ -155,12 +156,18 @@ export default function HireNowPage() {
                                     Browse our case studies to see what other companies achieved with Bytedocker — or read how our vetting process works.
                                 </p>
                                 <div className="flex flex-wrap gap-4">
-                                    <button className="bg-white text-black font-black text-base px-7 py-3.5 uppercase tracking-widest border-[4px] border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium">
+                                    <Link
+                                        href="/case-studies"
+                                        className="inline-flex items-center bg-white text-black font-black text-base px-7 py-3.5 uppercase tracking-widest border-[4px] border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium"
+                                    >
                                         View case studies
-                                    </button>
-                                    <button className="bg-black text-white font-black text-base px-7 py-3.5 uppercase tracking-widest border-[4px] border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium">
+                                    </Link>
+                                    <Link
+                                        href="/how-we-vet-developers"
+                                        className="inline-flex items-center bg-black text-white font-black text-base px-7 py-3.5 uppercase tracking-widest border-[4px] border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium"
+                                    >
                                         How we vet
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="w-full md:w-[240px] shrink-0 border-[4px] border-white p-6 flex flex-col gap-4 shadow-[6px_6px_0_#fff]">

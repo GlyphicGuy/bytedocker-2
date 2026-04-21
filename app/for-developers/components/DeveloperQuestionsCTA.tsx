@@ -37,7 +37,7 @@ export default function DeveloperQuestionsCTA() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                            <Link href="/for-developers#faq">
+                            <Link href="/">
                                 <button className="w-full sm:w-auto bg-[#ffffff] border-[3px] border-[#0a0a0a] text-[#0a0a0a] uppercase font-ibmplexmonomedium text-xs px-8 py-4 rounded-none hover:shadow-neo-lg transition-all flex items-center justify-center gap-3 shadow-neo active:translate-y-0.5">
                                     View all FAQs
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4">
