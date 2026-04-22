@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import SectionDivider from "@/components/SectionDivider";
-import FindJobsForm from "@/app/find-jobs/FindJobsForm";
 
 export const metadata = {
     title: "Find Jobs | Bytedocker Talent",
@@ -27,91 +26,87 @@ const perks = [
 
 export default function FindJobsPage() {
     return (
-        <div className="flex min-h-screen flex-col bg-[#f5f0e8] selection:bg-black selection:text-white">
+        <div className="flex min-h-screen flex-col bg-slate-50 selection:bg-slate-100 selection:text-slate-900">
             <Navbar />
             <main className="grow pt-20">
 
                 {/* Hero */}
-                <section className="relative px-6 pt-32 pb-24 bg-[#f5f0e8] overflow-hidden border-b-[4px] border-black min-h-[60vh] flex items-center">
+                <section className="relative px-6 pt-32 pb-24 bg-slate-50 overflow-hidden border-b border-slate-100 min-h-[60vh] flex items-center">
+                    <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+                        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <pattern id="grid-jobs" width="40" height="40" patternUnits="userSpaceOnUse">
+                                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="black" strokeWidth="1" />
+                                </pattern>
+                            </defs>
+                            <rect width="100%" height="100%" fill="url(#grid-jobs)" />
+                        </svg>
+                    </div>
                     <div className="absolute inset-0 pointer-events-none">
-                        <div className="absolute -top-16 -left-16 w-56 h-56 rounded-full bg-[#ffe24b] border-[4px] border-black"></div>
-                        <div className="absolute -bottom-16 right-10 w-56 h-56 rounded-full bg-[#ff8a5b] border-[4px] border-black"></div>
-                        <div className="absolute top-12 right-1/3 w-20 h-20 bg-white border-[4px] border-black rotate-12"></div>
-                        <div className="absolute inset-0 opacity-[0.08]">
-                            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <pattern id="grid-jobs" width="36" height="36" patternUnits="userSpaceOnUse">
-                                        <path d="M 36 0 L 0 0 0 36" fill="none" stroke="black" strokeWidth="2" />
-                                    </pattern>
-                                </defs>
-                                <rect width="100%" height="100%" fill="url(#grid-jobs)" />
-                            </svg>
-                        </div>
+                        <div className="absolute top-1/4 left-0 w-full border-t border-dashed border-black/5"></div>
+                        <div className="absolute bottom-1/4 left-0 w-full border-t border-dashed border-black/5"></div>
+                        <div className="absolute left-1/4 top-0 h-full border-l border-dashed border-black/5"></div>
+                        <div className="absolute right-1/4 top-0 h-full border-l border-dashed border-black/5"></div>
                     </div>
 
                     <div className="container mx-auto max-w-[1400px] relative z-10 flex flex-col md:flex-row gap-16 items-center">
                         <div className="flex-1 max-w-2xl">
-                            <div className="inline-flex items-center gap-3 mb-8 bg-white p-2 pr-6 border-[4px] border-black shadow-[6px_6px_0_#000]">
-                                <span className="w-8 h-8 bg-black text-white flex items-center justify-center text-[10px] font-bold">BY</span>
-                                <span className="text-xs font-ibmplexmonomedium uppercase text-black">For Developers</span>
+                            <div className="inline-flex items-center gap-3 mb-8 bg-white/50 backdrop-blur-sm p-2 pr-6 rounded-full border border-slate-200">
+                                <span className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-[10px] font-bold">BY</span>
+                                <span className="text-xs font-ibmplexmonomedium uppercase text-slate-500">For Developers</span>
                             </div>
-                            <h1 className="text-5xl md:text-7xl font-black tracking-tight text-black leading-[0.98] mb-8 font-dmsans">
+                            <h1 className="text-6xl md:text-8xl font-light tracking-tight text-slate-900 leading-[0.92] mb-8 font-dmsans">
                                 Work you&apos;re <br />
-                                <span className="bg-[#b7ffd6] border-[4px] border-black px-2 inline-block -rotate-1">proud of.</span>
+                                <span className="font-medium">proud of.</span>
                             </h1>
-                            <p className="text-black/80 text-lg md:text-xl max-w-xl leading-relaxed font-dmsans mb-10">
+                            <p className="text-slate-500 text-lg md:text-xl max-w-xl leading-relaxed font-dmsans mb-10">
                                 Join the top 1% of engineers in the Bytedocker network. Work remotely with world-class product companies that value quality.
                             </p>
                             <a href="#apply">
-                                <button className="bg-black text-white font-black text-base px-8 py-4 uppercase tracking-widest border-[4px] border-black shadow-[6px_6px_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#000] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0_#000] transition-all font-ibmplexmonomedium">
+                                <button className="bg-black hover:bg-slate-800 text-white font-medium text-base px-8 py-4 rounded-xl transition-colors font-dmsans">
                                     Apply to join
                                 </button>
                             </a>
                         </div>
 
                         <div className="hidden md:flex w-full md:w-[480px] shrink-0 items-center justify-center">
-                            <div className="bg-white border-[4px] border-black shadow-[10px_10px_0_#000] p-6 rotate-1">
-                                <Image
-                                    src="/undraw_job-hunt_5umi.svg"
-                                    alt="Find Jobs Illustration"
-                                    width={480}
-                                    height={400}
-                                    className="w-full h-auto"
-                                    priority
-                                />
-                            </div>
+                            <Image
+                                src="/undraw_job-hunt_5umi.svg"
+                                alt="Find Jobs Illustration"
+                                width={480}
+                                height={400}
+                                className="w-full h-auto"
+                                priority
+                            />
                         </div>
                     </div>
                 </section>
 
                 {/* Open roles */}
-                <SectionDivider bgTop="bg-[#f5f0e8]" fillBottom="fill-white" />
+                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
                 <section className="bg-white py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
                         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
                             <div>
-                                <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black tracking-tight mb-2">Open roles</h2>
-                                <p className="text-black/70 text-lg">Active positions from our current client network.</p>
+                                <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 tracking-tight mb-2">Open roles</h2>
+                                <p className="text-slate-500 text-lg">Active positions from our current client network.</p>
                             </div>
-                            <span className="text-sm font-ibmplexmonomedium text-black uppercase tracking-widest shrink-0">Remote only</span>
+                            <span className="text-sm font-ibmplexmonomedium text-slate-400 uppercase tracking-widest shrink-0">Remote only</span>
                         </div>
 
-                        <div className="flex flex-col gap-4">
+                        <div className="divide-y divide-slate-200 border-t border-slate-200">
                             {roles.map((role) => (
-                                <div
-                                    key={role.num}
-                                    className="border-[4px] border-black bg-[#fef6da] px-6 py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-[6px_6px_0_#000]"
-                                >
+                                <div key={role.num} className="py-7 flex flex-col md:flex-row md:items-center justify-between gap-4 group cursor-pointer">
                                     <div className="flex items-start md:items-center gap-8">
-                                        <span className="text-sm font-ibmplexmonomedium text-black shrink-0 w-8 pt-0.5 md:pt-0">{role.num}</span>
+                                        <span className="text-sm font-ibmplexmonomedium text-slate-400 shrink-0 w-8 pt-0.5 md:pt-0">{role.num}</span>
                                         <div>
-                                            <h3 className="text-lg font-dmsans font-black text-black">{role.title}</h3>
-                                            <p className="text-sm font-ibmplexmonomedium text-black/70 mt-1">{role.stack}</p>
+                                            <h3 className="text-lg font-dmsans font-medium text-slate-900 group-hover:text-slate-700 transition-colors">{role.title}</h3>
+                                            <p className="text-sm font-ibmplexmonomedium text-slate-400 mt-1">{role.stack}</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-3 ml-16 md:ml-0">
-                                        <span className="text-xs font-ibmplexmonomedium text-black border-[3px] border-black px-2.5 py-1 bg-white">{role.type}</span>
-                                        <span className="text-xs font-ibmplexmonomedium text-black">{role.location}</span>
+                                        <span className="text-xs font-ibmplexmonomedium text-slate-500 border border-slate-200 px-2.5 py-1 rounded-full">{role.type}</span>
+                                        <span className="text-xs font-ibmplexmonomedium text-slate-400">{role.location}</span>
                                     </div>
                                 </div>
                             ))}
@@ -120,22 +115,19 @@ export default function FindJobsPage() {
                 </section>
 
                 {/* Why join */}
-                <SectionDivider bgTop="bg-white" fillBottom="fill-[#f5f0e8]" />
-                <section className="bg-[#f5f0e8] py-24 px-6 font-dmsans">
+                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-50" />
+                <section className="bg-slate-50 py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
-                        <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black mb-4 tracking-tight">Why join the network</h2>
-                        <p className="text-black/70 text-lg mb-16 max-w-lg">What sets working through Bytedocker apart from applying directly or through traditional agencies.</p>
+                        <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-4 tracking-tight">Why join the network</h2>
+                        <p className="text-slate-500 text-lg mb-16 max-w-lg">What sets working through Bytedocker apart from applying directly or through traditional agencies.</p>
 
-                        <div className="max-w-3xl flex flex-col gap-6">
+                        <div className="max-w-3xl divide-y divide-slate-200 border-t border-slate-200">
                             {perks.map((p) => (
-                                <div
-                                    key={p.num}
-                                    className="border-[4px] border-black bg-white px-6 py-6 flex gap-6 items-start shadow-[6px_6px_0_#000]"
-                                >
-                                    <span className="text-sm font-ibmplexmonomedium text-black pt-0.5 shrink-0 w-8">{p.num}</span>
+                                <div key={p.num} className="py-8 flex gap-8 items-start">
+                                    <span className="text-sm font-ibmplexmonomedium text-slate-400 pt-0.5 shrink-0 w-8">{p.num}</span>
                                     <div>
-                                        <h3 className="text-lg font-dmsans font-black text-black mb-2">{p.title}</h3>
-                                        <p className="text-black/70 text-sm leading-relaxed">{p.description}</p>
+                                        <h3 className="text-lg font-dmsans font-medium text-slate-900 mb-2">{p.title}</h3>
+                                        <p className="text-slate-500 text-sm leading-relaxed">{p.description}</p>
                                     </div>
                                 </div>
                             ))}
@@ -144,40 +136,78 @@ export default function FindJobsPage() {
                 </section>
 
                 {/* Application form */}
-                <SectionDivider bgTop="bg-[#f5f0e8]" fillBottom="fill-white" />
+                <SectionDivider bgTop="bg-slate-50" fillBottom="fill-white" />
                 <section id="apply" className="bg-white py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
-                        <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black mb-4 tracking-tight">Apply to join</h2>
-                        <p className="text-black/70 text-lg mb-16 max-w-lg">Tell us about yourself. If your profile looks like a fit, we&apos;ll invite you to the vetting process.</p>
+                        <h2 className="text-4xl md:text-5xl font-dmsans font-medium text-slate-900 mb-4 tracking-tight">Apply to join</h2>
+                        <p className="text-slate-500 text-lg mb-16 max-w-lg">Tell us about yourself. If your profile looks like a fit, we&apos;ll invite you to the vetting process.</p>
 
-                        <FindJobsForm />
+                        <div className="border border-slate-200 rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+                            <div className="p-10 md:p-14 border-b lg:border-b-0 lg:border-r border-slate-200 space-y-6">
+                                <div>
+                                    <label className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest block mb-2">Full name</label>
+                                    <input className="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 font-dmsans text-base focus:outline-none focus:border-slate-400 transition-colors bg-slate-50" placeholder="Your full name" />
+                                </div>
+                                <div>
+                                    <label className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest block mb-2">Email</label>
+                                    <input type="email" className="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 font-dmsans text-base focus:outline-none focus:border-slate-400 transition-colors bg-slate-50" placeholder="you@email.com" />
+                                </div>
+                                <div>
+                                    <label className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest block mb-2">Primary stack</label>
+                                    <input className="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 font-dmsans text-base focus:outline-none focus:border-slate-400 transition-colors bg-slate-50" placeholder="e.g. React, Node.js, PostgreSQL" />
+                                </div>
+                                <div>
+                                    <label className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest block mb-2">Years of experience</label>
+                                    <select className="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 font-dmsans text-base focus:outline-none focus:border-slate-400 transition-colors bg-slate-50">
+                                        <option>3–5 years</option>
+                                        <option>5–8 years</option>
+                                        <option>8–12 years</option>
+                                        <option>12+ years</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div className="p-10 md:p-14 space-y-6">
+                                <div>
+                                    <label className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest block mb-2">LinkedIn or portfolio URL</label>
+                                    <input className="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 font-dmsans text-base focus:outline-none focus:border-slate-400 transition-colors bg-slate-50" placeholder="https://linkedin.com/in/yourname" />
+                                </div>
+                                <div>
+                                    <label className="text-xs font-ibmplexmonomedium text-slate-400 uppercase tracking-widest block mb-2">Tell us about yourself</label>
+                                    <textarea rows={6} className="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 font-dmsans text-base focus:outline-none focus:border-slate-400 transition-colors bg-slate-50 resize-none" placeholder="What have you built? What kind of work are you looking for?" />
+                                </div>
+                                <button className="w-full bg-black hover:bg-slate-800 text-white font-medium text-base px-7 py-4 rounded-xl transition-colors font-dmsans">
+                                    Submit application →
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 {/* Dark CTA */}
-                <SectionDivider bgTop="bg-white" fillBottom="fill-black" />
-                <section className="bg-black text-white py-24 px-6 font-dmsans">
+                <SectionDivider bgTop="bg-white" fillBottom="fill-slate-900" />
+                <section className="bg-slate-900 text-white py-24 px-6 font-dmsans">
                     <div className="container mx-auto max-w-[1200px]">
-                        <div className="border-[4px] border-white p-12 md:p-16 flex flex-col md:flex-row items-start justify-between gap-12 shadow-[8px_8px_0_#fff]">
+                        <div className="border border-slate-800 rounded-2xl p-12 md:p-16 flex flex-col md:flex-row items-start justify-between gap-12">
                             <div className="max-w-xl">
-                                <p className="text-sm font-ibmplexmonomedium text-white uppercase tracking-widest mb-6">Top 1% only</p>
-                                <h2 className="text-4xl md:text-5xl font-dmsans font-black mb-6 leading-[1.1] tracking-tight">
+                                <p className="text-sm font-ibmplexmonomedium text-slate-500 uppercase tracking-widest mb-6">Top 1% only</p>
+                                <h2 className="text-4xl md:text-5xl font-dmsans font-medium mb-6 leading-[1.1] tracking-tight">
                                     Our bar is high for a reason.
                                 </h2>
-                                <p className="text-white/70 text-lg leading-relaxed mb-10">
+                                <p className="text-slate-400 text-lg leading-relaxed mb-10">
                                     We only place developers we&apos;d hire ourselves. If you meet that bar, you&apos;ll have access to the best remote opportunities available.
                                 </p>
-                                <button className="bg-white text-black font-black text-base px-7 py-3.5 uppercase tracking-widest border-[4px] border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium">
+                                <button className="bg-white hover:bg-slate-100 text-slate-900 font-medium text-base px-7 py-3.5 rounded-xl transition-colors font-dmsans">
                                     Learn about our vetting process
                                 </button>
                             </div>
-                            <div className="w-full md:w-[240px] shrink-0 border-[4px] border-white p-6 flex flex-col gap-4 shadow-[6px_6px_0_#fff]">
-                                <p className="text-xs font-ibmplexmonomedium text-white uppercase tracking-widest">What we test</p>
-                                <div className="border-t-[4px] border-white pt-4 divide-y-[4px] divide-white">
+                            <div className="w-full md:w-[240px] shrink-0 border border-slate-800 rounded-xl p-6 flex flex-col gap-4">
+                                <p className="text-xs font-ibmplexmonomedium text-slate-500 uppercase tracking-widest">What we test</p>
+                                <div className="border-t border-slate-800 pt-4 divide-y divide-slate-800">
                                     {[["English", "Proficiency assessment"], ["Code", "Offline task + live review"], ["Soft skills", "Video interview"]].map(([v, l], i) => (
                                         <div key={i} className="py-3">
-                                            <p className="text-sm font-black text-white">{v}</p>
-                                            <p className="text-xs text-white/70 mt-0.5">{l}</p>
+                                            <p className="text-sm font-medium text-white">{v}</p>
+                                            <p className="text-xs text-slate-400 mt-0.5">{l}</p>
                                         </div>
                                     ))}
                                 </div>

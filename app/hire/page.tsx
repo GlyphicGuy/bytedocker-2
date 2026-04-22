@@ -2,8 +2,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import SectionDivider from "@/components/SectionDivider";
-import HireBriefForm from "@/app/hire/HireBriefForm";
-import Link from "next/link";
 
 export const metadata = {
     title: "Hire a Developer | Bytedocker Talent",
@@ -138,7 +136,45 @@ export default function HireNowPage() {
                         <h2 className="text-4xl md:text-5xl font-dmsans font-black text-black mb-4 tracking-tight">Submit your brief</h2>
                         <p className="text-black/70 text-lg mb-16 max-w-lg">Fill in the details below and we&apos;ll get back to you within a few hours.</p>
 
-                        <HireBriefForm />
+                        <div className="border-[4px] border-black overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-[8px_8px_0_#000]">
+                            <div className="p-10 md:p-14 border-b-[4px] lg:border-b-0 lg:border-r-[4px] border-black space-y-6 bg-[#fef6da]">
+                                <div>
+                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Company / Project name</label>
+                                    <input className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white" placeholder="e.g. Acme Inc." />
+                                </div>
+                                <div>
+                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Role needed</label>
+                                    <input className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white" placeholder="e.g. Senior Backend Engineer" />
+                                </div>
+                                <div>
+                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Tech stack</label>
+                                    <input className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white" placeholder="e.g. Node.js, PostgreSQL, AWS" />
+                                </div>
+                                <div>
+                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Your email</label>
+                                    <input type="email" className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white" placeholder="you@company.com" />
+                                </div>
+                            </div>
+
+                            <div className="p-10 md:p-14 space-y-6 bg-white">
+                                <div>
+                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Team context & requirements</label>
+                                    <textarea rows={6} className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white resize-none" placeholder="Tell us about your team, the problem you're solving, and what a great candidate looks like." />
+                                </div>
+                                <div>
+                                    <label className="text-xs font-ibmplexmonomedium text-black uppercase tracking-widest block mb-2">Timeline</label>
+                                    <select className="w-full border-[3px] border-black px-4 py-3 text-black font-dmsans text-base focus:outline-none focus:ring-2 focus:ring-black/60 transition-colors bg-white">
+                                        <option>As soon as possible</option>
+                                        <option>Within 2 weeks</option>
+                                        <option>Within a month</option>
+                                        <option>Just exploring</option>
+                                    </select>
+                                </div>
+                                <button className="w-full bg-black text-white font-black text-base px-7 py-4 uppercase tracking-widest border-[4px] border-black shadow-[6px_6px_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#000] transition-all font-ibmplexmonomedium">
+                                    Send brief →
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -156,18 +192,12 @@ export default function HireNowPage() {
                                     Browse our case studies to see what other companies achieved with Bytedocker — or read how our vetting process works.
                                 </p>
                                 <div className="flex flex-wrap gap-4">
-                                    <Link
-                                        href="/case-studies"
-                                        className="inline-flex items-center bg-white text-black font-black text-base px-7 py-3.5 uppercase tracking-widest border-[4px] border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium"
-                                    >
+                                    <button className="bg-white text-black font-black text-base px-7 py-3.5 uppercase tracking-widest border-[4px] border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium">
                                         View case studies
-                                    </Link>
-                                    <Link
-                                        href="/how-we-vet-developers"
-                                        className="inline-flex items-center bg-black text-white font-black text-base px-7 py-3.5 uppercase tracking-widest border-[4px] border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium"
-                                    >
+                                    </button>
+                                    <button className="bg-black text-white font-black text-base px-7 py-3.5 uppercase tracking-widest border-[4px] border-white shadow-[6px_6px_0_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[4px_4px_0_#fff] transition-all font-ibmplexmonomedium">
                                         How we vet
-                                    </Link>
+                                    </button>
                                 </div>
                             </div>
                             <div className="w-full md:w-[240px] shrink-0 border-[4px] border-white p-6 flex flex-col gap-4 shadow-[6px_6px_0_#fff]">

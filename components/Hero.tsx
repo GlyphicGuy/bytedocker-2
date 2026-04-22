@@ -69,7 +69,7 @@ export default function Hero() {
 
                 {/* CTA Buttons - Enhanced with more pop */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-16 md:mb-20">
-                    <Link href="/hire">
+                    <Link href="/for-startups">
                         <button className="bg-[#ff8c00] hover:bg-[#e67e00] hover:shadow-lg text-[#f5f0e8] font-black text-sm px-8 py-3 rounded-none uppercase tracking-widest transition-all cursor-pointer font-ibmplexmonomedium border-[3px] border-[#ff8c00] transform hover:scale-105">
                             Hire Now
                         </button>

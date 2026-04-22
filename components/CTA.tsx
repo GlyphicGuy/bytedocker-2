@@ -1,8 +1,15 @@
 "use client";
 
-import Link from "next/link";
+import { useState } from "react";
 
 export default function CTA() {
+    const [email, setEmail] = useState("");
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        console.log("Email submitted:", email);
+    };
+
     return (
         <section className="px-4 md:px-6 py-16 md:py-24 bg-[#0a0a0a] border-t-[3px] border-[#f5f0e8] relative overflow-hidden">
             <div className="relative w-full max-w-[1400px] mx-auto overflow-hidden flex flex-col items-center p-6 md:p-16 group">
@@ -37,7 +44,7 @@ export default function CTA() {
                             </p>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row items-stretch gap-3 md:gap-4 max-w-xl mx-auto lg:mx-0">
+                        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch gap-3 md:gap-4 max-w-xl mx-auto lg:mx-0">
                             <div className="relative grow group/input">
                                 <div className="absolute left-5 top-1/2 -translate-y-1/2 text-[#999999] group-focus-within/input:text-[#f5f0e8] transition-colors">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -47,17 +54,19 @@ export default function CTA() {
                                 <input
                                     type="email"
                                     placeholder="Work email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     className="w-full h-12 md:h-14 pl-12 pr-4 rounded-none bg-[#ffffff] border-[3px] border-[#f5f0e8] placeholder:text-[#999999] text-[#0a0a0a] font-ibmplexmonomedium text-[10px] md:text-xs uppercase focus:outline-none focus:ring-3 focus:ring-[#ff8c00] transition-all font-medium shadow-neo-sm"
                                     required
                                 />
                             </div>
-                            <Link
-                                href="/hire"
-                                className="h-12 md:h-14 px-10 rounded-none bg-[#ff8c00] text-[#0a0a0a] font-black text-[11px] md:text-[12px] uppercase tracking-widest hover:shadow-neo-lg transition-all active:translate-y-0.5 shadow-neo inline-flex items-center justify-center whitespace-nowrap border-[4px] border-[#ff8c00]"
+                            <button
+                                type="submit"
+                                className="h-12 md:h-14 px-10 rounded-none bg-[#ff8c00] text-[#0a0a0a] font-black text-[11px] md:text-[12px] uppercase tracking-widest hover:shadow-neo-lg transition-all active:translate-y-0.5 shadow-neo flex items-center justify-center whitespace-nowrap border-[4px] border-[#ff8c00]"
                             >
                                 Hire Now
-                            </Link>
-                        </div>
+                            </button>
+                        </form>
 
                         <div className="text-[#666666] text-[8px] md:text-[10px] uppercase font-ibmplexmonomedium tracking-widest hidden sm:block">
                             18H MATCH — NO PREP — TRIAL INCLUDED — RESPONSE IN 2 HOURS

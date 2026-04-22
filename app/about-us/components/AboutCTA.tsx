@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function AboutCTA() {
     return (
         <section className="bg-[#0a0a0a] text-[#f5f0e8] py-24 px-6 font-dmsans">
@@ -14,18 +12,12 @@ export default function AboutCTA() {
                             Years of building a talent network so you don&apos;t have to. Let us find your next great engineer.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <Link
-                                href="/hire"
-                                className="inline-flex items-center bg-[#f5f0e8] hover:shadow-neo-lg text-[#0a0a0a] font-black text-base px-7 py-3.5 rounded-none transition-all font-ibmplexmonomedium border-[4px] border-[#f5f0e8] shadow-neo active:translate-y-0.5 uppercase tracking-widest text-xs"
-                            >
+                            <button className="bg-[#f5f0e8] hover:shadow-neo-lg text-[#0a0a0a] font-black text-base px-7 py-3.5 rounded-none transition-all font-ibmplexmonomedium border-[4px] border-[#f5f0e8] shadow-neo active:translate-y-0.5 uppercase tracking-widest text-xs">
                                 Hire a developer
-                            </Link>
-                            <Link
-                                href="/how-we-vet-developers"
-                                className="inline-flex items-center border-[4px] border-[#f5f0e8] hover:shadow-neo-lg text-[#f5f0e8] font-black text-base px-7 py-3.5 rounded-none transition-all font-ibmplexmonomedium bg-transparent shadow-neo active:translate-y-0.5 uppercase tracking-widest text-xs"
-                            >
+                            </button>
+                            <button className="border-[4px] border-[#f5f0e8] hover:shadow-neo-lg text-[#f5f0e8] font-black text-base px-7 py-3.5 rounded-none transition-all font-ibmplexmonomedium bg-transparent shadow-neo active:translate-y-0.5 uppercase tracking-widest text-xs">
                                 Learn our process
-                            </Link>
+                            </button>
                         </div>
                     </div>
 

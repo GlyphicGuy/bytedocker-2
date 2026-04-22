@@ -46,7 +46,7 @@ export default function DeveloperHero() {
                         </p>
 
                         <div className="flex flex-wrap items-center gap-4">
-                            <Link href="/find-jobs">
+                            <Link href="#apply">
                                 <button className="bg-[#0a0a0a] text-[#f5f0e8] text-xs font-ibmplexmonomedium px-10 py-5 rounded-none border-[4px] border-[#0a0a0a] uppercase hover:shadow-neo-lg transition-all shadow-neo active:translate-y-0.5 cursor-pointer">
                                     Apply to Join
                                 </button>
